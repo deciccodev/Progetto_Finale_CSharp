@@ -1,67 +1,66 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
 
 public class QuestionLoader : MonoBehaviour
 {
-    private List<QuestionData> tutteLeDomande;
-    private int questionToPop;
-
-    void Awake()
+    /// <summary>
+    /// Carica le domande da un JSON relativo al topic selezionato
+    /// Restituisce solo il numero di domande corretto in base alla difficoltà del player
+    /// </summary>
+    /// <param name="topicFileName">nome del file JSON del topic (es. "Fondamenta.json")</param>
+    /// <param name="difficulty">0=facile, 1=medio, 2=difficile</param>
+    public List<FormQuestion> LoadQuestions(string topicFileName, int difficulty)
     {
-        CaricaDomande();
-    }
-
-    void CaricaDomande()
-    {
-        string path = Path.Combine(Application.streamingAssetsPath, "questions.json");
+        string path = Path.Combine(Application.streamingAssetsPath, topicFileName);
 
         if (!File.Exists(path))
         {
-            Debug.LogError("File questions.json non trovato in StreamingAssets!");
-            return;
+            Debug.LogError("File JSON del topic non trovato: " + path);
+            return new List<FormQuestion>();
         }
 
-        string json = File.ReadAllText(path);
+        string jsonString = File.ReadAllText(path);
 
-        QuestionDataList wrapper = JsonUtility.FromJson<QuestionDataList>(json);
-        tutteLeDomande = wrapper.questions;
+        // JsonUtility richiede un wrapper per le liste
+        FormQuestionList wrapper = JsonUtility.FromJson<FormQuestionList>(jsonString);
 
-        Debug.Log("Domande caricate: " + tutteLeDomande.Count);
-    }
+        List<FormQuestion> tutteLeDomande = wrapper.questions;
 
-    /// <summary>
-    /// Restituisce 3 domande filtrate e mescolate per topic e difficulty
-    /// </summary>
-    public List<QuestionData> GetQuestions(string topic, string difficulty)
-    {
-        // Filtra per topic e difficulty
-        List<QuestionData> filtrate = tutteLeDomande.FindAll(q => q.topic == topic && q.difficulty == difficulty
-        );
-
-        if (filtrate.Count == 0)
+        // Determina quante domande prendere in base alla difficoltà
+        int numDomande = 3; // default facile
+        switch (difficulty)
         {
-            Debug.LogWarning("Nessuna domanda trovata per topic/difficulty: " + topic + "/" + difficulty);
-            return new List<QuestionData>();
+            case 0: numDomande = 3; break;
+            case 1: numDomande = 5; break;
+            case 2: numDomande = 10; break;
         }
 
         // Mescola le domande
-        MescolaLista(filtrate);
+        MescolaLista(tutteLeDomande);
 
-        // Prende solo le prime 3 domande dalla lista
-        int count = Mathf.Min(questionToPop, filtrate.Count);
-        return filtrate.GetRange(0, count);
+        // Prendi solo le prime N domande disponibili
+        int count = Mathf.Min(numDomande, tutteLeDomande.Count);
+        return tutteLeDomande.GetRange(0, count);
     }
 
-    void MescolaLista(List<QuestionData> lista)
+    private void MescolaLista(List<FormQuestion> lista)
     {
         for (int i = 0; i < lista.Count; i++)
         {
             int randomIndex = Random.Range(i, lista.Count);
-
-            QuestionData temp = lista[i];
+            FormQuestion temp = lista[i];
             lista[i] = lista[randomIndex];
             lista[randomIndex] = temp;
         }
     }
+}
+
+/// <summary>
+/// Wrapper per JsonUtility (necessario per leggere una lista di domande)
+/// </summary>
+[System.Serializable]
+public class FormQuestionList
+{
+    public List<FormQuestion> questions;
 }
