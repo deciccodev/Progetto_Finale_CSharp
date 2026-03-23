@@ -10,49 +10,26 @@ public class QuestionLoader : MonoBehaviour
     /// </summary>
     /// <param name="topicFileName">nome del file JSON del topic (es. "Fondamenta.json")</param>
     /// <param name="difficulty">0=facile, 1=medio, 2=difficile</param>
-    public List<FormQuestion> LoadQuestions(string topicFileName, int difficulty)
+    public FormQuestion GetRandomQuestion(string topicFileName)
     {
         string path = Path.Combine(Application.streamingAssetsPath, topicFileName);
 
         if (!File.Exists(path))
         {
-            Debug.LogError("File JSON del topic non trovato: " + path);
-            return new List<FormQuestion>();
+            Debug.LogError("File non trovato: " + path);
+            return null;
         }
 
-        string jsonString = File.ReadAllText(path);
+        string json = File.ReadAllText(path);
+        FormQuestionList wrapper = JsonUtility.FromJson<FormQuestionList>(json);
 
-        // JsonUtility richiede un wrapper per le liste
-        FormQuestionList wrapper = JsonUtility.FromJson<FormQuestionList>(jsonString);
+        var lista = wrapper.questions;
 
-        List<FormQuestion> tutteLeDomande = wrapper.questions;
+        if (lista == null || lista.Count == 0)
+            return null;
 
-        // Determina quante domande prendere in base alla difficoltà
-        int numDomande = 3; // default facile
-        switch (difficulty)
-        {
-            case 0: numDomande = 3; break;
-            case 1: numDomande = 5; break;
-            case 2: numDomande = 10; break;
-        }
-
-        // Mescola le domande
-        MescolaLista(tutteLeDomande);
-
-        // Prendi solo le prime N domande disponibili
-        int count = Mathf.Min(numDomande, tutteLeDomande.Count);
-        return tutteLeDomande.GetRange(0, count);
-    }
-
-    private void MescolaLista(List<FormQuestion> lista)
-    {
-        for (int i = 0; i < lista.Count; i++)
-        {
-            int randomIndex = Random.Range(i, lista.Count);
-            FormQuestion temp = lista[i];
-            lista[i] = lista[randomIndex];
-            lista[randomIndex] = temp;
-        }
+        int index = Random.Range(0, lista.Count);
+        return lista[index];
     }
 }
 

@@ -2,38 +2,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour // Script da inserire sul pannello dove creare i bottoni per i quiz a scelta multipla
+public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
 {
     [Header("Setup")]
     [SerializeField] GameObject bottonePrefab;
     [SerializeField] Transform content; // Content della Scroll View
+
     private bool rispostaData = false;
     private Color coloreCorretto = Color.green;
     private Color coloreSbagliato = Color.red;
-    private float delayRitornoMenu = 1.5f; 
+    private float delayRitornoMenu = 1.5f;
 
-    void Start() // START PRESENTE SOLO PER TESTARE LO SCRIPT, DA RIMUOVERE QUANDO SI COLLEGA IL JSON
-    {
-        string[] opzioniTest = new string[]
-        {
-            "Risposta 1",
-            "Risposta 2",
-            "Risposta 3",
-            "Risposta 4",
-        };
-
-        //CreaBottoni(opzioniTest);
-    }
-
-    public void CreaBottoni(string[] opzioni, Question domanda, QuizController quizController)
+    public void CreaBottoni(FormQuestion domanda, QuizController quizController)
     {
         rispostaData = false;
 
-        // Pulisce bottoni esistenti nel caso fossero rimasti istanziati
+        // Pulisce bottoni esistenti
         for (int i = content.childCount - 1; i >= 0; i--)
         {
             Destroy(content.GetChild(i).gameObject);
         }
+
+        string[] opzioni = new string[]
+        {
+            domanda.answerA,
+            domanda.answerB,
+            domanda.answerC,
+            domanda.answerD
+        };
 
         Button[] bottoni = new Button[opzioni.Length];
 
@@ -43,6 +39,8 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour // Script da inse
             string opzione = opzioni[i];
 
             GameObject btnObj = Instantiate(bottonePrefab, content);
+            btnObj.GetComponent<LayoutElement>().preferredWidth = 500f;
+
             Button btn = btnObj.GetComponent<Button>();
             bottoni[i] = btn;
 
@@ -58,28 +56,23 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour // Script da inse
 
                 rispostaData = true;
 
-                // Disabilita tutti i bottoni dopo che l'utente da la risposta
+                // Blocca tutti i bottoni
                 foreach (Button b in bottoni)
                     b.interactable = false;
 
-                bool corretta = (index == domanda.rispostaCorretta);
+                bool corretta = (index == domanda.rightAnswer);
 
-                // Imposta il colore al bottone dopo la risposta (verde = giusta, rosso = sbagliata)
+                // Colora bottoni
                 for (int j = 0; j < bottoni.Length; j++)
                 {
                     Image img = bottoni[j].GetComponent<Image>();
-
-                    if (j == domanda.rispostaCorretta)
-                    {
-                        img.color = coloreCorretto; // risposta giusta
-                    }
+                    if (j == domanda.rightAnswer)
+                        img.color = coloreCorretto; // corretto
                     else if (j == index)
-                    {
-                        img.color = coloreSbagliato; // risposta sbagliata cliccata
-                    }
+                        img.color = coloreSbagliato; // sbagliato selezionato
                 }
 
-                // ⏱ Delay prima di tornare al menu
+                // Delay prima di notificare QuizController
                 StartCoroutine(RitornaDopoDelay(quizController, corretta));
             });
         }
@@ -87,10 +80,9 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour // Script da inse
         LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
     }
 
-    private System.Collections.IEnumerator RitornaDopoDelay(QuizController quizManager, bool risposta)
+    private System.Collections.IEnumerator RitornaDopoDelay(QuizController quizController, bool risposta)
     {
         yield return new WaitForSeconds(delayRitornoMenu);
-
-        quizManager.RispostaData(risposta);
+        quizController.RispostaData(risposta);
     }
 }
