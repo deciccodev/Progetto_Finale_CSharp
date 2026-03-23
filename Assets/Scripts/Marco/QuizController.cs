@@ -1,26 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class QuizController : MonoBehaviour
 {
-    private FormQuestion domandaCorrente;
+    private List<FormQuestion> domandeCorrenti;
+    private int indexDomanda = 0;
+    private int risposteCorrette = 0;
     private string topicCorrente;
 
-    [Header("Pannelli Tipi Quiz")]
+    [Header("Pannelli")]
+    [SerializeField] GameObject pannelloArgomenti;
+    [SerializeField] GameObject pannelloQuiz;
+
+    [Header("Panel Tipi Quiz")]
     [SerializeField] GameObject pannelloSceltaMultipla;
     /*[SerializeField] GameObject pannelloInputField;
     [SerializeField] GameObject pannelloDragAndDrop;
     [SerializeField] GameObject pannelloMaze;*/
 
-    [Header("Pannello Argomenti Quiz (Fondamenta, ecc...)")]
-    [SerializeField] GameObject pannelloArgomentiQuiz;
-
-    [Header("Pannello Dove Visualizzare La Domanda")]
+    [Header("Panel Visualizzazione Domanda")]
     [SerializeField] TextMeshProUGUI testoDomanda;
 
-    [Header("Riferimenti")]
+    [Header("Loader")]
     [SerializeField] QuestionLoader questionLoader;
-    [SerializeField] ProgressMenu menuQuiz;
 
     // SELEZIONE ARGOMENTO
     public void SelezionaArgomento(string topicFileName)
@@ -29,65 +32,56 @@ public class QuizController : MonoBehaviour
 
         int difficulty = GameManager.Instance.GetDifficulty();
 
-        int numeroDomande = 3;
-        if (difficulty == 1) numeroDomande = 5;
-        else if (difficulty == 2) numeroDomande = 10;
+        // Carica lista domande random in base alla difficoltà
+        domandeCorrenti = questionLoader.LoadQuestions(topicFileName, difficulty);
 
-        // Mostra il pannello con i bottoni quiz
-        DisattivaTutti();
-        pannelloArgomentiQuiz.SetActive(true);
-
-        // Crea i bottoni (quiz)
-        menuQuiz.CreaMenu(numeroDomande, this);
-    }
-
-    // AVVIO QUIZ (UNA DOMANDA)
-    public void AvviaQuiz(int index)
-    {
-        domandaCorrente = questionLoader.GetRandomQuestion(topicCorrente);
-
-        if (domandaCorrente == null)
+        if (domandeCorrenti == null || domandeCorrenti.Count == 0)
         {
-            Debug.LogError("Domanda non caricata!");
+            Debug.LogError("Nessuna domanda trovata!");
             return;
         }
 
-        DisattivaTutti();
+        indexDomanda = 0;
+        risposteCorrette = 0;
+
+        pannelloArgomenti.SetActive(false);
+        pannelloQuiz.SetActive(true);
+
         MostraDomanda();
     }
 
     // MOSTRA DOMANDA
     void MostraDomanda()
     {
-        if (testoDomanda != null)
-            testoDomanda.text = domandaCorrente.question;
+        DisattivaTipi();
 
-        switch (domandaCorrente.QuestionType)
+        FormQuestion domanda = domandeCorrenti[indexDomanda];
+
+        // Mostra il testo della domanda
+        testoDomanda.text = domanda.question;
+
+        switch (domanda.QuestionType)
         {
             case TypeQuestion.DomandaMultipla:
                 pannelloSceltaMultipla.SetActive(true);
-
                 var uiSceltaMultipla = pannelloSceltaMultipla.GetComponent<IstanziaBottoniQuizSceltaMultipla>();
-                uiSceltaMultipla.CreaBottoni(domandaCorrente, this);
+                uiSceltaMultipla.CreaBottoni(domanda, this);
                 break;
 
-            //TODO CREARE CLASSI CHE INIZIALIZZANO GLI ALTRI QUIZ
-            /*case TypeQuestion.Input: pannelloInputField.SetActive(true);
+            //TODO CREARE SCRIPT PER ISTANZIARE GLI ALTRI PANEL
+            /*case TypeQuestion.Input:
+                pannelloInputField.SetActive(true);
+                var uiInput = pannelloInputField.GetComponent<IstanziaInputField>();
+                break;
 
-                var uiInput = pannelloInputField.GetComponent<IstanziaInputfield>();
-                uiInput.MostraDomanda(domandaCorrente, this);
-                break;*/
+            case TypeQuestion.Dragger:
+                pannelloDragAndDrop.SetActive(true);
+                var uiDragger = pannelloDragAndDrop.GetComponent<IstanziaDragger>();
+                break;
 
-            /*case TypeQuestion.Dragger: pannelloDragAndDrop.SetActive(true);
-
-                var uiDrag = pannelloDragAndDrop.GetComponent<IstanziaDragAndDrop>();
-                uiDrag.MostraDomanda(domandaCorrente, this);
-                break;*/
-
-            /*case TypeQuestion.Maze: pannelloMaze.SetActive(true);
-
+            case TypeQuestion.Maze:
+                pannelloMaze.SetActive(true);
                 var uiMaze = pannelloMaze.GetComponent<IstanziaMaze>();
-                uiMaze.MostraDomanda(domandaCorrente, this);
                 break;*/
         }
     }
@@ -95,29 +89,58 @@ public class QuizController : MonoBehaviour
     // RISPOSTA DATA
     public void RispostaData(bool corretta)
     {
-        Debug.Log(corretta ? "Corretto!" : "Sbagliato!");
+        if (corretta)
+            risposteCorrette++;
 
-        // aggiorna stato bottoni nel menu
-        menuQuiz.SegnaCompletata(corretta);
+        indexDomanda++;
 
-        TornaAlMenuQuiz();
+        if (indexDomanda < domandeCorrenti.Count)
+        {
+            MostraDomanda();
+        }
+        else
+        {
+            FineQuiz();
+        }
     }
 
-    // TORNA AL MENU QUIZ
-    void TornaAlMenuQuiz()
+    // FINE QUIZ
+    void FineQuiz()
     {
-        DisattivaTutti();
-        pannelloArgomentiQuiz.SetActive(true);
+        int totale = domandeCorrenti.Count;
+        bool superato = risposteCorrette >= (totale - 1);
+
+        Debug.Log("Corrette: " + risposteCorrette + "/" + totale);
+
+        if (superato)
+        {
+            Debug.Log("TOPIC SUPERATO");
+
+            // TODO: gestire sblocco topic successivo
+            GameManager.Instance.ProgressToSave(GameManager.Instance.GetDifficulty() + 1);
+            GameManager.Instance.SaveData();
+        }
+        else
+        {
+            Debug.Log("TOPIC FALLITO - riprova");
+        }
+
+        TornaAlMenu();
     }
 
-    // UTILITY
-    void DisattivaTutti()
+    // TORNA AL MENU
+    void TornaAlMenu()
+    {
+        pannelloQuiz.SetActive(false);
+        pannelloArgomenti.SetActive(true);
+    }
+
+    // UTILITY - disattiva tutti i tipi panel
+    void DisattivaTipi()
     {
         pannelloSceltaMultipla.SetActive(false);
         /*pannelloInputField.SetActive(false);
         pannelloDragAndDrop.SetActive(false);
         pannelloMaze.SetActive(false);*/
-
-        pannelloArgomentiQuiz.SetActive(false);
     }
 }

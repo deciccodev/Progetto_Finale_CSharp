@@ -11,8 +11,11 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
     private bool rispostaData = false;
     private Color coloreCorretto = Color.green;
     private Color coloreSbagliato = Color.red;
-    private float delayRitornoMenu = 1.5f;
+    private float delayProssimaDomanda = 1.5f; // Delay prima di passare alla prossima domanda
 
+    /// <summary>
+    /// Crea i bottoni per una domanda a scelta multipla
+    /// </summary>
     public void CreaBottoni(FormQuestion domanda, QuizController quizController)
     {
         rispostaData = false;
@@ -33,7 +36,6 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
 
         Button[] bottoni = new Button[opzioni.Length];
 
-        // Crea bottoni
         for (int i = 0; i < opzioni.Length; i++)
         {
             string opzione = opzioni[i];
@@ -62,27 +64,29 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
 
                 bool corretta = (index == domanda.rightAnswer);
 
-                // Colora bottoni
+                // Colora i bottoni
                 for (int j = 0; j < bottoni.Length; j++)
                 {
                     Image img = bottoni[j].GetComponent<Image>();
                     if (j == domanda.rightAnswer)
-                        img.color = coloreCorretto; // corretto
+                        img.color = coloreCorretto;
                     else if (j == index)
-                        img.color = coloreSbagliato; // sbagliato selezionato
+                        img.color = coloreSbagliato;
                 }
 
-                // Delay prima di notificare QuizController
-                StartCoroutine(RitornaDopoDelay(quizController, corretta));
+                // Avvia la prossima domanda dopo il delay
+                StartCoroutine(AvanzaDopoDelay(quizController, corretta));
             });
         }
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
     }
 
-    private System.Collections.IEnumerator RitornaDopoDelay(QuizController quizController, bool risposta)
+    private System.Collections.IEnumerator AvanzaDopoDelay(QuizController quizController, bool risposta)
     {
-        yield return new WaitForSeconds(delayRitornoMenu);
+        yield return new WaitForSeconds(delayProssimaDomanda);
+
+        // Notifica il QuizController e lascia a lui la gestione della prossima domanda
         quizController.RispostaData(risposta);
     }
 }
