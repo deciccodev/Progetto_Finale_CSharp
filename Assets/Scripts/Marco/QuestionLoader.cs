@@ -6,12 +6,10 @@ public class QuestionLoader : MonoBehaviour
 {
     /// <summary>
     /// Carica le domande da un JSON relativo al topic selezionato
-    /// Restituisce un numero di domande in base alla difficoltà del player
-    /// Le domande vengono scelte casualmente dal file
+    /// Restituisce esattamente il numero di domande corretto in base alla difficoltà
     /// </summary>
-    /// <param name="topicFileName">nome del file JSON del topic (es. "Fondamenta.json")</param>
+    /// <param name="topicFileName">Nome file JSON (es. "DomandeTipiDiDato.json")</param>
     /// <param name="difficulty">0=facile, 1=medio, 2=difficile</param>
-    /// <returns>Lista di domande random selezionate</returns>
     public List<FormQuestion> LoadQuestions(string topicFileName, int difficulty)
     {
         string path = Path.Combine(Application.streamingAssetsPath, topicFileName);
@@ -25,64 +23,45 @@ public class QuestionLoader : MonoBehaviour
         string json = File.ReadAllText(path);
         FormQuestionList wrapper = JsonUtility.FromJson<FormQuestionList>(json);
 
-        List<FormQuestion> lista = wrapper.questions;
-
-        if (lista == null || lista.Count == 0)
+        if (wrapper?.questions == null || wrapper.questions.Count == 0)
+        {
+            Debug.LogError("Lista domande vuota!");
             return null;
-
-        // Determina quante domande prendere in base alla difficulty
-        int numeroDomande = 3;
-        if (difficulty == 1) numeroDomande = 5;
-        else if (difficulty == 2) numeroDomande = 10;
-
-        // Se ci sono meno domande di quelle richieste, prendile tutte
-        numeroDomande = Mathf.Min(numeroDomande, lista.Count);
+        }
 
         // Mescola la lista
-        List<FormQuestion> listaRandom = new List<FormQuestion>();
-        List<int> indiciUsati = new List<int>();
-        while (listaRandom.Count < numeroDomande)
+        List<FormQuestion> domandeMescolate = new List<FormQuestion>(wrapper.questions);
+        ShuffleList(domandeMescolate);
+
+        // Determina quante domande prendere
+        int n = 3; // default facile
+        switch (difficulty)
         {
-            int index = Random.Range(0, lista.Count);
-            if (!indiciUsati.Contains(index))
-            {
-                indiciUsati.Add(index);
-                listaRandom.Add(lista[index]);
-            }
+            case 0: n = 3; break;
+            case 1: n = 5; break;
+            case 2: n = 10; break;
         }
 
-        return listaRandom;
+        // Prende solo le prime N domande
+        if (n > domandeMescolate.Count)
+            n = domandeMescolate.Count;
+
+        return domandeMescolate.GetRange(0, n);
     }
 
-    /// <summary>
-    /// Restituisce una singola domanda random (se dovesse servire di nuovo)
-    /// </summary>
-    /*public FormQuestion GetRandomQuestion(string topicFileName)
+    // Metodo per mescolare la lista domande
+    void ShuffleList<T>(List<T> list)
     {
-        string path = Path.Combine(Application.streamingAssetsPath, topicFileName);
-
-        if (!File.Exists(path))
+        for (int i = 0; i < list.Count; i++)
         {
-            Debug.LogError("File non trovato: " + path);
-            return null;
+            int r = Random.Range(i, list.Count);
+            T tmp = list[i];
+            list[i] = list[r];
+            list[r] = tmp;
         }
-
-        string json = File.ReadAllText(path);
-        FormQuestionList wrapper = JsonUtility.FromJson<FormQuestionList>(json);
-
-        var lista = wrapper.questions;
-
-        if (lista == null || lista.Count == 0)
-            return null;
-
-        int index = Random.Range(0, lista.Count);
-        return lista[index];
-    }*/
+    }
 }
 
-/// <summary>
-/// Wrapper per JsonUtility (necessario per leggere una lista di domande)
-/// </summary>
 [System.Serializable]
 public class FormQuestionList
 {
