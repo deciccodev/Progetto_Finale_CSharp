@@ -16,25 +16,27 @@ public class PlayerData //Classe pubblica per i dati del player da scrivere/legg
 public enum TypeQuestion
 {
     DomandaMultipla,
-    Toggle,
     Input,
-    Dragger
+    Dragger,
+    Maze
 }
 
 [System.Serializable]
 public class FormQuestion
 {
-    public int difficulty;
 
     public TypeQuestion QuestionType;
     public int rightAnswer;
 
     public string question;
     public string answerA;
+    public string tooltipA;
     public string answerB;
+    public string tooltipB;
     public string answerC;
+    public string tooltipC;
     public string answerD;
-
+    public string tooltipD;
 }
 
 
