@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerData //Classe pubblica per i dati del player da scrivere/leggere
@@ -100,6 +101,7 @@ public sealed class GameManager : MonoBehaviour
             //  il true serve per indentare la stringa e renderla più leggibile
             string jsonString = JsonUtility.ToJson(_playerData,true); 
             File.WriteAllText(_path,jsonString);
+            Debug.Log("Salvataggio completato");
         }
         catch (System.Exception e)
         {
@@ -122,6 +124,24 @@ public sealed class GameManager : MonoBehaviour
 
     #endregion
 
+    #region Scene Manager
+    public void NextScene(string NextScene)
+    {
+        Debug.Log("Cambio scena...");
+        SceneManager.LoadScene(NextScene);
+    }
+
+    public void MenuScene(GameObject menu )
+    {
+        if(menu != null)
+        {
+            //Se l'oggetto è attivo lo disattiva e vice versa 
+            menu.SetActive(!menu.activeSelf);
+        }
+    }
+
+    #endregion
+
     #region Info Player
     // Gestione delle proprietà della classe per impostare il salvataggio dei dati
 
@@ -130,6 +150,7 @@ public sealed class GameManager : MonoBehaviour
         if (!string.IsNullOrWhiteSpace(name) && name!= _playerData.userName)
         {
             _playerData.userName = name;
+            Debug.Log("Username aggiornato!");
         }
     }
     public void ScoreToSave(int i)
