@@ -2,11 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
+public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour // Script da inserire sul pannello dove creare i bottoni per i quiz a scelta multipla
 {
     [Header("Setup")]
-    public GameObject bottonePrefab;
-    public Transform content; // Content della Scroll View
+    [SerializeField] GameObject bottonePrefab;
+    [SerializeField] Transform content; // Content della Scroll View
+    private bool rispostaData = false;
+    private Color coloreCorretto = Color.green;
+    private Color coloreSbagliato = Color.red;
+    private float delayRitornoMenu = 1.5f; 
 
     void Start() // START PRESENTE SOLO PER TESTARE LO SCRIPT, DA RIMUOVERE QUANDO SI COLLEGA IL JSON
     {
@@ -18,36 +22,75 @@ public class IstanziaBottoniQuizSceltaMultipla : MonoBehaviour
             "Risposta 4",
         };
 
-        CreaBottoni(opzioniTest);
+        //CreaBottoni(opzioniTest);
     }
 
-    public void CreaBottoni(string[] opzioni) // Metodo da chiamare passando le opzioni della domanda
+    public void CreaBottoni(string[] opzioni, Question domanda, QuizController quizController)
     {
-        // Pulisce i bottoni esistenti
+        rispostaData = false;
+
+        // Pulisce bottoni esistenti nel caso fossero rimasti istanziati
         for (int i = content.childCount - 1; i >= 0; i--)
         {
             Destroy(content.GetChild(i).gameObject);
         }
 
-        // Istanzia i nuovi bottoni
-        foreach (string opzione in opzioni)
-        {
-            GameObject btn = Instantiate(bottonePrefab, content);
+        Button[] bottoni = new Button[opzioni.Length];
 
-            TMP_Text testo = btn.GetComponentInChildren<TMP_Text>();
+        // Crea bottoni
+        for (int i = 0; i < opzioni.Length; i++)
+        {
+            string opzione = opzioni[i];
+
+            GameObject btnObj = Instantiate(bottonePrefab, content);
+            Button btn = btnObj.GetComponent<Button>();
+            bottoni[i] = btn;
+
+            TextMeshProUGUI testo = btnObj.GetComponentInChildren<TextMeshProUGUI>();
             if (testo != null)
-            {
                 testo.text = opzione;
-            }
-            else
+
+            int index = i;
+
+            btn.onClick.AddListener(() =>
             {
-                Text testoUI = btn.GetComponentInChildren<Text>();
-                if (testoUI != null)
-                    testoUI.text = opzione;
-            }
+                if (rispostaData) return;
+
+                rispostaData = true;
+
+                // Disabilita tutti i bottoni dopo che l'utente da la risposta
+                foreach (Button b in bottoni)
+                    b.interactable = false;
+
+                bool corretta = (index == domanda.rispostaCorretta);
+
+                // Imposta il colore al bottone dopo la risposta (verde = giusta, rosso = sbagliata)
+                for (int j = 0; j < bottoni.Length; j++)
+                {
+                    Image img = bottoni[j].GetComponent<Image>();
+
+                    if (j == domanda.rispostaCorretta)
+                    {
+                        img.color = coloreCorretto; // risposta giusta
+                    }
+                    else if (j == index)
+                    {
+                        img.color = coloreSbagliato; // risposta sbagliata cliccata
+                    }
+                }
+
+                // ⏱ Delay prima di tornare al menu
+                StartCoroutine(RitornaDopoDelay(quizController, corretta));
+            });
         }
 
-        // Forza aggiornamento layout (IMPORTANTE per Scroll View)
         LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
+    }
+
+    private System.Collections.IEnumerator RitornaDopoDelay(QuizController quizManager, bool risposta)
+    {
+        yield return new WaitForSeconds(delayRitornoMenu);
+
+        quizManager.RispostaData(risposta);
     }
 }
