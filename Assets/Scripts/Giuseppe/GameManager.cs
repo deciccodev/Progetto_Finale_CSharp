@@ -161,7 +161,8 @@ public sealed class GameManager : MonoBehaviour
         _playerData.maxScore = Mathf.Max(_playerData.maxScore, i);
 
     }
-    public void DifficultyToSave(int i) 
+    
+    public void SetDifficulty(int i) 
     {
         if(i>=0 && i<= _maxDifficulty)
         {
@@ -169,7 +170,15 @@ public sealed class GameManager : MonoBehaviour
         }
     }
 
+    public int GetDifficulty()
+    {
+        return _playerData.difficulty;
+    }
+
     public void ProgressToSave(int i) {_playerData.progressLvl = i;}
+    
+    
+
     public void VolumeToSave(float i)
     {
         if(i>=0 && i<=100)
@@ -182,6 +191,7 @@ public sealed class GameManager : MonoBehaviour
         }
     }
 
+    
     #endregion
 
 }
