@@ -9,26 +9,25 @@ public class ButtonZoomer : Button, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private float _scalaSet = 1.2f;
     [SerializeField] private float _durataPop = 0.8f;
 
-   protected override void Awake()
-   {
-      base.Awake();
-      //Imposto la local scale a 0 per un effetto pop all'avvio
-      this.gameObject.transform.localScale = new Vector3(0,0,0);
-      
-   }
+    protected override void Awake()
+    {
+        base.Awake();
+        //Imposto la local scale a 0 per un effetto pop all'avvio
+        this.gameObject.transform.localScale = new Vector3(0,0,0);
+    }
 
-   protected override void Start()
-   {
-      base.Start();
-      StartCoroutine(PopIniziale());
-   }
+    protected override void Start()
+    {
+        base.Start();
+        StartCoroutine(PopIniziale());
+    }
 
     //Riduzione della scala del pulsante all'uscita del puntatore sull'oggetto
-   public override void OnPointerExit(PointerEventData eventData)
-   {
+    public override void OnPointerExit(PointerEventData eventData)
+    {
         this.gameObject.transform.localScale = new Vector3(1,1,1);
         base.OnPointerExit(eventData);
-   }
+    }
 
     //Aumento della scala del pulsante all'ingresso del puntatore sull'oggetto
     public override void OnPointerEnter(PointerEventData eventData)
