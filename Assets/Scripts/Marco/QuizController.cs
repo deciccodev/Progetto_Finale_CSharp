@@ -15,7 +15,7 @@ public class QuizController : MonoBehaviour
 
     [Header("Panel Tipi Quiz")]
     [SerializeField] GameObject pannelloSceltaMultipla;
-    //[SerializeField] GameObject pannelloInputField;
+    [SerializeField] GameObject pannelloInputField;
     [SerializeField] GameObject pannelloDragAndDrop;
     //[SerializeField] GameObject pannelloMaze;
 
@@ -67,9 +67,10 @@ public class QuizController : MonoBehaviour
                 break;
 
             //TODO CREARE SCRIPT PER ISTANZIARE GLI ALTRI PANEL
-            /*case TypeQuestion.Input: pannelloInputField.SetActive(true);
-                var uiInput = pannelloInputField.GetComponent<IstanziaInputField>();
-                break;*/
+            case TypeQuestion.Input: pannelloInputField.SetActive(true);
+                var uiInput = pannelloInputField.GetComponent<InputSubmission>();
+                uiInput.LoadQuestions(domanda);
+                break;
 
             case TypeQuestion.Dragger: pannelloDragAndDrop.SetActive(true);
                 var uiDragger = pannelloDragAndDrop.GetComponent<IstanziaDragger>();
@@ -138,7 +139,7 @@ public class QuizController : MonoBehaviour
     void DisattivaTipi()
     {
         pannelloSceltaMultipla.SetActive(false);
-        //pannelloInputField.SetActive(false);
+        pannelloInputField.SetActive(false);
         pannelloDragAndDrop.SetActive(false);
         //pannelloMaze.SetActive(false);
     }
