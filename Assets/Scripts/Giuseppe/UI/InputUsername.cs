@@ -9,19 +9,12 @@ public class InputUsername : MonoBehaviour
 
     [SerializeField] private string _nextScene;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //usernameInput.onSubmit.AddListener(GameManager.Instance.NameToSave);
         bottoneUsername.onClick.AddListener(InserisciNome);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void InserisciNome()
     {
         GameManager.Instance.NameToSave(usernameInput.text);
