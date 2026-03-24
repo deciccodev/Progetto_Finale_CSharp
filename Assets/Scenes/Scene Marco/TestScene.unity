@@ -1484,6 +1484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelInput
       objectReference: {fileID: 0}
+    - target: {fileID: 4223438334661061874, guid: 0fdcf402e7d784995a29682667a28a49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1550,9 +1554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
   quizController: {fileID: 887500895}
-  colorNeutral: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  colorCorrect: {r: 0, g: 1, b: 0, a: 1}
-  colorWrong: {r: 1, g: 0, b: 0, a: 1}
+  colorNeutral: {r: 0.8980392, g: 0.88235295, b: 0.88235295, a: 0.83137256}
+  colorCorrect: {r: 0.20392157, g: 0.8117647, b: 0.20392157, a: 0.7019608}
+  colorWrong: {r: 0.8980392, g: 0.18039216, b: 0.18039216, a: 0.7019608}
+  answerDelay: 1.5
 --- !u!114 &886885147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +1786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &987088511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1900,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 467.19, y: 0}
-  m_SizeDelta: {x: -934.39, y: 0}
+  m_SizeDelta: {x: -934.39, y: -1070.2598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019687578
 MonoBehaviour:
@@ -2466,7 +2471,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 34}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1681896043
 MonoBehaviour:
@@ -3065,7 +3070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1940124619
 RectTransform:
   m_ObjectHideFlags: 0
