@@ -53,7 +53,7 @@ public class InputSubmission : MonoBehaviour
             string textAnswer = inputAnswer.text.Trim().ToLower();
             Debug.Log($"testo della risposta: {textAnswer}");
 
-            if (textAnswer == arrAnswers[_indexAnswer])
+            if (textAnswer == arrAnswers[_indexAnswer].ToLower())
             {
                 Debug.Log("Risposta corretta!");
                 tooltipText.gameObject.SetActive(true);
@@ -63,9 +63,9 @@ public class InputSubmission : MonoBehaviour
             }
             else
             {
-                Debug.Log("Risposta sbagliata");
+                Debug.Log($"Risposta sbagliata: {arrAnswers[_indexAnswer]}");
                 tooltipText.gameObject.SetActive(true);
-                tooltipText.text = $"Peccato.. {arrTooltip[_indexAnswer]}";
+                tooltipText.text = $"Peccato era {arrAnswers[_indexAnswer]} \ntip: {arrTooltip[_indexAnswer]}";
                 tooltipText.color = Color.red;
                 _isCorrect = false;
             }
@@ -80,7 +80,7 @@ public class InputSubmission : MonoBehaviour
             text.Trim().ToLower();
             Debug.Log($"testo della risposta: {text}");
 
-            if (text == arrAnswers[_indexAnswer])
+            if (text == arrAnswers[_indexAnswer].ToLower())
                 {
                     Debug.Log("Risposta corretta!");
                     tooltipText.text = arrTooltip[_indexAnswer];
@@ -89,9 +89,9 @@ public class InputSubmission : MonoBehaviour
                 }
             else
                 {
-                    Debug.Log("Risposta sbagliata");
+                    Debug.Log($"Risposta sbagliata: {arrAnswers[_indexAnswer]}");
                     tooltipText.gameObject.SetActive(true);
-                    tooltipText.text = $"Peccato.. {arrTooltip[_indexAnswer]}";
+                    tooltipText.text = $"Peccato era {arrAnswers[_indexAnswer]} \ntip: {arrTooltip[_indexAnswer]}";
                     tooltipText.color = Color.red;
                     _isCorrect = false;
                 }
