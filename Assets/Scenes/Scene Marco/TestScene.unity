@@ -1396,6 +1396,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 699881060}
     m_Modifications:
+    - target: {fileID: 15448979537892903, guid: 0fdcf402e7d784995a29682667a28a49, type: 3}
+      propertyPath: _quizController
+      value: 
+      objectReference: {fileID: 887500895}
     - target: {fileID: 1784050652305178945, guid: 0fdcf402e7d784995a29682667a28a49, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
