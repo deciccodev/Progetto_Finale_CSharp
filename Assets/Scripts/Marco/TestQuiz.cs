@@ -7,7 +7,7 @@ public class TestQuiz : MonoBehaviour
     void Start()
     {
         // Simula la scelta del topic
-        quizController.SelezionaArgomento("DomandeTipiDiDato.json");
+        quizController.SelezionaArgomento("questions_test.json");
     }
 }
 

@@ -1,7 +1,6 @@
 {
-   "questions": 
-[
-  {
+  "questions": [
+    {
     "QuestionType": 0,
     "rightAnswer": 0,
     "question": "Qual è il valore di default assegnato a una variabile di tipo \"int\" in C# se questa viene dichiarata ma non inizializzata esplicitamente?",
@@ -390,45 +389,6 @@
     "tooltipB": "L'uso dell'underscore come carattere iniziale è perfettamente valido e comune in certi contesti di programmazione.",
     "tooltipC": "Questo nome segue correttamente la convenzione camelCase ed è composto da soli caratteri alfanumerici.",
     "tooltipD": "Le regole di nomenclatura di C# vietano espressamente che un identificatore inizi con una cifra numerica."
-  },
-  {
-      "QuestionType": 2,
-      "rightAnswer": 2,
-      "question": "Inserisci il tipo corretto:\n___ nome = \"Mario\";",
-      "answerA": "int",
-      "answerB": "bool",
-      "answerC": "string",
-      "answerD": "char",
-      "tooltipA": "int serve per numeri interi.",
-      "tooltipB": "bool rappresenta vero o falso.",
-      "tooltipC": "string è il tipo corretto per il testo.",
-      "tooltipD": "char rappresenta un singolo carattere."
-    },
-    {
-      "QuestionType": 2,
-      "rightAnswer": 0,
-      "question": "Completa il codice:\n___ numero = 10;",
-      "answerA": "int",
-      "answerB": "float",
-      "answerC": "string",
-      "answerD": "bool",
-      "tooltipA": "Corretto! int è usato per numeri interi.",
-      "tooltipB": "float è per numeri con virgola.",
-      "tooltipC": "string è per il testo.",
-      "tooltipD": "bool è per valori true/false."
-    },
-    {
-      "QuestionType": 2,
-      "rightAnswer": 3,
-      "question": "Scegli il tipo corretto:\n___ iniziale = 'A';",
-      "answerA": "string",
-      "answerB": "int",
-      "answerC": "bool",
-      "answerD": "char",
-      "tooltipA": "string è per parole o frasi.",
-      "tooltipB": "int è per numeri interi.",
-      "tooltipC": "bool è solo true o false.",
-      "tooltipD": "char è corretto per un singolo carattere."
-    }
-]
+  }
+  ]
 }
