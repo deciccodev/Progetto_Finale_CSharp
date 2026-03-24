@@ -11,7 +11,6 @@ public class QuizController : MonoBehaviour
 
     [Header("Pannelli")]
     [SerializeField] GameObject pannelloArgomenti;
-    [SerializeField] GameObject pannelloQuiz;
 
     [Header("Panel Tipi Quiz")]
     [SerializeField] GameObject pannelloSceltaMultipla;
@@ -45,7 +44,6 @@ public class QuizController : MonoBehaviour
         risposteCorrette = 0;
 
         pannelloArgomenti.SetActive(false);
-        pannelloQuiz.SetActive(true);
 
         MostraDomanda();
     }
@@ -62,25 +60,21 @@ public class QuizController : MonoBehaviour
 
         switch (domanda.QuestionType)
         {
-            case TypeQuestion.DomandaMultipla:
-                pannelloSceltaMultipla.SetActive(true);
+            case TypeQuestion.DomandaMultipla: pannelloSceltaMultipla.SetActive(true);
                 var uiSceltaMultipla = pannelloSceltaMultipla.GetComponent<IstanziaBottoniQuizSceltaMultipla>();
                 uiSceltaMultipla.CreaBottoni(domanda, this);
                 break;
 
             //TODO CREARE SCRIPT PER ISTANZIARE GLI ALTRI PANEL
-            /*case TypeQuestion.Input:
-                pannelloInputField.SetActive(true);
+            /*case TypeQuestion.Input: pannelloInputField.SetActive(true);
                 var uiInput = pannelloInputField.GetComponent<IstanziaInputField>();
                 break;
 
-            case TypeQuestion.Dragger:
-                pannelloDragAndDrop.SetActive(true);
+            case TypeQuestion.Dragger: pannelloDragAndDrop.SetActive(true);
                 var uiDragger = pannelloDragAndDrop.GetComponent<IstanziaDragger>();
                 break;
 
-            case TypeQuestion.Maze:
-                pannelloMaze.SetActive(true);
+            case TypeQuestion.Maze: pannelloMaze.SetActive(true);
                 var uiMaze = pannelloMaze.GetComponent<IstanziaMaze>();
                 break;*/
         }
@@ -131,7 +125,6 @@ public class QuizController : MonoBehaviour
     // TORNA AL MENU
     void TornaAlMenu()
     {
-        pannelloQuiz.SetActive(false);
         pannelloArgomenti.SetActive(true);
     }
 
