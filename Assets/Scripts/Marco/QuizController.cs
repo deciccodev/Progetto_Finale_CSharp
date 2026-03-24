@@ -15,9 +15,9 @@ public class QuizController : MonoBehaviour
 
     [Header("Panel Tipi Quiz")]
     [SerializeField] GameObject pannelloSceltaMultipla;
-    /*[SerializeField] GameObject pannelloInputField;
+    //[SerializeField] GameObject pannelloInputField;
     [SerializeField] GameObject pannelloDragAndDrop;
-    [SerializeField] GameObject pannelloMaze;*/
+    //[SerializeField] GameObject pannelloMaze;
 
     [Header("Panel Visualizzazione Domanda")]
     [SerializeField] TextMeshProUGUI testoDomanda;
@@ -69,13 +69,14 @@ public class QuizController : MonoBehaviour
             //TODO CREARE SCRIPT PER ISTANZIARE GLI ALTRI PANEL
             /*case TypeQuestion.Input: pannelloInputField.SetActive(true);
                 var uiInput = pannelloInputField.GetComponent<IstanziaInputField>();
-                break;
+                break;*/
 
             case TypeQuestion.Dragger: pannelloDragAndDrop.SetActive(true);
                 var uiDragger = pannelloDragAndDrop.GetComponent<IstanziaDragger>();
+                uiDragger.CreaDomandaDragger(domanda);
                 break;
 
-            case TypeQuestion.Maze: pannelloMaze.SetActive(true);
+            /*case TypeQuestion.Maze: pannelloMaze.SetActive(true);
                 var uiMaze = pannelloMaze.GetComponent<IstanziaMaze>();
                 break;*/
         }
@@ -126,6 +127,7 @@ public class QuizController : MonoBehaviour
     // TORNA AL MENU
     void TornaAlMenu()
     {
+        DisattivaTipi();
         pannelloArgomenti.SetActive(true);
         // qui richiamo solo mode 
         progressMenu.SoloMode();
@@ -136,8 +138,8 @@ public class QuizController : MonoBehaviour
     void DisattivaTipi()
     {
         pannelloSceltaMultipla.SetActive(false);
-        /*pannelloInputField.SetActive(false);
+        //pannelloInputField.SetActive(false);
         pannelloDragAndDrop.SetActive(false);
-        pannelloMaze.SetActive(false);*/
+        //pannelloMaze.SetActive(false);
     }
 }
