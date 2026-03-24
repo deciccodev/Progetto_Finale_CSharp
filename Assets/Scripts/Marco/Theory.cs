@@ -11,11 +11,16 @@ public class Theory : MonoBehaviour
     [SerializeField] private List<Button> tabs;
 
     [Header("Scroll View")]
-    [SerializeField] private ScrollRect  scrollRect;
-    [SerializeField] private Transform   contentContainer;
-    [SerializeField] private GameObject  textPrefab;
+    [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private Transform contentContainer;
+    [SerializeField] private GameObject textPrefab;
 
+    [Header("Dati")]
     [SerializeField] private string jsonFileName = "Topics.json"; // Per ora lasciamo visibile il nome stringa per debug
+    [SerializeField] private Sprite spriteTabAttiva;
+    [SerializeField] private Sprite spriteTabDisattiva;
+    [SerializeField] private Color coloreTestoAttivo;
+    [SerializeField] private Color coloreTestoDisattivato;
 
     // Strutture dati per il parsing del JSON
     [System.Serializable]
@@ -33,8 +38,8 @@ public class Theory : MonoBehaviour
 
     // Stato interno
     private TopicList _data;
-    private int       _currentIndex = -1;
-    private bool      _ready        = false;
+    private int _currentIndex = -1;
+    private bool _ready = false;
 
     // Lifecycle
     private void Start()
@@ -149,6 +154,16 @@ public class Theory : MonoBehaviour
     private void UpdateTabVisuals(int activeIndex)
     {
         for (int i = 0; i < tabs.Count; i++)
-            tabs[i].interactable = (i != activeIndex);
+        {
+            bool isActive = (i == activeIndex);
+
+            tabs[i].GetComponent<Image>().sprite = isActive ? spriteTabAttiva : spriteTabDisattiva;
+
+            TextMeshProUGUI label = tabs[i].GetComponentInChildren<TextMeshProUGUI>();
+            if (label != null)
+                label.color = isActive ? coloreTestoAttivo : coloreTestoDisattivato;
+
+            tabs[i].interactable = !isActive;
+        }
     }
 }
