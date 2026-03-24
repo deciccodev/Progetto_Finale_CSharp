@@ -10,8 +10,14 @@ public class PlayerData //Classe pubblica per i dati del player da scrivere/legg
     public int maxScore;
     public int difficulty;
     public int progressLvl;
+    public int progressVariabili;
+    public int progressCicli;
+    public int progressDesignPattern;
+    public int progressOOP;
+    public int progressMetodi;
     public float gameVolume;
 }
+
 //[System.Serializable]
 public enum TypeQuestion
 {
@@ -105,7 +111,7 @@ public sealed class GameManager : MonoBehaviour
             File.WriteAllText(_path,jsonString);
             Debug.Log("Salvataggio completato");
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.Log($"Eccezione durante il salvataggio: {e}");
         }
@@ -175,7 +181,7 @@ public sealed class GameManager : MonoBehaviour
         return _playerData.difficulty;
     }
 
-    public void ProgressToSave(int i) {_playerData.progressLvl = i;}
+    //public void ProgressToSave(int i) {_playerData.progressLvl = i;}
     
     
 
@@ -191,7 +197,97 @@ public sealed class GameManager : MonoBehaviour
         }
     }
 
+    //Getter Progressi
+    public int GetProgress(string tipoProgresso)
+    {
+            switch (tipoProgresso)
+            {
+                case "variabili":
+                    Debug.Log($"Ritorno il progresso sulle variabili [{_playerData.progressVariabili}]");
+                    return _playerData.progressVariabili;
+                case "cicli":
+                    Debug.Log($"Ritorno il progresso sui cicli [{_playerData.progressCicli}]");
+                    return _playerData.progressCicli;
+                case "designPattern":
+                    Debug.Log($"Ritorno il progresso sui design pattern [{_playerData.progressDesignPattern}]");
+                    return _playerData.progressDesignPattern;
+                case "oop":
+                    Debug.Log($"Ritorno il progresso sui principi OOP [{_playerData.progressOOP}]");
+                    return _playerData.progressOOP;
+                case "metodi":
+                    Debug.Log($"Ritorno il progresso sui metodi [{_playerData.progressMetodi}]");
+                    return _playerData.progressMetodi;
+                case "livelli":
+                    Debug.Log($"Ritorno il progresso sui livelli [{_playerData.progressLvl}]");
+                    return _playerData.progressLvl;
+                default:
+                    Debug.Log("Valore per il progresso non valido");
+                    return 0;
+
+        }
+    }
+
+    //Setter Progressi
+    public void SetProgress(string tipoProgresso, int valoreProgress)
+    {
+            switch (tipoProgresso)
+            {
+                case "variabili":
+                    Debug.Log($"Aggiorno il progresso sulle variabili [{_playerData.progressVariabili} diventa {valoreProgress}]");
+                    if (_playerData.progressVariabili != valoreProgress)
+                    {
+                        _playerData.progressVariabili = valoreProgress;
+                    }
+                    break;
+
+                case "cicli":
+                    Debug.Log($"Aggiorno il progresso sui cicli [{_playerData.progressCicli} diventa {valoreProgress}]");
+                    if (_playerData.progressCicli != valoreProgress)
+                    {
+                        _playerData.progressCicli = valoreProgress;
+                    }
+                    break;
+
+                case "designPattern":
+                    Debug.Log($"Aggiorno il progresso sui design pattern [{_playerData.progressDesignPattern} diventa {valoreProgress}]");
+                    if(_playerData.progressDesignPattern != valoreProgress)
+                    {
+                        _playerData.progressDesignPattern = valoreProgress;
+                    }
+                    break;
+
+                case "oop":
+                    Debug.Log($"Aggiorno il progresso sui principi OOP [{_playerData.progressOOP} diventa {valoreProgress}]");
+                    if( _playerData.progressOOP != valoreProgress)
+                    {
+                        _playerData.progressOOP = valoreProgress;
+                    }
+                    break;
+
+                case "metodi":
+                    Debug.Log($"Aggiorno il progresso sui metodi [{_playerData.progressMetodi} diventa {valoreProgress}]");
+                    if(_playerData.progressMetodi != valoreProgress)
+                    {
+                        _playerData.progressMetodi = valoreProgress;
+                    }
+                    break;
+
+                case "livelli":
+                    Debug.Log($"Aggiorno il progresso sui livelli [{_playerData.progressLvl} diventa {valoreProgress}]");
+                    if (_playerData.progressLvl != valoreProgress)
+                    {
+                        _playerData.progressLvl = valoreProgress;
+                    }
+                    break;
+
+                default:
+                    Debug.Log("Valore per il progresso non valido");
+                    break;
+        }
     
+    }
+
+
     #endregion
 
 }
