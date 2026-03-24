@@ -4,6 +4,7 @@ using TMPro;
 
 public class QuizController : MonoBehaviour
 {
+    [SerializeField] private ProgressMenu  progressMenu;
     private List<FormQuestion> domandeCorrenti;
     private int indexDomanda = 0;
     private int risposteCorrette = 0;
@@ -126,6 +127,9 @@ public class QuizController : MonoBehaviour
     void TornaAlMenu()
     {
         pannelloArgomenti.SetActive(true);
+        // qui richiamo solo mode 
+        progressMenu.SoloMode();
+        //progressMenu.ResetBottone();
     }
 
     // UTILITY - disattiva tutti i tipi panel

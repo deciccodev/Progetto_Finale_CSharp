@@ -727,11 +727,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1278fe4e7191246a095a7c46fbbc5094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressMenu
-  bottoneVar: {fileID: 888411469}
-  bottoneCicli: {fileID: 1984601014}
-  bottoneOop: {fileID: 365401238}
-  bottoneDesignP: {fileID: 126645809}
-  bottoneMet: {fileID: 94010217}
+  starterQuiz: {fileID: 887500895}
+  buttonVar: {fileID: 888411469}
+  buttonCicli: {fileID: 1984601014}
+  buttonOop: {fileID: 365401238}
+  buttonDesignP: {fileID: 126645809}
+  buttonMethod: {fileID: 94010217}
 --- !u!4 &463200385
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,7 +1117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &684657287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,7 +1125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684657286}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cd1a9ef72ba3fe4a84164376f1c0b4b, type: 3}
   m_Name: 
@@ -1414,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07005e4061a752448a17db7f9613f44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuizController
+  progressMenu: {fileID: 463200384}
   pannelloArgomenti: {fileID: 1788259117}
   pannelloQuiz: {fileID: 1940124618}
   pannelloSceltaMultipla: {fileID: 1940124618}
