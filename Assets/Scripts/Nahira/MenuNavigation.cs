@@ -1,26 +1,33 @@
 using UnityEngine;
-
-public partial class MenuNavigation : MonoBehaviour
+using System.Collections.Generic;
+public class MenuNavigation : MonoBehaviour
 {
-    [Header("Riferimenti Pannelli")]
-    public GameObject mainMenu;
-    public GameObject difficultySelect;
-    public GameObject topicSelect;
-    public GameObject theory;
+    [Header("Lista di tutti i pannelli del menu")]
+    public List<GameObject> tuttiIPannelli;
 
-    // metodo per cambiare pannello
-    public void OpenPanel(GameObject panelToOpen)
+    // Funzione principale per cambiare pannello
+    public void OpenPanel(GameObject pannelloDaAprire)
     {
-        // spegniamo tutto per sicurezza
-        mainMenu.SetActive(false);
-        difficultySelect.SetActive(false);
-        topicSelect.SetActive(false);
-        theory.SetActive(false);
-
-        // accendiamo quello richiesto
-        panelToOpen.SetActive(true);
+        // 1. Spegne tutti i pannelli nella lista
+        foreach (GameObject p in tuttiIPannelli)
+        {
+            if (p != null)
+            {
+                p.SetActive(false);
+            }
+        }
+        // 2. Accende solo quello che abbiamo passato come parametro
+        if (pannelloDaAprire != null)
+        {
+            pannelloDaAprire.SetActive(true);
+        }
     }
-
-    // shortcut per tornare indietro o al menu principale
-    public void BackToMain() => OpenPanel(mainMenu);
+    // All'avvio del gioco, mostra solo il Main Menu
+    void Start()
+    {
+        if (tuttiIPannelli.Count > 0)
+        {
+            OpenPanel(tuttiIPannelli[0]); // Il primo della lista deve essere il MainMenu
+        }
+    }
 }
