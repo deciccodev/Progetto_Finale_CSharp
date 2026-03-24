@@ -2,7 +2,7 @@
   "questions": [
     {
       "QuestionType": 0,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "In C#, quale modificatore di visibilità rende un metodo accessibile solo all'interno della classe in cui è stato dichiarato?",
       "answerA": "public",
       "answerB": "internal",
@@ -15,7 +15,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Qual è la differenza fondamentale tra i parametri passati con la parola chiave `ref` e quelli passati con `out`?",
       "answerA": "Non esiste alcuna differenza funzionale; sono sinonimi utilizzati per migliorare la leggibilità.",
       "answerB": "I parametri `out` permettono solo il passaggio di tipi primitivi, mentre `ref` accetta oggetti.",
@@ -28,7 +28,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale delle seguenti affermazioni descrive correttamente l'overloading (sovraccarico) dei metodi?",
       "answerA": "Modificare il comportamento di un metodo virtuale ereditato da una classe base.",
       "answerB": "Dichiarare un metodo in un'interfaccia senza fornirne l'implementazione.",
@@ -41,7 +41,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Cosa indica il tipo di ritorno `void` nella firma di un metodo?",
       "answerA": "Il metodo non restituisce alcun valore al chiamante.",
       "answerB": "Il metodo restituisce un valore booleano predefinito pari a false.",
@@ -54,7 +54,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale parola chiave è necessaria nella classe derivata per ridefinire un metodo marcato come `virtual` nella classe base?",
       "answerA": "abstract",
       "answerB": "new",
@@ -67,7 +67,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "In un metodo C#, qual è l'ambito (scope) di una variabile dichiarata all'interno del corpo del metodo stesso?",
       "answerA": "È visibile solo all'interno del metodo in cui è stata dichiarata.",
       "answerB": "Rimane persistente in memoria anche dopo la fine dell'esecuzione del metodo.",
@@ -80,7 +80,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Cosa succede quando si passa un parametro 'per valore' a un metodo in C#?",
       "answerA": "Il programma lancia un'eccezione se si tenta di modificare il parametro.",
       "answerB": "Il metodo riceve una copia del valore, quindi le modifiche locali non influenzano la variabile originale.",
@@ -93,7 +93,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è lo scopo principale del delegato `Func<T1, T2, TResult>`?",
       "answerA": "Definire un costruttore personalizzato per una classe generica.",
       "answerB": "Gestire esclusivamente operazioni asincrone nel framework .NET.",
@@ -106,7 +106,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nell'architettura .NET, quale componente è responsabile della compilazione 'Just-In-Time' (JIT) dell'Intermediate Language (IL) in codice macchina?",
       "answerA": "BCL (Base Class Library)",
       "answerB": "CLR (Common Language Runtime)",
@@ -119,7 +119,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Secondo le convenzioni di nomenclatura C# (PascalCase), come dovrebbe essere scritto correttamente il nome di un metodo pubblico?",
       "answerA": "CalcolaMedia",
       "answerB": "CALCOLAMEDIA",
@@ -132,7 +132,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è il valore di default assegnato a una variabile di tipo intero (`int`) se non viene inizializzata esplicitamente?",
       "answerA": "0",
       "answerB": "null",
@@ -145,7 +145,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Nel pattern matching degli `switch`, cosa rappresenta il carattere underscore `_`?",
       "answerA": "Un segnaposto per indicare che il valore deve essere obbligatoriamente nullo.",
       "answerB": "Una variabile temporanea per il conteggio.",
@@ -158,7 +158,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Perché si dovrebbe preferire l'uso di un `Dictionary<TKey, TValue>` rispetto a una `List<T>` per cercare un elemento tramite una chiave univoca?",
       "answerA": "Perché occupa meno memoria complessiva.",
       "answerB": "Perché l'accesso tramite chiave è molto più veloce rispetto alla scansione sequenziale di una lista.",
@@ -171,7 +171,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale parola chiave viene utilizzata per invocare un metodo della classe base all'interno di un override nella classe derivata?",
       "answerA": "parent",
       "answerB": "super",
@@ -184,7 +184,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Cosa caratterizza un metodo dichiarato come `static`?",
       "answerA": "Appartiene alla classe stessa e non a una specifica istanza (oggetto).",
       "answerB": "Viene eseguito automaticamente dal Garbage Collector.",
@@ -197,7 +197,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "In un blocco `try-catch-finally`, quando viene eseguito il blocco `finally`?",
       "answerA": "Solo se non si è verificata alcuna eccezione.",
       "answerB": "Mai, se viene utilizzata l'istruzione return all'interno del blocco try.",
@@ -210,7 +210,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Qual è lo scopo del metodo `ToString()` ereditato dalla classe `System.Object`?",
       "answerA": "Convertire un oggetto in una sequenza di byte per il salvataggio su disco.",
       "answerB": "Fornire una rappresentazione testuale leggibile dell'oggetto.",
@@ -223,7 +223,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Quale tra questi è un delegato predefinito che accetta parametri ma non restituisce alcun valore?",
       "answerA": "Delegate",
       "answerB": "Action",
@@ -236,7 +236,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Nell'Iniezione delle Dipendenze (DI), cosa si intende per 'Constructor Injection'?",
       "answerA": "Fornire le dipendenze necessarie a una classe tramite i parametri del suo costruttore.",
       "answerB": "Creare manualmente le dipendenze all'interno del costruttore usando 'new'.",
@@ -249,7 +249,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è il limite principale della 'Setter Injection' rispetto alla 'Constructor Injection'?",
       "answerA": "Non garantisce che la dipendenza sia presente prima che l'oggetto venga utilizzato.",
       "answerB": "Le proprietà non possono essere cambiate a runtime.",
@@ -262,7 +262,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale operatore viene utilizzato per verificare a runtime se un oggetto è compatibile con un determinato tipo o interfaccia?",
       "answerA": "is",
       "answerB": "as",
@@ -275,7 +275,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Qual è la funzione del metodo `Invoke()` in un delegato o in un evento?",
       "answerA": "Registra un nuovo metodo all'interno della lista di esecuzione.",
       "answerB": "Esegue tutti i metodi attualmente associati al delegato.",
@@ -288,7 +288,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Perché un metodo dichiarato in una `interface` non può avere un corpo (implementazione) nelle versioni classiche di C#?",
       "answerA": "Perché le interfacce servono a definire solo lo stato (variabili) dell'oggetto.",
       "answerB": "Perché rappresentano un contratto puro che definisce 'cosa' l'oggetto fa, non 'come' lo fa.",
@@ -301,7 +301,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è il vantaggio principale dell'utilizzo del 'Factory Method'?",
       "answerA": "Garantisce che esista solo un'unica istanza di una classe in tutto il sistema.",
       "answerB": "Velocizza l'accesso ai dati nel database.",
@@ -314,7 +314,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Cosa accade se un metodo marcato come `sealed` viene ereditato da una sottoclasse?",
       "answerA": "Il compilatore genera automaticamente una copia del metodo per la sottoclasse.",
       "answerB": "Il metodo può essere utilizzato ma non può essere ulteriormente sovrascritto (`override`).",
@@ -327,7 +327,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nella manipolazione delle stringhe, cosa restituisce il metodo `string.Split(' ')`?",
       "answerA": "La stringa originale invertita.",
       "answerB": "Un array di stringhe composte dalle parole separate dallo spazio.",
@@ -340,7 +340,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è la sintassi corretta per un operatore ternario che assegna 'Pari' o 'Dispari' in base a una variabile `n`?",
       "answerA": "string s = (n % 2 == 0) ? \"Pari\" : \"Dispari\";",
       "answerB": "string s = (n % 2 == 0) if \"Pari\" else \"Dispari\";",
@@ -353,7 +353,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "A cosa serve la proprietà `Length` di un array in C#?",
       "answerA": "A ottenere il numero totale di elementi contenuti nell'array.",
       "answerB": "A modificare dinamicamente la dimensione dell'array.",
@@ -366,7 +366,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Quale vantaggio offre il pattern 'Strategy' rispetto a una serie di istruzioni `if-else` annidate?",
       "answerA": "Assicura che un metodo venga eseguito solo una volta per sessione.",
       "answerB": "Permette di scambiare l'algoritmo utilizzato da un oggetto in modo dinamico a runtime.",
@@ -379,7 +379,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale tra i seguenti operatori logici restituisce `true` solo se entrambe le condizioni verificate sono vere?",
       "answerA": "|| (OR)",
       "answerB": "^ (XOR)",
@@ -392,7 +392,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è lo scopo principale di un metodo in C#?",
       "answerA": "Memorizzare dati in modo permanente nel database.",
       "answerB": "Sostituire completamente l'uso delle classi.",
@@ -405,7 +405,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Se un metodo non deve restituire alcun valore, quale tipo di ritorno deve essere specificato?",
       "answerA": "null",
       "answerB": "int",

@@ -2,7 +2,7 @@
   "questions": [
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Secondo la classificazione dei 'Gang of Four' (GoF), a quale categoria appartiene un pattern che si occupa di come le classi e gli oggetti vengono composti per formare strutture più grandi?",
       "answerA": "Pattern Comportamentali",
       "answerB": "Pattern Architetturali",
@@ -15,7 +15,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Quale caratteristica dell'implementazione del pattern Singleton garantisce che non sia possibile creare istanze della classe dall'esterno utilizzando l'operatore 'new'?",
       "answerA": "L'implementazione di un oggetto di 'lock'.",
       "answerB": "L'uso di un costruttore privato.",
@@ -28,7 +28,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nel pattern Factory Method, qual è il principale vantaggio derivante dal delegare la responsabilità della creazione alle sottoclassi?",
       "answerA": "Riduzione del numero totale di classi nel sistema.",
       "answerB": "Disaccoppiamento tra il client e le classi concrete.",
@@ -41,7 +41,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Quale problema tipico della programmazione procedurale viene risolto dal pattern Strategy attraverso l'incapsulamento degli algoritmi?",
       "answerA": "La mancanza di supporto per l'ereditarietà multipla.",
       "answerB": "Le lunghe catene di istruzioni 'if/else' o 'switch'.",
@@ -54,7 +54,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Il pattern Observer definisce una relazione 'uno-a-molti'. Cosa accade quando lo stato del 'Subject' (o Observable) cambia?",
       "answerA": "Tutti gli Observer registrati vengono notificati automaticamente.",
       "answerB": "Il Subject viene distrutto e ricreato con il nuovo stato.",
@@ -67,7 +67,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Perché il pattern Decorator è spesso preferito all'ereditarietà classica per estendere le funzionalità di un oggetto?",
       "answerA": "Perché consente di combinare più comportamenti in modo flessibile a runtime.",
       "answerB": "Perché è l'unico modo per accedere ai campi privati della classe base.",
@@ -80,7 +80,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è lo scopo principale del pattern 'Facade' nell'ambito dei pattern strutturali?",
       "answerA": "Garantire che una classe abbia una sola istanza globale.",
       "answerB": "Permettere la comunicazione tra interfacce incompatibili.",
@@ -93,7 +93,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Nell'implementazione 'thread-safe' del Singleton in C#, a cosa serve il doppio controllo (double-check locking) della variabile `_instance`?",
       "answerA": "A prevenire che due thread creino due istanze separate contemporaneamente.",
       "answerB": "A convertire il codice IL in codice macchina più velocemente.",
@@ -106,7 +106,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Quale pattern comportamentale è ideale per implementare un sistema di 'Undo/Redo' salvando le richieste come oggetti?",
       "answerA": "Pattern Decorator",
       "answerB": "Pattern Observer",
@@ -119,7 +119,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Cosa si intende per 'Iniezione delle Dipendenze' (Dependency Injection) in relazione ai design pattern?",
       "answerA": "Fornire le dipendenze a una classe dall'esterno, solitamente tramite costruttore.",
       "answerB": "L'uso obbligatorio della parola chiave 'new' dentro ogni metodo.",
@@ -132,7 +132,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Nel pattern Observer, qual è lo scopo del metodo 'Detach' (o Rimuovi)?",
       "answerA": "Bloccare l'accesso al database da parte del client.",
       "answerB": "Inizializzare lo stato locale dell'osservatore.",
@@ -145,7 +145,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale tra i seguenti è un esempio di pattern 'Comportamentale' che gestisce gli algoritmi come una famiglia intercambiabile?",
       "answerA": "Strategy",
       "answerB": "Adapter",
@@ -158,7 +158,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nell'implementazione thread-safe del Singleton in C#, perché viene eseguito un doppio controllo sulla variabile `_instance` prima e dopo l'istruzione lock?",
       "answerA": "Per consentire la creazione di istanze multiple in ambienti multithread senza bloccare l'esecuzione globale.",
       "answerB": "Per ottimizzare le prestazioni evitando il lock se l'istanza esiste già, garantendo al contempo che un solo thread crei l'oggetto.",
@@ -171,7 +171,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è il vantaggio architetturale principale derivante dall'uso del pattern Factory Method rispetto all'istanziazione diretta tramite l'operatore new?",
       "answerA": "Semplifica la sintassi del codice eliminando la necessità di utilizzare interfacce o classi astratte.",
       "answerB": "Garantisce che ogni oggetto creato venga automaticamente registrato in un database centrale per la persistenza.",
@@ -184,7 +184,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nel pattern Observer, quale affermazione descrive meglio la conoscenza che il Subject ha dei suoi Observer?",
       "answerA": "Il Subject conosce l'implementazione concreta di ogni Observer per inviare dati specifici a ciascuno.",
       "answerB": "Il Subject conosce gli Observer solo attraverso un'interfaccia comune, mantenendo un basso accoppiamento.",
@@ -197,7 +197,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "In che modo il pattern Decorator evita la 'proliferazione di sottoclassi' che si verificherebbe con l'ereditarietà classica?",
       "answerA": "Utilizzando la composizione ricorsiva per combinare i comportamenti a runtime invece di definirli a compile-time.",
       "answerB": "Rendendo tutte le classi del sistema 'static', impedendo così la creazione di nuove gerarchie.",
@@ -210,7 +210,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Quale principio SOLID viene maggiormente favorito dal pattern Strategy quando si aggiunge un nuovo algoritmo di calcolo al sistema?",
       "answerA": "Il principio di Sostituzione di Liskov (LSP).",
       "answerB": "Il principio di Segregazione delle Interfacce (ISP).",
@@ -223,7 +223,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Perché la classe Singleton viene spesso dichiarata con la keyword `sealed` in C#?",
       "answerA": "Per obbligare il programmatore a inizializzare tutti i campi nel costruttore statico.",
       "answerB": "Per consentire alla classe di essere utilizzata come un'interfaccia all'interno di un sistema di Dependency Injection.",
@@ -236,7 +236,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nel pattern Strategy, qual è il compito principale della classe Context?",
       "answerA": "Creare nuove istanze di strategie concrete in base all'input dell'utente tramite uno switch-case.",
       "answerB": "Mantenere un riferimento a un oggetto Strategy e delegare ad esso l'esecuzione dell'algoritmo.",
@@ -249,7 +249,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale tra i seguenti pattern è classificato come 'Strutturale'?",
       "answerA": "Factory Method",
       "answerB": "Singleton",
@@ -262,7 +262,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nel pattern Factory Method, chi ha la responsabilità finale di decidere quale ConcreteProduct istanziare?",
       "answerA": "Il client che invoca il metodo FactoryMethod.",
       "answerB": "Le sottoclassi concrete del Creator (ConcreteCreators).",
@@ -275,7 +275,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Cosa differenzia principalmente il pattern Decorator dal pattern Strategy?",
       "answerA": "Non esiste alcuna differenza, sono due nomi diversi per lo stesso concetto di polimorfismo.",
       "answerB": "Il Decorator può essere applicato solo a classi statiche, mentre lo Strategy solo a interfacce.",
@@ -288,7 +288,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "In un'implementazione thread-safe del pattern Singleton in C#, qual è lo scopo principale del meccanismo di 'double-check locking'?",
       "answerA": "Impedire che la classe venga ereditata da altre sottoclassi nel framework.",
       "answerB": "Sostituire la necessità di dichiarare il costruttore come privato.",
@@ -301,7 +301,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Secondo la tassonomia della Gang of Four (GoF), quale dei seguenti pattern è classificato come 'Strutturale'?",
       "answerA": "Decorator",
       "answerB": "Factory Method",
@@ -314,7 +314,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Qual è il vantaggio principale del pattern Factory Method rispetto all'uso diretto dell'operatore new all'interno di un client?",
       "answerA": "Permette di aggiungere nuovi attributi privati a una classe esistente senza ricompilare il codice.",
       "answerB": "Riduce l'accoppiamento delegando la scelta della classe concreta alle sottoclassi o a un metodo specializzato.",
@@ -327,7 +327,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Perché il pattern Decorator è considerato un'alternativa flessibile all'ereditarietà classica?",
       "answerA": "Consente a una classe di ereditare contemporaneamente da più classi base in C#.",
       "answerB": "Permette di aggiungere responsabilità agli oggetti dinamicamente a runtime invece che staticamente tramite sottoclassi.",
@@ -340,7 +340,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Nel pattern Observer, quale principio fondamentale della programmazione ad oggetti viene promosso attraverso l'uso del metodo Notify()?",
       "answerA": "Il disaccoppiamento (decoupling), poiché il Soggetto non conosce i dettagli implementativi dei suoi Osservatori.",
       "answerB": "La gerarchia di ereditarietà singola obbligatoria tra Soggetto e Osservatore.",
@@ -353,7 +353,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è lo scopo principale del pattern Strategy in un contesto di sviluppo software?",
       "answerA": "Rendere intercambiabile una famiglia di algoritmi, permettendo al client di scegliere quello più adatto a runtime.",
       "answerB": "Fornire un'interfaccia semplificata per accedere a un sottosistema complesso di classi.",
@@ -366,7 +366,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale tra le seguenti affermazioni descrive correttamente l'intento dei pattern 'Creazionali'?",
       "answerA": "Nascondere la complessità della creazione di oggetti e separare il client dalle classi concrete.",
       "answerB": "Garantire che ogni classe derivata implementi obbligatoriamente tutti i metodi della classe base.",
@@ -379,7 +379,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "In C#, perché è considerata una buona pratica dichiarare una classe Singleton come `sealed`?",
       "answerA": "Per forzare l'inizializzazione dell'oggetto solo quando il programma viene avviato (Eager loading).",
       "answerB": "Per permettere al compilatore di allocare l'oggetto nello stack invece che nello heap.",
@@ -392,7 +392,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Qual è la differenza fondamentale tra i pattern Adapter e Facade, nonostante entrambi siano strutturali?",
       "answerA": "L'Adapter crea nuove funzionalità, mentre il Facade si limita a nascondere quelle esistenti.",
       "answerB": "L'Adapter viene usato solo a tempo di compilazione, mentre il Facade agisce solo a runtime.",
@@ -405,7 +405,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale problematica viene risolta dal pattern Command nello sviluppo di applicazioni interattive?",
       "answerA": "La separazione tra chi invoca l'operazione e chi la esegue effettivamente, supportando azioni reversibili.",
       "answerB": "L'eccessivo consumo di memoria dovuto alla creazione di troppi piccoli oggetti simili.",
