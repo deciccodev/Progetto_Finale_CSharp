@@ -69,18 +69,15 @@ public class QuizController : MonoBehaviour
                 break;
 
             //TODO CREARE SCRIPT PER ISTANZIARE GLI ALTRI PANEL
-            /*case TypeQuestion.Input:
-                pannelloInputField.SetActive(true);
+            /*case TypeQuestion.Input: pannelloInputField.SetActive(true);
                 var uiInput = pannelloInputField.GetComponent<IstanziaInputField>();
                 break;
 
-            case TypeQuestion.Dragger:
-                pannelloDragAndDrop.SetActive(true);
+            case TypeQuestion.Dragger: pannelloDragAndDrop.SetActive(true);
                 var uiDragger = pannelloDragAndDrop.GetComponent<IstanziaDragger>();
                 break;
 
-            case TypeQuestion.Maze:
-                pannelloMaze.SetActive(true);
+            case TypeQuestion.Maze: pannelloMaze.SetActive(true);
                 var uiMaze = pannelloMaze.GetComponent<IstanziaMaze>();
                 break;*/
         }
