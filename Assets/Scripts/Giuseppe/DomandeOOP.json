@@ -2,7 +2,7 @@
   "questions": [
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "In C#, qual è la differenza sostanziale tra l'utilizzo della parola chiave `override` e della parola chiave `new` nella firma di un metodo di una classe derivata?",
       "answerA": "`override` estende l'implementazione virtuale della classe base consentendo il polimorfismo a runtime, mentre `new` nasconde il membro ereditato creando una nuova firma indipendente.",
       "answerB": "`override` permette di cambiare il tipo di ritorno del metodo, mentre `new` richiede che la firma sia identica a quella della classe base.",
@@ -15,7 +15,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale principio dell'OOP viene violato se i campi di una classe sono dichiarati `public` senza l'uso di proprietà o metodi di accesso?",
       "answerA": "Incapsulamento",
       "answerB": "Astrazione",
@@ -28,7 +28,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Nel contesto dell'astrazione in C#, quale delle seguenti affermazioni descrive correttamente una differenza tra una classe astratta e un'interfaccia?",
       "answerA": "Le classi astratte supportano l'ereditarietà multipla, mentre una classe può implementare una sola interfaccia.",
       "answerB": "Una classe astratta può contenere campi (variabili di istanza) e implementazioni di metodi concreti, mentre un'interfaccia definisce principalmente un contratto comportamentale.",
@@ -41,7 +41,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è l'effetto dell'applicazione del modificatore `sealed` a un metodo marcato con `override` in una classe derivata?",
       "answerA": "Rende il metodo inaccessibile alle classi derivate (equivalente a `private`).",
       "answerB": "Permette al metodo di essere chiamato solo all'interno del costruttore della classe base.",
@@ -54,7 +54,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Dato lo scenario: `Animale a = new Cane();`. Se `Animale` definisce `FaiVerso()` come `virtual` e `Cane` lo ridefinisce con `new void FaiVerso()`, cosa accadrà chiamando `a.FaiVerso()`?",
       "answerA": "Verrà eseguito il metodo `FaiVerso()` definito nella classe `Animale`.",
       "answerB": "Il programma genererà un errore di compilazione per ambiguità.",
@@ -67,7 +67,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Qual è il vantaggio principale dell'uso dell'operatore `as` rispetto a un cast esplicito tra parentesi come `(Cane)animale`?",
       "answerA": "L'operatore `as` è l'unico modo per eseguire il casting tra un'interfaccia e una classe concreta.",
       "answerB": "L'operatore `as` esegue una conversione profonda dell'oggetto creando una nuova istanza in memoria.",
@@ -80,7 +80,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale modificatore di accesso deve essere utilizzato per permettere a un membro di essere visibile solo all'interno della classe stessa e nelle sue classi derivate?",
       "answerA": "`private`",
       "answerB": "`internal`",
@@ -93,7 +93,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Cosa si intende per 'Inversione delle Dipendenze' (DIP) nell'ambito dell'astrazione e dell'OOP?",
       "answerA": "I moduli di alto livello non devono dipendere da moduli di basso livello, ma entrambi devono dipendere da astrazioni (interfacce).",
       "answerB": "È il processo in cui una classe base chiama i metodi definiti esclusivamente nelle sue classi derivate.",
@@ -106,7 +106,7 @@
     },
     {
       "QuestionType": 2,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "Perché è necessario sovrascrivere il metodo `GetHashCode()` quando si effettua l'override di `Equals()` in una classe C#?",
       "answerA": "Perché il compilatore C# genera un errore fatale se solo uno dei due metodi viene sovrascritto.",
       "answerB": "`GetHashCode()` è il metodo che effettivamente esegue il confronto dei dati, mentre `Equals()` si occupa solo della gestione della memoria.",
@@ -119,7 +119,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale delle seguenti definizioni descrive meglio il concetto di 'Polimorfismo a compile-time'?",
       "answerA": "Il sovraccarico dei metodi (Method Overloading), dove il compilatore seleziona il metodo corretto in base al numero e al tipo di parametri passati.",
       "answerB": "Il casting di un oggetto verso la sua classe base tramite l'operatore `as`.",
@@ -132,7 +132,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Quale dei seguenti principi dell'OOP ha lo scopo principale di nascondere i dati interni di una classe, permettendo l'accesso solo tramite metodi o proprietà controllate?",
       "answerA": "Astrazione",
       "answerB": "Ereditarietà",
@@ -145,7 +145,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "In C#, quale operatore viene utilizzato nella dichiarazione di una classe per indicare che essa eredita da una classe base?",
       "answerA": "Il punto .",
       "answerB": "I due punti :",
@@ -158,7 +158,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Qual è la differenza fondamentale tra l'uso delle parole chiave `virtual` e `override` nel contesto del polimorfismo?",
       "answerA": "`virtual` viene usato per le interfacce, mentre `override` per le classi astratte.",
       "answerB": "`virtual` dichiara un membro sovrascrivibile, mentre `override` fornisce la nuova implementazione nella classe derivata.",
@@ -171,7 +171,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Cosa accade se si tenta di istanziare direttamente una classe dichiarata come `abstract`?",
       "answerA": "Il programma viene eseguito correttamente creando un oggetto vuoto.",
       "answerB": "Viene creato un oggetto di tipo System.Object.",
@@ -184,7 +184,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è il vantaggio principale dell'utilizzo di un'interfaccia rispetto a una classe astratta quando si progetta un sistema?",
       "answerA": "Le interfacce possono contenere campi privati per mantenere lo stato.",
       "answerB": "Le interfacce sono più veloci in termini di performance rispetto alle classi astratte.",
@@ -197,7 +197,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Quale parola chiave viene utilizzata per impedire che una classe venga ulteriormente ereditata?",
       "answerA": "sealed",
       "answerB": "static",
@@ -210,7 +210,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Quale tra questi è un esempio di polimorfismo a compile-time (statico)?",
       "answerA": "L'uso dell'operatore `as`.",
       "answerB": "Il Method Overloading.",
@@ -223,7 +223,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "In una gerarchia di ereditarietà, a cosa serve la parola chiave `base`?",
       "answerA": "A dichiarare che una classe è la radice di tutte le altre classi.",
       "answerB": "Ad accedere a membri o costruttori della classe genitore dalla classe derivata.",
@@ -236,7 +236,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Qual è lo scopo dei modificatori di accesso `get` e `set` in una proprietà C#?",
       "answerA": "Definire se la proprietà è visibile solo all'interno del file di progetto.",
       "answerB": "Obbligare l'utente a inserire una password per modificare il dato.",
@@ -249,7 +249,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Se una classe implementa un'interfaccia che contiene un metodo senza corpo, cosa è obbligata a fare la classe?",
       "answerA": "Dichiarare il metodo come `static`.",
       "answerB": "Fornire un'implementazione concreta per quel metodo.",
@@ -262,7 +262,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 1,
+      "rightAnswer": 1,
       "question": "Qual è la funzione principale del modificatore di accesso `protected`?",
       "answerA": "Impedire che una classe venga ereditata.",
       "answerB": "Rendere un membro accessibile solo alla classe stessa e alle sue classi derivate.",
@@ -275,7 +275,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Cos'è una classe astratta in C#?",
       "answerA": "Una classe che può avere solo metodi statici.",
       "answerB": "Un'interfaccia che permette l'ereditarietà multipla.",
@@ -288,7 +288,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è una differenza fondamentale tra un'interfaccia e una classe astratta?",
       "answerA": "Una classe può implementare più interfacce, ma può ereditare da una sola classe astratta.",
       "answerB": "Le interfacce possono contenere campi privati, le classi astratte no.",
@@ -301,7 +301,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 0,
+      "rightAnswer": 0,
       "question": "Qual è il vantaggio principale del 'Method Overloading'?",
       "answerA": "Permettere di definire più metodi con lo stesso nome ma con parametri diversi.",
       "answerB": "Garantire che un metodo sia accessibile solo all'interno dell'assembly.",
@@ -314,7 +314,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "A cosa serve la parola chiave `base` all'interno di una classe derivata?",
       "answerA": "A creare una nuova istanza della classe corrente.",
       "answerB": "A dichiarare la classe come radice della gerarchia.",
@@ -327,7 +327,7 @@
     },
     {
       "QuestionType": 1,
-      "rightanswer": 3,
+      "rightAnswer": 3,
       "question": "Cosa si intende per 'astrazione' tramite interfacce?",
       "answerA": "Limitare il numero di oggetti che possono essere creati da una classe.",
       "answerB": "Creare una classe che non può contenere metodi con implementazione.",
@@ -340,7 +340,7 @@
     },
     {
       "QuestionType": 0,
-      "rightanswer": 2,
+      "rightAnswer": 2,
       "question": "In C#, tutte le classi derivano implicitamente da quale classe base?",
       "answerA": "System.Main",
       "answerB": "System.Class",

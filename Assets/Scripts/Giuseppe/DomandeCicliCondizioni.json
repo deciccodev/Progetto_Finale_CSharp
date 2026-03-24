@@ -2,7 +2,7 @@
    "questions": [
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Qual è il risultato dell'espressione logica !(10 > 5)?",
          "answerA": "10",
          "answerB": "True",
@@ -15,7 +15,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "In una catena di 'if - else if - else', cosa succede se la prima condizione dell'if è vera?",
          "answerA": "Il programma crasha se non c'è un'istruzione break.",
          "answerB": "Viene eseguito solo il primo blocco e gli altri vengono saltati.",
@@ -28,7 +28,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "Quale operatore aritmetico viene spesso usato nelle condizioni per verificare se un numero è pari o dispari?",
          "answerA": "* (Moltiplicazione)",
          "answerB": "++ (Incremento)",
@@ -41,7 +41,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Quale ciclo è più indicato per iterare su una stringa carattere per carattere senza usare un indice numerico?",
          "answerA": "if-else",
          "answerB": "while",
@@ -54,7 +54,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "A cosa serve l'underscore (_) in una struttura switch con pattern matching?",
          "answerA": "Indica che il valore deve essere obbligatoriamente nullo.",
          "answerB": "Rappresenta una variabile di tipo stringa vuota.",
@@ -67,7 +67,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Nell'operatore logico AND (&&), quando l'intera espressione risulta vera?",
          "answerA": "Se almeno una delle due condizioni è vera.",
          "answerB": "Solo se entrambe le condizioni sono vere.",
@@ -80,7 +80,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Quale parte del ciclo 'for' viene eseguita dopo ogni iterazione del blocco di codice?",
          "answerA": "L'inizializzazione della variabile.",
          "answerB": "L'incremento o l'aggiornamento dell'indice.",
@@ -93,7 +93,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Qual è la differenza principale tra un ciclo 'while' e un ciclo 'do-while'?",
          "answerA": "Il while può essere utilizzato solo con numeri interi.",
          "answerB": "Il do-while garantisce almeno un'esecuzione del blocco di codice.",
@@ -106,7 +106,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "In un'istruzione switch-case, a cosa serve la parola chiave 'break'?",
          "answerA": "Riavvia il ciclo dall'inizio della valutazione.",
          "answerB": "Interrompe l'esecuzione del blocco switch una volta trovato un caso corrispondente.",
@@ -119,7 +119,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Quale struttura di controllo viene utilizzata per eseguire un blocco di codice solo se una condizione specifica è vera?",
          "answerA": "if",
          "answerB": "for",
@@ -132,7 +132,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Qual è la differenza fondamentale tra il ciclo 'while' e il ciclo 'do-while'?",
          "answerA": "Il ciclo 'do-while' valuta la condizione prima di eseguire il blocco di codice.",
          "answerB": "Il ciclo 'do-while' garantisce che il codice venga eseguito almeno una volta.",
@@ -145,7 +145,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "In una catena di istruzioni 'if-else if-else', cosa accade se la prima condizione 'if' risulta vera?",
          "answerA": "Il programma verifica comunque le condizioni else if successive.",
          "answerB": "Viene eseguito sia il blocco if che il blocco finale else.",
@@ -158,7 +158,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Quale operatore aritmetico viene comunemente usato in un 'if' per verificare se un numero intero è pari?",
          "answerA": "L'operatore di moltiplicazione *",
          "answerB": "L'operatore di incremento ++",
@@ -171,7 +171,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "Cosa indica l'uso del carattere underscore '_' in uno 'switch' che utilizza il pattern matching?",
          "answerA": "Serve a definire una costante numerica all'interno dello switch.",
          "answerB": "Indica una variabile locale che deve essere inizializzata.",
@@ -184,7 +184,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Come si comporta un ciclo 'foreach' quando viene applicato a una variabile di tipo string?",
          "answerA": "Non è possibile usare 'foreach' su una stringa perché non è un array.",
          "answerB": "Itera su ogni singolo carattere (char) che compone la stringa.",
@@ -197,7 +197,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Dato il ciclo 'for (int i = 0; i < 10; i += 2)', quante iterazioni verranno eseguite?",
          "answerA": "11",
          "answerB": "10",
@@ -210,7 +210,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Cosa succede se in uno 'switch' tradizionale (C#) si omette l'istruzione 'break' alla fine di un 'case' non vuoto?",
          "answerA": "Il compilatore genera un errore poiché non è permesso il 'fall-through' automatico.",
          "answerB": "Lo 'switch' viene ignorato e il programma continua normalmente.",
@@ -223,7 +223,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "Quale risultato restituisce l'espressione logica '!(5 > 3 && 2 == 2)'?",
          "answerA": "Un errore di runtime.",
          "answerB": "true",
@@ -236,7 +236,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Qual è lo scopo principale dell'istruzione 'default' in una struttura 'switch'?",
          "answerA": "Gestire i valori che non corrispondono a nessuno dei casi 'case' specificati.",
          "answerB": "Indicare che lo 'switch' deve essere ripetuto ciclicamente.",
@@ -249,7 +249,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Quale operatore logico restituisce 'true' se almeno una delle condizioni verificate è vera?",
          "answerA": "L'operatore NOT !",
          "answerB": "L'operatore AND &&",
@@ -262,7 +262,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Nella sintassi del ciclo 'for', qual è il ruolo della terza espressione (es. i++)?",
          "answerA": "Verificare se il ciclo deve continuare o interrompersi.",
          "answerB": "Inizializzare la variabile del ciclo prima dell'esecuzione.",
@@ -275,7 +275,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Quale istruzione può essere usata per scrivere un'operazione condizionale 'if-else' in una sola riga?",
          "answerA": "L'operatore ternario ?:",
          "answerB": "Il ciclo 'foreach' con filtro integrato.",
@@ -288,7 +288,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Qual è la differenza fondamentale tra un ciclo 'while' e un ciclo 'do-while' in C#?",
          "answerA": "Il ciclo 'do-while' può essere utilizzato solo con tipi di dati numerici.",
          "answerB": "Solo il ciclo 'while' supporta l'istruzione 'break' per interrompere l'esecuzione.",
@@ -301,7 +301,7 @@
       },
       {
          "QuestionType": 2,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Nello 'switch-case' con pattern matching, a cosa serve la clausola 'when'?",
          "answerA": "Ad aggiungere una condizione booleana supplementare oltre al controllo sul tipo o sul valore.",
          "answerB": "A convertire automaticamente l'oggetto nel tipo specificato nel case.",
@@ -314,7 +314,7 @@
       },
       {
          "QuestionType": 2,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Data l'espressione 'bool result = (a > 10 || b < 5) && !c;', quale combinazione di valori rende 'result' uguale a 'true'?",
          "answerA": "a = 12, b = 2, c = true",
          "answerB": "a = 5, b = 10, c = false",
@@ -327,7 +327,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Cosa accade se in una struttura 'if-else if-else' più di una condizione risulta vera?",
          "answerA": "Viene eseguito solo l'ultimo blocco la cui condizione è vera.",
          "answerB": "Viene eseguito solo il blocco di codice corrispondente alla prima condizione vera incontrata.",
@@ -340,7 +340,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "Qual è il comportamento dell'istruzione 'foreach' quando viene applicata a una variabile di tipo 'string'?",
          "answerA": "Restituisce l'intera stringa in un'unica iterazione.",
          "answerB": "Non è possibile usare 'foreach' su una stringa, è necessario un ciclo 'for' con indice.",
@@ -353,7 +353,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "In un'espressione 'switch' moderna (C# 8.0+), cosa rappresenta il simbolo '_'?",
          "answerA": "Rappresenta il 'discard pattern', che agisce come caso predefinito per gestire qualsiasi valore non precedentemente specificato.",
          "answerB": "È un segnaposto per indicare che quel caso deve essere ignorato e saltato.",
@@ -366,7 +366,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 2,
+         "rightAnswer": 2,
          "question": "Quante volte verrà eseguito il corpo del seguente ciclo? for (int i = 1; i <= 5; i += 2)",
          "answerA": "Infinitamente",
          "answerB": "5 volte",
@@ -379,7 +379,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 1,
+         "rightAnswer": 1,
          "question": "Perché l'utilizzo di 'int.TryParse' è spesso preferito all'interno di una condizione 'if' rispetto a 'int.Parse'?",
          "answerA": "È l'unico metodo che supporta il casting esplicito verso tipi 'float'.",
          "answerB": "Permette di tentare la conversione e gestire l'eventuale fallimento tramite il ramo else senza sollevare eccezioni.",
@@ -392,7 +392,7 @@
       },
       {
          "QuestionType": 1,
-         "rightanswer": 0,
+         "rightAnswer": 0,
          "question": "Qual è il rischio principale di non includere l'istruzione 'break' in un blocco 'case' di uno 'switch' in C#?",
          "answerA": "Il compilatore genererà un errore, poiché il 'fall-through' non è permesso se il case contiene istruzioni.",
          "answerB": "Verrà eseguito automaticamente solo il caso 'default'.",
@@ -405,7 +405,7 @@
       },
       {
          "QuestionType": 0,
-         "rightanswer": 3,
+         "rightAnswer": 3,
          "question": "Quale struttura di controllo è più indicata per gestire un menu utente con molteplici opzioni basate su un singolo valore intero?",
          "answerA": "'while'",
          "answerB": "'if' semplice",

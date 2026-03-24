@@ -9,12 +9,17 @@ public class PlayerData //Classe pubblica per i dati del player da scrivere/legg
     public string userName;
     public int maxScore;
     public int difficulty;
+    
     public int progressLvl;
+
+    /*
     public int progressVariabili;
     public int progressCicli;
     public int progressDesignPattern;
     public int progressOOP;
     public int progressMetodi;
+    */
+
     public float gameVolume;
 }
 
@@ -170,9 +175,10 @@ public sealed class GameManager : MonoBehaviour
     
     public void SetDifficulty(int i) 
     {
-        if(i>=0 && i<= _maxDifficulty)
+        if(i>=0 && i<= _maxDifficulty && _playerData.difficulty != i)
         {
             _playerData.difficulty = i;
+            _playerData.progressLvl = 0;
         }
     }
 
@@ -198,8 +204,11 @@ public sealed class GameManager : MonoBehaviour
     }
 
     //Getter Progressi
+    //
     public int GetProgress(string tipoProgresso)
     {
+        return _playerData.progressLvl;
+        /*
             switch (tipoProgresso)
             {
                 case "variabili":
@@ -225,11 +234,23 @@ public sealed class GameManager : MonoBehaviour
                     return 0;
 
         }
+        */
     }
 
     //Setter Progressi
-    public void SetProgress(string tipoProgresso, int valoreProgress)
+    public void SetProgress(/*bool isPassed*//*string tipoProgresso, int valoreProgress*/)
     {
+        _playerData.progressLvl += 1;
+
+        /*
+        if (isPassed)
+        {
+            _playerData.progressLvl += 1;
+        }
+        */
+
+        /*
+        // Metodo privato  SetMatchProgress
             switch (tipoProgresso)
             {
                 case "variabili":
@@ -283,8 +304,8 @@ public sealed class GameManager : MonoBehaviour
                 default:
                     Debug.Log("Valore per il progresso non valido");
                     break;
-        }
-    
+        }*/
+
     }
 
 

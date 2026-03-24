@@ -111,7 +111,7 @@ public class QuizController : MonoBehaviour
             Debug.Log("TOPIC SUPERATO");
 
             // TODO: gestire sblocco topic successivo
-            GameManager.Instance.ProgressToSave(GameManager.Instance.GetDifficulty() + 1);
+            GameManager.Instance.SetProgress();
             GameManager.Instance.SaveData();
         }
         else
