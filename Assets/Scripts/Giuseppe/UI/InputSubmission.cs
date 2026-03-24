@@ -14,7 +14,9 @@ public class InputSubmission : MonoBehaviour
     private string[] arrAnswers;
     private string[] arrTooltip;
     private int _indexAnswer;
+    private bool _isCorrect;
     [SerializeField] private FormQuestion _formQuestion;
+    [SerializeField] private QuizController _quizController;
     
     #endregion
    
@@ -33,6 +35,7 @@ public class InputSubmission : MonoBehaviour
         _formQuestion = formQuestion;
         inputAnswer.text = "";
         tooltipText.text = "";
+        questionText.text = _formQuestion.question;
 
         arrAnswers = new string[] {_formQuestion.answerA,_formQuestion.answerB,_formQuestion.answerC,_formQuestion.answerD};
         arrTooltip = new string[] {_formQuestion.tooltipA,_formQuestion.tooltipB,_formQuestion.tooltipC,_formQuestion.tooltipD};
@@ -56,6 +59,7 @@ public class InputSubmission : MonoBehaviour
                 tooltipText.gameObject.SetActive(true);
                 tooltipText.text = $"Esatto! {arrTooltip[_indexAnswer]}";
                 tooltipText.color = Color.green;
+                _isCorrect = true;
             }
             else
             {
@@ -63,20 +67,42 @@ public class InputSubmission : MonoBehaviour
                 tooltipText.gameObject.SetActive(true);
                 tooltipText.text = $"Peccato.. {arrTooltip[_indexAnswer]}";
                 tooltipText.color = Color.red;
+                _isCorrect = false;
             }
+            NextQuestion();
         }
     }
 
     public void CheckSubmit(string text)
     {
-        text.Trim().ToLower();
-        Debug.Log($"testo della risposta: {text}");
+        if(_formQuestion != null)
+        {
+            text.Trim().ToLower();
+            Debug.Log($"testo della risposta: {text}");
 
-        if (text == arrAnswers[_indexAnswer])
-            {
-                Debug.Log("Risposta corretta!");
-                tooltipText.text = arrTooltip[_indexAnswer];
-            }
+            if (text == arrAnswers[_indexAnswer])
+                {
+                    Debug.Log("Risposta corretta!");
+                    tooltipText.text = arrTooltip[_indexAnswer];
+                    tooltipText.color = Color.green;
+                    _isCorrect = true;
+                }
+            else
+                {
+                    Debug.Log("Risposta sbagliata");
+                    tooltipText.gameObject.SetActive(true);
+                    tooltipText.text = $"Peccato.. {arrTooltip[_indexAnswer]}";
+                    tooltipText.color = Color.red;
+                    _isCorrect = false;
+                }
+            
+            NextQuestion();
+        }
+    }
+
+    public void NextQuestion()
+    {
+        _quizController.RispostaData(_isCorrect);
     }
 #endregion
 
