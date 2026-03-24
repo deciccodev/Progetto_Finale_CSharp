@@ -11,7 +11,6 @@ public class QuizController : MonoBehaviour
 
     [Header("Pannelli")]
     [SerializeField] GameObject pannelloArgomenti;
-    [SerializeField] GameObject pannelloQuiz;
 
     [Header("Panel Tipi Quiz")]
     [SerializeField] GameObject pannelloSceltaMultipla;
@@ -45,7 +44,6 @@ public class QuizController : MonoBehaviour
         risposteCorrette = 0;
 
         pannelloArgomenti.SetActive(false);
-        pannelloQuiz.SetActive(true);
 
         MostraDomanda();
     }
@@ -62,8 +60,7 @@ public class QuizController : MonoBehaviour
 
         switch (domanda.QuestionType)
         {
-            case TypeQuestion.DomandaMultipla:
-                pannelloSceltaMultipla.SetActive(true);
+            case TypeQuestion.DomandaMultipla: pannelloSceltaMultipla.SetActive(true);
                 var uiSceltaMultipla = pannelloSceltaMultipla.GetComponent<IstanziaBottoniQuizSceltaMultipla>();
                 uiSceltaMultipla.CreaBottoni(domanda, this);
                 break;
@@ -128,7 +125,6 @@ public class QuizController : MonoBehaviour
     // TORNA AL MENU
     void TornaAlMenu()
     {
-        pannelloQuiz.SetActive(false);
         pannelloArgomenti.SetActive(true);
     }
 
