@@ -205,7 +205,7 @@ public sealed class GameManager : MonoBehaviour
 
     //Getter Progressi
     //
-    public int GetProgress(string tipoProgresso)
+    public int GetProgress(/*string tipoProgresso*/)
     {
         return _playerData.progressLvl;
         /*
