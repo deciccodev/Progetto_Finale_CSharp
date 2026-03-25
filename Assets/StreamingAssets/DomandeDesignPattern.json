@@ -92,7 +92,7 @@
       "tooltipD": "Il Facade funge da punto di ingresso unico che nasconde la complessità delle interazioni tra molte classi interne di un sistema."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 3,
       "rightAnswer": 0,
       "question": "Nell'implementazione 'thread-safe' del Singleton in C#, a cosa serve il doppio controllo (double-check locking) della variabile `_instance`?",
       "answerA": "A prevenire che due thread creino due istanze separate contemporaneamente.",
@@ -157,7 +157,7 @@
       "tooltipD": "Il Decorator aggiunge responsabilità strutturalmente, mentre lo Strategy sostituisce l'intera logica di un'operazione."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nell'implementazione thread-safe del Singleton in C#, perché viene eseguito un doppio controllo sulla variabile `_instance` prima e dopo l'istruzione lock?",
       "answerA": "Per consentire la creazione di istanze multiple in ambienti multithread senza bloccare l'esecuzione globale.",
@@ -209,7 +209,7 @@
       "tooltipD": "Sebbene i delegati siano potenti, il Decorator si basa sulla struttura di classi che incapsulano altre istanze dello stesso tipo."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Quale principio SOLID viene maggiormente favorito dal pattern Strategy quando si aggiunge un nuovo algoritmo di calcolo al sistema?",
       "answerA": "Il principio di Sostituzione di Liskov (LSP).",
@@ -289,28 +289,28 @@
     {
       "QuestionType": 2,
       "rightAnswer": 2,
-      "question": "In un'implementazione thread-safe del pattern Singleton in C#, qual è lo scopo principale del meccanismo di 'double-check locking'?",
-      "answerA": "Impedire che la classe venga ereditata da altre sottoclassi nel framework.",
-      "answerB": "Sostituire la necessità di dichiarare il costruttore come privato.",
-      "answerC": "Garantire che l'istanza venga creata una sola volta evitando l'overhead del lock dopo l'inizializzazione.",
-      "answerD": "Verificare se il sistema operativo ha allocato memoria sufficiente per l'oggetto singleton.",
-      "tooltipA": "L'ereditarietà viene impedita dall'uso della parola chiave sealed, non dalla logica di sincronizzazione dei thread.",
-      "tooltipB": "Il costruttore privato rimane indispensabile per impedire l'istanziazione esterna, indipendentemente dalla logica di lock.",
-      "tooltipC": "Il primo controllo evita il lock se l'istanza esiste già, mentre il secondo controllo all'interno del lock previene la creazione duplicata da parte di thread concorrenti.",
-      "tooltipD": "La gestione della memoria a basso livello è compito del Garbage Collector e del CLR, non della logica di controllo del pattern."
+      "question": "Completa la dichiarazione dell'istanza in un Singleton thread-safe con double-check locking:\nprivate static ___ MySingleton _instance = null;",
+      "answerA": "readonly",
+      "answerB": "sealed",
+      "answerC": "volatile",
+      "answerD": "static",
+      "tooltipA": "readonly impedisce la riassegnazione dopo l'inizializzazione ma non garantisce la visibilità immediata tra thread.",
+      "tooltipB": "sealed si applica alle classi per impedirne l'ereditarietà, non alle variabili.",
+      "tooltipC": "volatile garantisce che ogni thread legga il valore aggiornato dalla memoria principale, rendendo sicuro il primo controllo nel double-check locking.",
+      "tooltipD": "static è già presente nella firma: aggiungerne un secondo non è sintassi valida in C#."
     },
-    {
-      "QuestionType": 0,
+        {
+      "QuestionType": 2,
       "rightAnswer": 0,
-      "question": "Secondo la tassonomia della Gang of Four (GoF), quale dei seguenti pattern è classificato come 'Strutturale'?",
+      "question": "Completa con il pattern della Gang of Four (GoF) classificato come Strutturale:\n___ aggiunge responsabilità a un oggetto dinamicamente senza modificarne la classe.",
       "answerA": "Decorator",
       "answerB": "Factory Method",
       "answerC": "Singleton",
       "answerD": "Strategy",
-      "tooltipA": "Il pattern Decorator si occupa della composizione di classi e oggetti per formare strutture più grandi e aggiungere funzionalità.",
-      "tooltipB": "Il Factory Method è un pattern creazionale, dato che il suo scopo principale è astrarre il processo di istanziazione.",
-      "tooltipC": "Il Singleton è classificato come creazionale perché garantisce il controllo sul ciclo di vita e sulla creazione di un'unica istanza.",
-      "tooltipD": "Lo Strategy è un pattern comportamentale poiché si concentra sulla gestione degli algoritmi e delle interazioni tra oggetti."
+      "tooltipA": "Decorator è strutturale: si occupa della composizione di oggetti per aggiungere funzionalità in modo flessibile.",
+      "tooltipB": "Factory Method è creazionale: astrae il processo di istanziazione delegandolo alle sottoclassi.",
+      "tooltipC": "Singleton è creazionale: garantisce il controllo sulla creazione di un'unica istanza.",
+      "tooltipD": "Strategy è comportamentale: gestisce famiglie di algoritmi intercambiabili a runtime."
     },
     {
       "QuestionType": 1,
@@ -391,7 +391,7 @@
       "tooltipD": "L'ereditarietà potrebbe permettere la creazione di istanze di classi derivate, aggirando il controllo dell'unica istanza previsto nella classe base."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 1,
       "rightAnswer": 2,
       "question": "Qual è la differenza fondamentale tra i pattern Adapter e Facade, nonostante entrambi siano strutturali?",
       "answerA": "L'Adapter crea nuove funzionalità, mentre il Facade si limita a nascondere quelle esistenti.",
@@ -404,7 +404,7 @@
       "tooltipD": "Entrambi possono lavorare con interfacce, classi astratte o classi concrete a seconda delle necessità del sistema."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 3,
       "rightAnswer": 0,
       "question": "Quale problematica viene risolta dal pattern Command nello sviluppo di applicazioni interattive?",
       "answerA": "La separazione tra chi invoca l'operazione e chi la esegue effettivamente, supportando azioni reversibili.",
