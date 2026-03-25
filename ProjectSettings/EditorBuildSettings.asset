@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LoginScene.unity
+    guid: ca245d49a6c5abe4d9097dfdbc2a33fb
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/QuizScene.unity
+    guid: 784f63ebdf601a643aab2f9c7bbe1a50
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 87c3f1f0e5c7845faa7e01d20f5223fb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
