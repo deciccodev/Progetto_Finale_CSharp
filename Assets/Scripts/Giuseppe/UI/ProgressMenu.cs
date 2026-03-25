@@ -33,7 +33,7 @@ public class ProgressMenu : MonoBehaviour
         Debug.Log("Start!!!");
         SoloMode();
 
-        arrayButton[_progressAmount].onClick.AddListener(StartQuestions);
+        
    }
 
    //Metodo per l'attivazione della modalità SOLO, lasciamo interagibile solo il bottone che corrisponde al progresso del giocatore
@@ -46,10 +46,11 @@ public class ProgressMenu : MonoBehaviour
 
         for (var i = 0; i < arrayButton.Length; i++)
         {
-            if(i != _progressAmount)
+            int index = i;
+            if(index != _progressAmount)
             {
-                arrayButton[i].interactable = false ;
-                Debug.Log($"Bottone {arrayButton[i]} disattivato");
+                arrayButton[index].interactable = false ;
+                Debug.Log($"Bottone {arrayButton[index]} disattivato");
             }
 
         }
@@ -58,7 +59,7 @@ public class ProgressMenu : MonoBehaviour
 
     public void ResetBottone()
     {
-        //arrayButton[_progressAmount-1].onClick.RemoveAllListeners();
+        arrayButton[_progressAmount].onClick.RemoveAllListeners();
         arrayButton[_progressAmount].interactable = true;
         arrayButton[_progressAmount].onClick.AddListener(StartQuestions);
     }
