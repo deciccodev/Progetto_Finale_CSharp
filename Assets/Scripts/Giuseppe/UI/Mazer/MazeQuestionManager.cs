@@ -66,10 +66,10 @@ public class MazeQuestionManager : MonoBehaviour
         optionC.gameObject.SetActive(true);
         optionD.gameObject.SetActive(true);
         
-        optionA.text = arrAnswers[0];
-        optionB.text = arrAnswers[1];
-        optionC.text = arrAnswers[2];
-        optionD.text = arrAnswers[3];
+        optionA.text = $"A. {arrAnswers[0]}";
+        optionB.text = $"B. {arrAnswers[1]}";
+        optionC.text = $"C. {arrAnswers[2]}";
+        optionD.text = $"D. {arrAnswers[3]}";
 
         _indexAnswer = _formQuestion.rightAnswer;
         tooltipText.gameObject.SetActive(false);
