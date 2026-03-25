@@ -9,11 +9,11 @@ public class ProgressMenu : MonoBehaviour
     //[SerializeField] GameManager gameManager;
     [SerializeField] QuizController starterQuiz;
 
-    public Button buttonVar;
-    public Button buttonCicli;
-    public Button buttonOop;
-    public Button buttonDesignP;
-    public Button buttonMethod;
+    [SerializeField] Button buttonVar;
+    [SerializeField] Button buttonCicli;
+    [SerializeField] Button buttonOop;
+    [SerializeField] Button buttonDesignP;
+    [SerializeField] Button buttonMethod;
 
     private Button[] arrayButton;
     
