@@ -1167,7 +1167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &684657287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684657286}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cd1a9ef72ba3fe4a84164376f1c0b4b, type: 3}
   m_Name: 
@@ -3348,6 +3348,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
       propertyPath: _Maze
+      value: 
+      objectReference: {fileID: 1162978065}
+    - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: _maze
       value: 
       objectReference: {fileID: 1162978065}
     - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
