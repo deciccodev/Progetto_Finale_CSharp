@@ -17,7 +17,7 @@ public class QuizController : MonoBehaviour
     [SerializeField] GameObject pannelloSceltaMultipla;
     [SerializeField] GameObject pannelloInputField;
     [SerializeField] GameObject pannelloDragAndDrop;
-    //[SerializeField] GameObject pannelloMaze;
+    [SerializeField] GameObject pannelloMaze;
 
     [Header("Panel Visualizzazione Domanda")]
     [SerializeField] TextMeshProUGUI testoDomanda;
@@ -77,9 +77,10 @@ public class QuizController : MonoBehaviour
                 uiDragger.CreaDomandaDragger(domanda);
                 break;
 
-            /*case TypeQuestion.Maze: pannelloMaze.SetActive(true);
-                var uiMaze = pannelloMaze.GetComponent<IstanziaMaze>();
-                break;*/
+            case TypeQuestion.Maze: pannelloMaze.SetActive(true);
+                var uiMaze = pannelloMaze.GetComponent<MazeQuestionManager>();
+                uiMaze.LoadQuestion(domanda);
+                break;
         }
     }
 
@@ -141,6 +142,6 @@ public class QuizController : MonoBehaviour
         pannelloSceltaMultipla.SetActive(false);
         pannelloInputField.SetActive(false);
         pannelloDragAndDrop.SetActive(false);
-        //pannelloMaze.SetActive(false);
+        pannelloMaze.SetActive(false);
     }
 }

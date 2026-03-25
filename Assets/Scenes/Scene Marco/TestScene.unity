@@ -1056,6 +1056,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &672537647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4060588921030614013, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
+  m_PrefabInstance: {fileID: 747838639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681301923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,8 +1230,8 @@ RectTransform:
   - {fileID: 1940124619}
   - {fileID: 987088511}
   - {fileID: 872202456}
-  - {fileID: 1788259118}
   - {fileID: 1901845980}
+  - {fileID: 1788259118}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1283,8 +1288,8 @@ Canvas:
   m_GameObject: {fileID: 699881059}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 552840858}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1307,23 +1312,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.88
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.88
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.88
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.19
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1000366
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6812024189661704999, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1360,6 +1365,10 @@ PrefabInstance:
     - target: {fileID: 9011984143382403452, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
       propertyPath: m_Name
       value: GameGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011984143382403452, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1745,6 +1754,7 @@ MonoBehaviour:
   pannelloSceltaMultipla: {fileID: 1940124618}
   pannelloInputField: {fileID: 872202457}
   pannelloDragAndDrop: {fileID: 987088510}
+  pannelloMaze: {fileID: 2056301282}
   testoDomanda: {fileID: 1600282957}
   questionLoader: {fileID: 482762516}
 --- !u!4 &887500896
@@ -3026,7 +3036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1788259118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3179,6 +3189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelMaze
       objectReference: {fileID: 0}
+    - target: {fileID: 2187601528757900192, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2995761254035111444, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3259,6 +3273,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3473903925087032722, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 301.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473903925087032722, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -500.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: _Maze
+      value: 
+      objectReference: {fileID: 2070959730}
+    - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 672537647}
+    - target: {fileID: 6816826899401125826, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+      propertyPath: _quizController
+      value: 
+      objectReference: {fileID: 887500895}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3619,6 +3653,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &2056301282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2187601528757900192, guid: 475a1e448ecd542c697654a88c9ec6e6, type: 3}
+  m_PrefabInstance: {fileID: 1901845979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2070959730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5779200142399761835, guid: 17825a6f46270426da1b704bed4e8366, type: 3}
+  m_PrefabInstance: {fileID: 747838639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
