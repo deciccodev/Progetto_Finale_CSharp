@@ -75,7 +75,6 @@ public class MazeQuestionManager : MonoBehaviour
         tooltipText.gameObject.SetActive(false);
 
         ActiveMaze();
-
     }
 
     public void CheckSubmit()

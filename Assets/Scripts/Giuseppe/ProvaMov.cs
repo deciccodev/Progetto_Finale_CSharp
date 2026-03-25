@@ -17,7 +17,7 @@ public class ProvaMov : MonoBehaviour
    void Awake()
    {
       _posIniz = gameObject.transform.position;
-      gameObject.SetActive(true);
+      //gameObject.SetActive(true);
    }
 
    private void OnEnable()

@@ -9,11 +9,11 @@ public class ProgressMenu : MonoBehaviour
     //[SerializeField] GameManager gameManager;
     [SerializeField] QuizController starterQuiz;
 
-    public Button buttonVar;
-    public Button buttonCicli;
-    public Button buttonOop;
-    public Button buttonDesignP;
-    public Button buttonMethod;
+    [SerializeField] Button buttonVar;
+    [SerializeField] Button buttonCicli;
+    [SerializeField] Button buttonOop;
+    [SerializeField] Button buttonDesignP;
+    [SerializeField] Button buttonMethod;
 
     private Button[] arrayButton;
     
@@ -32,8 +32,8 @@ public class ProgressMenu : MonoBehaviour
    {
         Debug.Log("Start!!!");
         SoloMode();
-
-        arrayButton[_progressAmount].onClick.AddListener(StartQuestions);
+        //ResetBottone();
+        //arrayButton[_progressAmount].onClick.AddListener(StartQuestions);
    }
 
    //Metodo per l'attivazione della modalità SOLO, lasciamo interagibile solo il bottone che corrisponde al progresso del giocatore
@@ -51,14 +51,13 @@ public class ProgressMenu : MonoBehaviour
                 arrayButton[i].interactable = false ;
                 Debug.Log($"Bottone {arrayButton[i]} disattivato");
             }
-
         }
         ResetBottone();
     }
 
     public void ResetBottone()
     {
-        //arrayButton[_progressAmount-1].onClick.RemoveAllListeners();
+        arrayButton[_progressAmount].onClick.RemoveAllListeners();
         arrayButton[_progressAmount].interactable = true;
         arrayButton[_progressAmount].onClick.AddListener(StartQuestions);
     }
