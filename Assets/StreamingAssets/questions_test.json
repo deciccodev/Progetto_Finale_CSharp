@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Qual è il valore di default assegnato a una variabile di tipo \"int\" in C# se questa viene dichiarata ma non inizializzata esplicitamente?",
     "answerA": "0",
@@ -14,7 +14,7 @@
     "tooltipD": "Il tipo \"int\" è un tipo valore e non può essere null a meno che non venga dichiarato come nullable tramite la sintassi \"int?\"."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Perché è necessario aggiungere il suffisso \"f\" (o \"F\") quando si assegna un valore decimale a una variabile di tipo \"float\"?",
     "answerA": "Perché il tipo \"float\" può contenere solo numeri interi senza questo suffisso.",
@@ -27,7 +27,7 @@
     "tooltipD": "Il compilatore C# interpreta i numeri con la virgola come double; il suffisso forza la conversione a float a 32 bit."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Quale tra le seguenti affermazioni descrive correttamente la differenza tra i tipi primitivi \"char\" e \"string\"?",
     "answerA": "Il tipo \"char\" può contenere intere frasi purché siano brevi.",
@@ -40,7 +40,7 @@
     "tooltipD": "Al contrario, il char è un tipo valore primitivo, mentre la stringa, pur comportandosi spesso come tale, è tecnicamente un tipo riferimento."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Cosa si intende per casting \"Esplicito\" (Narrowing) in C#?",
     "answerA": "La conversione da un tipo con intervallo più grande a uno più piccolo, con potenziale perdita di dati.",
@@ -53,7 +53,7 @@
     "tooltipD": "Questa è una conversione implicita (widening) perché non c'è rischio di perdere la grandezza del valore."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Quale convenzione di nomenclatura (naming convention) è standard in C# per le variabili locali?",
     "answerA": "camelCase (es. \"numeroStudenti\")",
@@ -66,7 +66,7 @@
     "tooltipD": "Lo snake_case è comune in altri linguaggi come Python, ma non è la convenzione standard per C#."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Qual è il vincolo principale per una variabile dichiarata con la parola chiave \"const\"?",
     "answerA": "Il suo valore può essere letto solo tramite l'istanza di un oggetto.",
@@ -79,7 +79,7 @@
     "tooltipD": "Una costante non può mai essere modificata dopo la sua prima e unica assegnazione obbligatoria."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "In C#, l'uso della parola chiave \"var\" per la dichiarazione di una variabile implica che:",
     "answerA": "La variabile non occupa spazio in memoria finché non viene usata.",
@@ -92,7 +92,7 @@
     "tooltipD": "L'inferenza del tipo tramite \"var\" è un meccanismo di compile-time; una volta assegnato, il tipo della variabile non può più cambiare."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Se si esegue il seguente codice: \"double d = 9.99; int i = (int)d;\", quale sarà il valore finale della variabile \"i\"?",
     "answerA": "9",
@@ -105,7 +105,7 @@
     "tooltipD": "Questa operazione è sintatticamente corretta e sicura secondo le regole del linguaggio C#, pur portando a una perdita di precisione."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Quale tipo primitivo viene utilizzato per rappresentare valori logici che possono essere solo veri o falsi?",
     "answerA": "bool",
@@ -118,7 +118,7 @@
     "tooltipD": "Il termine \"logic\" descrive la natura del dato ma non è una parola chiave riservata per un tipo primitivo."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Quale delle seguenti opzioni NON è un nome di variabile valido in C#?",
     "answerA": "valore$2$",
@@ -131,7 +131,7 @@
     "tooltipD": "Iniziare con una lettera maiuscola è valido, anche se solitamente riservato a contesti diversi dalle variabili locali."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Quale delle seguenti affermazioni descrive correttamente il comportamento del casting implicito tra un tipo int e un tipo float in C#?",
     "answerA": "Il casting avviene solo se la variabile int è dichiarata come costante tramite la parola chiave const.",
@@ -144,7 +144,7 @@
     "tooltipD": "Il casting esplicito è richiesto solo per il 'narrowing', ovvero quando si passa da un tipo più grande (come double) a uno più piccolo."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Se dichiariamo una variabile come 'float x = 3.14;', quale sarà il risultato del compilatore?",
     "answerA": "Un errore di compilazione, poiché il valore letterale 3.14 viene interpretato di default come double.",
@@ -157,7 +157,7 @@
     "tooltipD": "L'inferenza di tipo avviene solo con la parola chiave var; se il tipo è esplicitamente float, il valore deve corrispondere esattamente o essere convertibile."
   },
   {
-    "QuestionType": 2,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Qual è la differenza fondamentale tra una costante dichiarata con 'const' e una dichiarata con 'readonly' per i tipi primitivi?",
     "answerA": "Una variabile const può essere modificata una sola volta dopo l'avvio, mentre readonly mai.",
@@ -170,7 +170,7 @@
     "tooltipD": "Le costanti const sono statiche e determinate durante la compilazione, mentre readonly può essere assegnata nel costruttore o alla dichiarazione."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Considerando l'operatore modulo (%), qual è il risultato dell'espressione intera 14 % 4?",
     "answerA": "0.5",
@@ -183,7 +183,7 @@
     "tooltipD": "L'operatore modulo restituisce il resto della divisione intera; 14 diviso 4 è pari a 3 con il resto di 2."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Nel contesto dei tipi di dato primitivi, cosa accade se si tenta di eseguire un casting esplicito da double a int su un valore pari a 9.99?",
     "answerA": "Il valore viene troncato a 9.",
@@ -196,7 +196,7 @@
     "tooltipD": "I tipi numerici sono compatibili tra loro tramite casting; l'unico rischio è la perdita di precisione o l'overflow."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Quale tra i seguenti metodi è il più indicato per convertire una stringa inserita dall'utente in un int senza rischiare il crash del programma?",
     "answerA": "(int)stringa",
@@ -209,7 +209,7 @@
     "tooltipD": "Pur essendo un metodo di conversione valido, l'uso di Convert su una stringa non valida genererebbe comunque un errore di formato."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Qual è il valore booleano risultante dall'espressione logica !(10 < 5 || 5 == 5)?",
     "answerA": "Errore di sintassi dovuto all'operatore !.",
@@ -222,7 +222,7 @@
     "tooltipD": "L'espressione tra parentesi è vera poiché una delle due condizioni (OR) è soddisfatta; l'operatore NOT (!) inverte quindi il risultato in falso."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Nella nomenclatura delle variabili in C#, quale delle seguenti dichiarazioni causerebbe un errore di compilazione?",
     "answerA": "char _lettera = 'A';",
@@ -235,7 +235,7 @@
     "tooltipD": "Questa è una dichiarazione valida e segue la convenzione camelCase suggerita nel materiale."
   },
   {
-    "QuestionType": 2,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Cosa restituisce il metodo char.GetNumericValue('5')?",
     "answerA": "Il carattere '5' immutato.",
@@ -248,7 +248,7 @@
     "tooltipD": "Il metodo è specificamente progettato per operare su singoli caratteri (char)."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Qual è il valore predefinito (default) di una variabile di tipo bool in C# quando non viene inizializzata esplicitamente?",
     "answerA": "false",
@@ -261,7 +261,7 @@
     "tooltipD": "Sebbene logicamente equivalente a false, in C# non è possibile assegnare direttamente 0 a un bool senza un'operazione di confronto."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Quale tipo di dato primitivo viene utilizzato in C# per memorizzare numeri interi, come ad esempio 10 o -5?",
     "answerA": "string",
@@ -274,7 +274,7 @@
     "tooltipD": "Questo tipo è progettato per numeri decimali a virgola mobile, non per numeri interi puri."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Per inizializzare correttamente una variabile di tipo 'float', quale suffisso deve essere aggiunto al valore numerico?",
     "answerA": "s",
@@ -287,7 +287,7 @@
     "tooltipD": "Il suffisso 'd' è utilizzato specificamente per i valori di tipo double."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Qual è la differenza principale nella dichiarazione letterale tra un tipo 'char' e un tipo 'string'?",
     "answerA": "Il char usa singoli apici (''), mentre la stringa usa doppi apici (\"\")",
@@ -300,7 +300,7 @@
     "tooltipD": "Entrambi i tipi richiedono delimitatori per essere distinti dai nomi delle variabili o dalle parole chiave."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Se dichiari una variabile 'int' senza assegnarle un valore, quale sarà il suo valore di default?",
     "answerA": "null",
@@ -313,7 +313,7 @@
     "tooltipD": "In C#, i tipi numerici primitivi vengono inizializzati automaticamente a zero se non diversamente specificato."
   },
   {
-    "QuestionType": 1,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Quale delle seguenti affermazioni descrive correttamente l'operazione di 'Narrowing' (Casting Esplicito)?",
     "answerA": "È una conversione automatica che avviene sempre senza perdita di dati.",
@@ -326,7 +326,7 @@
     "tooltipD": "Il casting tra tipi non compatibili come bool e string non è supportato tramite narrowing."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Quali sono i valori ammessi per il tipo di dato primitivo 'bool'?",
     "answerA": "Sì e No",
@@ -339,7 +339,7 @@
     "tooltipD": "Il tipo booleano rappresenta un bit di informazione logica, limitato ai due stati di vero o falso."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "In base alle convenzioni di nomenclatura C#, come dovrebbero essere scritte le variabili locali?",
     "answerA": "PascalCase (es. MiaVariabile)",
@@ -352,7 +352,7 @@
     "tooltipD": "Il maiuscolo fisso è generalmente evitato, tranne a volte per le costanti separate da underscore."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Quale tipo di dato primitivo è più indicato per memorizzare un valore decimale con alta precisione come 3.14159?",
     "answerA": "bool",
@@ -365,7 +365,7 @@
     "tooltipD": "Il tipo int troncherebbe tutti i decimali, memorizzando solo la parte intera del numero."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 2,
     "question": "Cosa indica la parola chiave 'var' nella dichiarazione di una variabile?",
     "answerA": "La variabile viene memorizzata direttamente sul database.",
@@ -378,7 +378,7 @@
     "tooltipD": "Per definire costanti si utilizzano le parole chiave 'const' o 'readonly'."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Quale di questi nomi di variabile non è valido in C#?",
     "answerA": "eta25",
