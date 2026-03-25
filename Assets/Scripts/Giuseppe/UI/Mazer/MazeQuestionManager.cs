@@ -113,8 +113,10 @@ public class MazeQuestionManager : MonoBehaviour
                     _isCorrect = false;
                 }
 
-            
+            _player.gameObject.SetActive(false);
+
             NextQuestion();
+            
 
         }
     }
