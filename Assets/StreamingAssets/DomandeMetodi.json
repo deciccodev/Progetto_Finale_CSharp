@@ -1,17 +1,17 @@
 {
   "questions": [
     {
-      "QuestionType": 0,
+      "QuestionType": 2,
       "rightAnswer": 2,
-      "question": "In C#, quale modificatore di visibilità rende un metodo accessibile solo all'interno della classe in cui è stato dichiarato?",
+      "question": "Completa il metodo accessibile solo all'interno della classe dichiarante:\n___ void CalcolaSconto() { }",
       "answerA": "public",
       "answerB": "internal",
       "answerC": "private",
       "answerD": "protected",
-      "tooltipA": "Il modificatore public garantisce l'accesso da qualsiasi parte del programma, non limitandolo alla classe stessa.",
-      "tooltipB": "Questo modificatore limita l'accesso all'interno dello stesso assembly, che può contenere più classi.",
-      "tooltipC": "Il modificatore private è progettato specificamente per l'incapsulamento, limitando la visibilità al solo ambito della classe dichiarante.",
-      "tooltipD": "Sebbene restrittivo, protected permette l'accesso anche alle classi derivate, non solo alla classe originale."
+      "tooltipA": "public garantisce l'accesso da qualsiasi parte del programma, non limitandolo alla classe stessa.",
+      "tooltipB": "internal limita l'accesso all'interno dello stesso assembly, che può contenere più classi.",
+      "tooltipC": "private è il modificatore corretto per l'incapsulamento, limita la visibilità al solo ambito della classe dichiarante.",
+      "tooltipD": "protected permette l'accesso anche alle classi derivate, non solo alla classe originale."
     },
     {
       "QuestionType": 1,
@@ -222,20 +222,20 @@
       "tooltipD": "ToString() di default restituisce il nome del tipo, non esegue calcoli di lunghezza automatici."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 2,
       "rightAnswer": 1,
-      "question": "Quale tra questi è un delegato predefinito che accetta parametri ma non restituisce alcun valore?",
+      "question": "Completa con il delegato predefinito che accetta parametri ma non restituisce alcun valore:\n___ <string> OnMessaggio;",
       "answerA": "Delegate",
       "answerB": "Action",
       "answerC": "Predicate",
       "answerD": "Func",
       "tooltipA": "Delegate è la classe base astratta, non un tipo di delegato pronto all'uso con parametri.",
-      "tooltipB": "Action è ideale per definire comportamenti, log o eventi che eseguono istruzioni senza dover produrre un risultato.",
-      "tooltipC": "Un Predicate restituisce sempre un valore booleano, quindi ha un ritorno.",
-      "tooltipD": "Func deve sempre avere almeno un parametro di ritorno specificato."
+      "tooltipB": "Action è ideale per comportamenti ed eventi che eseguono istruzioni senza produrre un risultato.",
+      "tooltipC": "Predicate restituisce sempre un valore booleano, quindi ha un tipo di ritorno.",
+      "tooltipD": "Func deve sempre avere almeno un tipo di ritorno specificato come ultimo parametro generico."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 3,
       "rightAnswer": 0,
       "question": "Nell'Iniezione delle Dipendenze (DI), cosa si intende per 'Constructor Injection'?",
       "answerA": "Fornire le dipendenze necessarie a una classe tramite i parametri del suo costruttore.",
@@ -248,7 +248,7 @@
       "tooltipD": "La DI tramite costruttore si applica alle istanze di classe, indipendentemente da chi le istanzia."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 1,
       "rightAnswer": 0,
       "question": "Qual è il limite principale della 'Setter Injection' rispetto alla 'Constructor Injection'?",
       "answerA": "Non garantisce che la dipendenza sia presente prima che l'oggetto venga utilizzato.",
@@ -300,7 +300,7 @@
       "tooltipD": "Il motivo non è tecnico-prestazionale ma architetturale, legato ai principi dell'OOP."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 3,
       "rightAnswer": 3,
       "question": "Qual è il vantaggio principale dell'utilizzo del 'Factory Method'?",
       "answerA": "Garantisce che esista solo un'unica istanza di una classe in tutto il sistema.",
@@ -365,7 +365,7 @@
       "tooltipD": "Tentare di accedere a Length su un array nullo causerebbe un errore; il controllo del null va fatto sulla variabile stessa."
     },
     {
-      "QuestionType": 2,
+      "QuestionType": 3,
       "rightAnswer": 1,
       "question": "Quale vantaggio offre il pattern 'Strategy' rispetto a una serie di istruzioni `if-else` annidate?",
       "answerA": "Assicura che un metodo venga eseguito solo una volta per sessione.",
@@ -378,17 +378,17 @@
       "tooltipD": "Le interfacce sono il pilastro fondamentale su cui si regge il pattern Strategy."
     },
     {
-      "QuestionType": 0,
+      "QuestionType": 2,
       "rightAnswer": 3,
-      "question": "Quale tra i seguenti operatori logici restituisce `true` solo se entrambe le condizioni verificate sono vere?",
-      "answerA": "|| (OR)",
-      "answerB": "^ (XOR)",
-      "answerC": "! (NOT)",
-      "answerD": "&& (AND)",
-      "tooltipA": "L'operatore OR restituisce true se almeno una delle condizioni è soddisfatta.",
-      "tooltipB": "XOR restituisce true solo se esattamente una delle due condizioni è vera, ma non entrambe.",
-      "tooltipC": "NOT è un operatore unario che inverte il valore di verità di una singola condizione.",
-      "tooltipD": "L'operatore AND richiede la veridicità di tutti i suoi operandi per convalidare l'intera espressione."
+      "question": "Completa la condizione che è vera solo se entrambe le condizioni sono vere:\nif (età >= 18 ___ hasPermesso) { }",
+      "answerA": "||",
+      "answerB": "^",
+      "answerC": "!",
+      "answerD": "&&",
+      "tooltipA": "|| (OR) restituisce true se almeno una delle condizioni è soddisfatta, non necessariamente entrambe.",
+      "tooltipB": "^ (XOR) restituisce true solo se esattamente una delle due condizioni è vera, non entrambe.",
+      "tooltipC": "! (NOT) è un operatore unario che inverte il valore di una singola condizione.",
+      "tooltipD": "&& (AND) richiede che entrambi gli operandi siano veri per restituire true."
     },
     {
       "QuestionType": 0,

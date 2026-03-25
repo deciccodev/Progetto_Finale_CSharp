@@ -12,9 +12,12 @@ public class DropSlot : MonoBehaviour, IDropHandler
     [SerializeField] private QuizController quizController;
 
     [Header("Colori feedback")]
-    [SerializeField] private Color colorNeutral = Color.gray;
-    [SerializeField] private Color colorCorrect = Color.green;
-    [SerializeField] private Color colorWrong   = Color.red;
+    [SerializeField] private Color colorNeutral;
+    [SerializeField] private Color colorCorrect;
+    [SerializeField] private Color colorWrong;
+
+    [Header("Delay")]
+    [SerializeField] private float answerDelay = 1.5f;
 
     // Impostato da DragDropQuestion prima di mostrare la domanda
     public int RightAnswer { get; set; }
@@ -49,6 +52,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
         itemRect.anchorMin = new Vector2(0.5f, 0.5f);
         itemRect.anchorMax = new Vector2(0.5f, 0.5f);
         itemRect.anchoredPosition = Vector2.zero;
+        itemRect.sizeDelta = GetComponent<RectTransform>().sizeDelta;
 
         // Valida e notifica
         bool isCorrect = (dragged.AnswerIndex == RightAnswer);
@@ -57,9 +61,16 @@ public class DropSlot : MonoBehaviour, IDropHandler
         _image.color = isCorrect ? colorCorrect : colorWrong;
 
         if (quizController != null)
-            quizController.RispostaData(isCorrect);
+            StartCoroutine(NotifyAfterDelay(isCorrect));
         else
             Debug.LogWarning("[DropSlot] QuizController non assegnato in Inspector.");
+    }
+
+    // Coroutine per aggiungere il delay prima di cambiare domanda
+    private System.Collections.IEnumerator NotifyAfterDelay(bool isCorrect)
+    {
+        yield return new WaitForSeconds(answerDelay);
+        quizController.RispostaData(isCorrect);
     }
 
     // Chiamato da DragDropQuestion per resettare lo slot

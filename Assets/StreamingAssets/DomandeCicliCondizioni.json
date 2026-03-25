@@ -1,7 +1,7 @@
 {
    "questions": [
       {
-         "QuestionType": 0,
+         "QuestionType": 3,
          "rightAnswer": 3,
          "question": "Qual è il risultato dell'espressione logica !(10 > 5)?",
          "answerA": "10",
@@ -40,7 +40,7 @@
          "tooltipD": "La divisione restituisce il quoziente, che non indica direttamente la parità senza ulteriori calcoli sul resto."
       },
       {
-         "QuestionType": 0,
+         "QuestionType": 3,
          "rightAnswer": 3,
          "question": "Quale ciclo è più indicato per iterare su una stringa carattere per carattere senza usare un indice numerico?",
          "answerA": "if-else",
@@ -222,17 +222,17 @@
          "tooltipD": "Questo comportamento è tipico di linguaggi come il C++, ma in C# è bloccato dal compilatore."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 2,
-         "question": "Quale risultato restituisce l'espressione logica '!(5 > 3 && 2 == 2)'?",
-         "answerA": "Un errore di runtime.",
-         "answerB": "true",
-         "answerC": "false",
-         "answerD": "null",
-         "tooltipA": "I confronti tra costanti intere sono operazioni perfettamente valide e sicure.",
-         "tooltipB": "L'interno della parentesi è vero, quindi l'operatore ! lo inverte a false, non a true.",
-         "tooltipC": "Poiché 5 > 3 è vero e 2 == 2 è vero, l'espressione in parentesi è vera; la negazione ! la rende falsa.",
-         "tooltipD": "Il risultato di un'operazione logica tra booleani è sempre di tipo bool (true o false)."
+      "QuestionType": 2,
+      "rightAnswer": 2,
+      "question": "Completa con il risultato dell'espressione:\nbool risultato = ___ ; !(5 > 3 && 2 == 2)",
+      "answerA": "error",
+      "answerB": "true",
+      "answerC": "false",
+      "answerD": "null",
+      "tooltipA": "I confronti tra costanti intere sono operazioni perfettamente valide, nessun errore viene generato.",
+      "tooltipB": "L'interno della parentesi è vero, quindi ! lo inverte a false, non a true.",
+      "tooltipC": "5 > 3 è vero e 2 == 2 è vero, quindi l'AND è vero; la negazione ! restituisce false.",
+      "tooltipD": "Il risultato di un'operazione logica è sempre bool (true o false), mai null."
       },
       {
          "QuestionType": 0,
@@ -300,7 +300,7 @@
          "tooltipD": "Questa distinzione garantisce che il corpo di un ciclo 'do-while' venga eseguito almeno una volta, a differenza del 'while'."
       },
       {
-         "QuestionType": 2,
+         "QuestionType": 3,
          "rightAnswer": 0,
          "question": "Nello 'switch-case' con pattern matching, a cosa serve la clausola 'when'?",
          "answerA": "Ad aggiungere una condizione booleana supplementare oltre al controllo sul tipo o sul valore.",
@@ -313,7 +313,7 @@
          "tooltipD": "Il pattern matching richiede comunque che il tipo o il valore di base soddisfino il criterio del case prima di valutare 'when'."
       },
       {
-         "QuestionType": 2,
+         "QuestionType": 1,
          "rightAnswer": 3,
          "question": "Data l'espressione 'bool result = (a > 10 || b < 5) && !c;', quale combinazione di valori rende 'result' uguale a 'true'?",
          "answerA": "a = 12, b = 2, c = true",
@@ -365,17 +365,17 @@
          "tooltipD": "Per gestire i valori nulli si utilizza esplicitamente la parola chiave 'null'."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 2,
-         "question": "Quante volte verrà eseguito il corpo del seguente ciclo? for (int i = 1; i <= 5; i += 2)",
-         "answerA": "Infinitamente",
-         "answerB": "5 volte",
-         "answerC": "3 volte",
-         "answerD": "2 volte",
-         "tooltipA": "L'incremento è positivo e la condizione di uscita è ben definita, quindi il ciclo terminerà.",
-         "tooltipB": "Questo accadrebbe solo se l'incremento fosse 'i++' invece di 'i += 2'.",
-         "tooltipC": "Il ciclo viene eseguito per i = 1, i = 3 e i = 5. Al passo successivo i = 7, che è > 5.",
-         "tooltipD": "Questo ignora il fatto che la condizione 'i <= 5' include il valore 5."
+      "QuestionType": 2,
+      "rightAnswer": 2,
+      "question": "Completa con il numero di iterazioni del ciclo:\nfor (int i = 1; i <= 5; i += 2) { }\n// eseguito ___ volte",
+      "answerA": "infinito",
+      "answerB": "5",
+      "answerC": "3",
+      "answerD": "2",
+      "tooltipA": "L'incremento è positivo e la condizione di uscita è ben definita, il ciclo termina.",
+      "tooltipB": "Questo accadrebbe solo se l'incremento fosse i++ invece di i += 2.",
+      "tooltipC": "Il ciclo esegue per i=1, i=3, i=5. Al passo successivo i=7 che è > 5, quindi si ferma.",
+      "tooltipD": "La condizione i <= 5 include il valore 5, quindi l'iterazione con i=5 viene eseguita."
       },
       {
          "QuestionType": 1,

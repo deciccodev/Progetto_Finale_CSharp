@@ -93,7 +93,7 @@
     "tooltipD": "L'inferenza del tipo tramite \"var\" è un meccanismo di compile-time; una volta assegnato, il tipo della variabile non può più cambiare."
   },
   {
-    "QuestionType": 0,
+    "QuestionType": 3,
     "rightAnswer": 0,
     "question": "Se si esegue il seguente codice: \"double d = 9.99; int i = (int)d;\", quale sarà il valore finale della variabile \"i\"?",
     "answerA": "9",
@@ -158,7 +158,7 @@
     "tooltipD": "L'inferenza di tipo avviene solo con la parola chiave var; se il tipo è esplicitamente float, il valore deve corrispondere esattamente o essere convertibile."
   },
   {
-    "QuestionType": 2,
+    "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Qual è la differenza fondamentale tra una costante dichiarata con 'const' e una dichiarata con 'readonly' per i tipi primitivi?",
     "answerA": "Una variabile const può essere modificata una sola volta dopo l'avvio, mentre readonly mai.",
@@ -236,7 +236,7 @@
     "tooltipD": "Questa è una dichiarazione valida e segue la convenzione camelCase suggerita nel materiale."
   },
   {
-    "QuestionType": 2,
+    "QuestionType": 3,
     "rightAnswer": 1,
     "question": "Cosa restituisce il metodo char.GetNumericValue('5')?",
     "answerA": "Il carattere '5' immutato.",
