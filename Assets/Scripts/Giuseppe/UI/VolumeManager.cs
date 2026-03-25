@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ public class VolumeManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _audio;
     [SerializeField] private Slider _sliderVol;
+    [SerializeField] TextMeshProUGUI testoValore;
 
    void Awake()
    {
@@ -14,7 +16,7 @@ public class VolumeManager : MonoBehaviour
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
     {
-        
+        if (_sliderVol == null) _sliderVol = GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class VolumeManager : MonoBehaviour
     void SetVolume(float vol)
     {
         _audio.volume = vol * 0.01f;
+        testoValore.text = vol.ToString("F0") + " %";
         GameManager.Instance.VolumeToSave(vol);
     }
 }
