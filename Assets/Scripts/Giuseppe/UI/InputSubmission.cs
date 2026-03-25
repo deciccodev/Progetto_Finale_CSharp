@@ -41,6 +41,8 @@ public class InputSubmission : MonoBehaviour
         arrTooltip = new string[] {_formQuestion.tooltipA,_formQuestion.tooltipB,_formQuestion.tooltipC,_formQuestion.tooltipD};
 
         _indexAnswer = _formQuestion.rightAnswer;
+
+        
     }
 
     #endregion
