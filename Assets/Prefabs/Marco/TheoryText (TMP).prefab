@@ -151,10 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
   m_IgnoreLayout: 0
-  m_MinWidth: 1580
-  m_MinHeight: 750
-  m_PreferredWidth: 1580
-  m_PreferredHeight: 750
+  m_MinWidth: 1550
+  m_MinHeight: 800
+  m_PreferredWidth: 1550
+  m_PreferredHeight: 800
   m_FlexibleWidth: 0
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
