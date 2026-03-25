@@ -52,7 +52,7 @@ public class ProvaMov : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         Debug.Log(("Posizione player resettata"));
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         Debug.Log(("Player disattivato"));
     }
 

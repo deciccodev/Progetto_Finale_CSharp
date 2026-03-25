@@ -20,7 +20,7 @@ public class MazeQuestionManager : MonoBehaviour
 
     [SerializeField] private FormQuestion _formQuestion;
     [SerializeField] private QuizController _quizController;
-    [SerializeField] private GameObject _Maze;
+    [SerializeField] private GameObject _maze;
     [SerializeField] private GameObject _player;
 
     void Awake()
@@ -45,7 +45,7 @@ public class MazeQuestionManager : MonoBehaviour
     public void ActiveMaze()
     {
         //Attivo labirinto e player torna su SetActive(true);
-        _Maze.SetActive(true);
+        _maze.SetActive(true);
         _player.gameObject.SetActive(true);
     }
 
@@ -113,7 +113,10 @@ public class MazeQuestionManager : MonoBehaviour
                     _isCorrect = false;
                 }
 
-            _Maze.SetActive(false);
+            _maze.SetActive(false);
+            _player.gameObject.SetActive(false);
+            
+
             NextQuestion();
 
         }
@@ -122,6 +125,7 @@ public class MazeQuestionManager : MonoBehaviour
     public void NextQuestion()
     {
         _quizController.RispostaData(_isCorrect);
+
     }
 
     private void GetEventTrig(int id)
