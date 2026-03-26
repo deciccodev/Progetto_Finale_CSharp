@@ -21,6 +21,7 @@ public class QuizController : MonoBehaviour
 
     [Header("Panel Visualizzazione Domanda")]
     [SerializeField] TextMeshProUGUI testoDomanda;
+    [SerializeField] TextMeshProUGUI punteggio;
 
     [Header("Loader")]
     [SerializeField] QuestionLoader questionLoader;
@@ -55,6 +56,8 @@ public class QuizController : MonoBehaviour
         DisattivaTipi();
 
         FormQuestion domanda = domandeCorrenti[indexDomanda];
+
+        punteggio.text = risposteCorrette.ToString() + " / " + domandeCorrenti.Count.ToString();
 
         // Mostra il testo della domanda
         testoDomanda.text = domanda.question;
