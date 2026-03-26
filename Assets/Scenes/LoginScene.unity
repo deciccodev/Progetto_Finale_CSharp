@@ -1551,6 +1551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2069119938}
     m_Modifications:
+    - target: {fileID: 1093509858482469544, guid: 38571cf15b0d6f840b6dd733f77f782b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1909569940}
     - target: {fileID: 1495989302329466838, guid: 38571cf15b0d6f840b6dd733f77f782b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1768,11 +1772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283328950040065088, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436786517892021832, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4436786517892021832, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1780,7 +1784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436786517892021832, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4436786517892021832, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1798,9 +1802,37 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 873746411}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7642797308937386355, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7642797308937386355, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1930,6 +1962,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!1 &1909569940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4283328950040065088, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+  m_PrefabInstance: {fileID: 1909569936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955913909
 GameObject:
   m_ObjectHideFlags: 0
