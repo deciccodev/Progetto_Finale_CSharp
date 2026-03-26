@@ -28,4 +28,10 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void CaricaQuiz(string scene)
+    {
+        scene = _nextScene;
+        GameManager.Instance.NextScene(scene);
+    }
+
 }

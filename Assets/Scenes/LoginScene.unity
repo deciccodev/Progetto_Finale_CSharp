@@ -1804,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1933,7 +1933,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7042401532478086408, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1909569943}
   m_SourcePrefab: {fileID: 100100000, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
 --- !u!114 &1909569937 stripped
 MonoBehaviour:
@@ -1967,6 +1970,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4283328950040065088, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
   m_PrefabInstance: {fileID: 1909569936}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1909569941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7042401532478086408, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+  m_PrefabInstance: {fileID: 1909569936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1909569942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7254725466976341084, guid: b9a0d33045e743842ae35adf0c6d664b, type: 3}
+  m_PrefabInstance: {fileID: 1909569936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909569941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1909569943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909569941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2add2d154fc4b42a42f1e4e4d7900e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Quit
+  quitBtn: {fileID: 1909569942}
 --- !u!1 &1955913909
 GameObject:
   m_ObjectHideFlags: 0

@@ -307,12 +307,6 @@ public sealed class GameManager : MonoBehaviour
         }*/
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-
     #endregion
 
 }
