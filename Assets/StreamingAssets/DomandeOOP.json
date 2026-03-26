@@ -27,7 +27,7 @@
       "tooltipD": "Il polimorfismo si occupa della capacità di un oggetto di assumere più forme, non della protezione dei suoi campi di memoria."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nel contesto dell'astrazione in C#, quale delle seguenti affermazioni descrive correttamente una differenza tra una classe astratta e un'interfaccia?",
       "answerA": "Le classi astratte supportano l'ereditarietà multipla, mentre una classe può implementare una sola interfaccia.",
@@ -40,7 +40,7 @@
       "tooltipD": "Né le interfacce né le classi astratte possono essere istanziate direttamente; richiedono sempre una classe concreta di supporto."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Qual è l'effetto dell'applicazione del modificatore `sealed` a un metodo marcato con `override` in una classe derivata?",
       "answerA": "Rende il metodo inaccessibile alle classi derivate (equivalente a `private`).",
@@ -66,7 +66,7 @@
       "tooltipD": "Questo accadrebbe solo se il metodo fosse stato marcato con 'override', permettendo al late binding di trovare l'implementazione della derivata."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Qual è il vantaggio principale dell'uso dell'operatore `as` rispetto a un cast esplicito tra parentesi come `(Cane)animale`?",
       "answerA": "L'operatore `as` è l'unico modo per eseguire il casting tra un'interfaccia e una classe concreta.",
@@ -79,7 +79,7 @@
       "tooltipD": "L'operatore 'as' funziona solo con tipi di riferimento o tipi nullable, non con tipi di valore primitivi come int o double."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Quale modificatore di accesso deve essere utilizzato per permettere a un membro di essere visibile solo all'interno della classe stessa e nelle sue classi derivate?",
       "answerA": "`private`",
@@ -92,7 +92,7 @@
       "tooltipD": "Il livello di accesso 'protected' è progettato specificamente per supportare l'ereditarietà, limitando la visibilità all'esterno della gerarchia delle classi."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Cosa si intende per 'Inversione delle Dipendenze' (DIP) nell'ambito dell'astrazione e dell'OOP?",
       "answerA": "I moduli di alto livello non devono dipendere da moduli di basso livello, ma entrambi devono dipendere da astrazioni (interfacce).",
@@ -118,7 +118,7 @@
       "tooltipD": "La conversione in stringa è responsabilità del metodo 'ToString', non di 'GetHashCode'."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Quale delle seguenti definizioni descrive meglio il concetto di 'Polimorfismo a compile-time'?",
       "answerA": "Il sovraccarico dei metodi (Method Overloading), dove il compilatore seleziona il metodo corretto in base al numero e al tipo di parametri passati.",
@@ -183,7 +183,7 @@
       "tooltipD": "C# impedisce la creazione di istanze di classi astratte perché servono solo come base per altre classi."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Qual è il vantaggio principale dell'utilizzo di un'interfaccia rispetto a una classe astratta quando si progetta un sistema?",
       "answerA": "Le interfacce possono contenere campi privati per mantenere lo stato.",
@@ -209,7 +209,7 @@
       "tooltipD": "readonly si applica ai campi per renderli immutabili dopo l'inizializzazione, non alle classi."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Quale tra questi è un esempio di polimorfismo a compile-time (statico)?",
       "answerA": "L'uso dell'operatore `as`.",
@@ -287,7 +287,7 @@
       "tooltipD": "Le classi astratte sono progettate per essere ereditate e possono contenere metodi senza implementazione (astratti)."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Qual è una differenza fondamentale tra un'interfaccia e una classe astratta?",
       "answerA": "Una classe può implementare più interfacce, ma può ereditare da una sola classe astratta.",
@@ -326,7 +326,7 @@
       "tooltipD": "I valori di default si assegnano direttamente nella dichiarazione o nel costruttore."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Cosa si intende per 'astrazione' tramite interfacce?",
       "answerA": "Limitare il numero di oggetti che possono essere creati da una classe.",
@@ -350,6 +350,71 @@
       "tooltipB": "'System.Class' non è la classe base di tutte le classi; la radice è l'oggetto universale.",
       "tooltipC": "Tutti i tipi ereditano i metodi fondamentali come ToString() e Equals() da questa classe radice.",
       "tooltipD": "Non esiste una classe denominata 'System.Base' che funga da radice universale nel framework .NET."
-    }
+    },
+    {
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Cosa può contenere una classe astratta che è invece assente in un'interfaccia standard?",
+  "answerA": "Contratti",
+  "answerB": "Campi",
+  "answerC": "Metodi",
+  "answerD": "Costanti",
+  "tooltipA": "Entrambe definiscono contratti, ma la classe astratta può anche implementare logica[cite: 269].",
+  "tooltipB": "Le classi astratte possono contenere variabili di istanza (campi) e codice concreto, a differenza delle interfacce[cite: 269].",
+  "tooltipC": "Entrambe possono dichiarare metodi, ma solo la classe astratta li gestisce come membri concreti con stato[cite: 269].",
+  "tooltipD": "Le interfacce si concentrano sul comportamento, non sulla conservazione dello stato interno[cite: 269]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Quale effetto ha il modificatore 'sealed' su un metodo 'override'?",
+  "answerA": "Inaccessibilità",
+  "answerB": "Staticità",
+  "answerC": "Visibilità",
+  "answerD": "Inalterabilità",
+  "tooltipA": "Il metodo rimane visibile e accessibile per l'invocazione[cite: 273].",
+  "tooltipB": "Non trasforma il metodo in statico, ne blocca solo la sovrascrittura[cite: 272].",
+  "tooltipC": "La visibilità (es. public) non viene cambiata dal modificatore sealed[cite: 273].",
+  "tooltipD": "Impedisce a qualsiasi classe derivata di effettuare ulteriormente l'override di quel metodo[cite: 272, 273]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Cosa restituisce l'operatore 'as' se il cast fallisce?",
+  "answerA": "Eccezione",
+  "answerB": "Errore",
+  "answerC": "Null",
+  "answerD": "Zero",
+  "tooltipA": "A differenza del cast esplicito, 'as' evita il sollevamento di InvalidCastException[cite: 274].",
+  "tooltipB": "Non genera un errore di compilazione ma un valore gestibile a runtime[cite: 274].",
+  "tooltipC": "Restituisce null se la conversione non è possibile, rendendo il codice più sicuro[cite: 274].",
+  "tooltipD": "Funziona solo con tipi di riferimento, quindi restituisce null e non zero[cite: 275]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Quale modificatore rende un membro visibile solo alla classe e alle sue derivate?",
+  "answerA": "Private",
+  "answerB": "Internal",
+  "answerC": "Static",
+  "answerD": "Protected",
+  "tooltipA": "I membri privati sono nascosti anche alle sottoclassi[cite: 277].",
+  "tooltipB": "Internal limita l'accesso all'intero progetto (assembly), non alla gerarchia[cite: 277].",
+  "tooltipC": "Static riguarda l'appartenenza alla classe, non la visibilità nell'ereditarietà[cite: 272].",
+  "tooltipD": "Protected è progettato per permettere l'accesso esclusivamente all'interno della gerarchia delle classi[cite: 277]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "A cosa devono dipendere i moduli secondo il principio DIP?",
+  "answerA": "Astrazioni",
+  "answerB": "Implementazioni",
+  "answerC": "Database",
+  "answerD": "Classi",
+  "tooltipA": "Sia i moduli di alto che di basso livello devono dipendere da interfacce o classi astratte[cite: 279].",
+  "tooltipB": "Dipendere dalle implementazioni concrete crea un accoppiamento troppo rigido[cite: 279].",
+  "tooltipC": "Il principio riguarda l'architettura del codice, non la persistenza dei dati[cite: 279].",
+  "tooltipD": "L'uso di classi concrete viola il disaccoppiamento previsto dal principio[cite: 279]."
+}
   ]
 }

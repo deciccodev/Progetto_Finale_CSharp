@@ -41,19 +41,6 @@
     "tooltipD": "Al contrario, il char è un tipo valore primitivo, mentre la stringa, pur comportandosi spesso come tale, è tecnicamente un tipo riferimento."
   },
   {
-    "QuestionType": 1,
-    "rightAnswer": 0,
-    "question": "Cosa si intende per casting \"Esplicito\" (Narrowing) in C#?",
-    "answerA": "La conversione da un tipo con intervallo più grande a uno più piccolo, con potenziale perdita di dati.",
-    "answerB": "La trasformazione di una stringa in un numero tramite il metodo \"Parse\".",
-    "answerC": "L'assegnazione di una costante a una variabile locale.",
-    "answerD": "La conversione automatica di un intero in un numero a virgola mobile.",
-    "tooltipA": "Il narrowing richiede che lo sviluppatore confermi l'operazione tra parentesi poiché il valore originale potrebbe non entrare nel nuovo tipo.",
-    "tooltipB": "Il parsing è una conversione di formato basata su analisi testuale, non un semplice cast di tipo numerico.",
-    "tooltipC": "L'assegnazione di una costante non è un'operazione di casting, ma una semplice inizializzazione di memoria.",
-    "tooltipD": "Questa è una conversione implicita (widening) perché non c'è rischio di perdere la grandezza del valore."
-  },
-  {
     "QuestionType": 0,
     "rightAnswer": 0,
     "question": "Quale convenzione di nomenclatura (naming convention) è standard in C# per le variabili locali?",
@@ -65,19 +52,6 @@
     "tooltipB": "Il PascalCase è solitamente riservato a nomi di classi, metodi e proprietà pubbliche.",
     "tooltipC": "L'uso del tutto maiuscolo è spesso associato alla dichiarazione di costanti nel codice.",
     "tooltipD": "Lo snake_case è comune in altri linguaggi come Python, ma non è la convenzione standard per C#."
-  },
-  {
-    "QuestionType": 1,
-    "rightAnswer": 2,
-    "question": "Qual è il vincolo principale per una variabile dichiarata con la parola chiave \"const\"?",
-    "answerA": "Il suo valore può essere letto solo tramite l'istanza di un oggetto.",
-    "answerB": "Deve sempre essere di tipo \"string\".",
-    "answerC": "Il suo valore deve essere assegnato al momento della dichiarazione e deve essere noto a compile-time.",
-    "answerD": "Può essere modificata solo una volta all'interno del metodo Main.",
-    "tooltipA": "In realtà, le \"const\" sono implicitamente statiche e si accede ad esse tramite il nome della classe, non dell'istanza.",
-    "tooltipB": "Le costanti possono essere di diversi tipi primitivi, inclusi int, double, bool e altri.",
-    "tooltipC": "Le costanti \"const\" sono statiche per natura e il compilatore le sostituisce direttamente nel codice con il loro valore.",
-    "tooltipD": "Una costante non può mai essere modificata dopo la sua prima e unica assegnazione obbligatoria."
   },
   {
     "QuestionType": 0,
@@ -132,32 +106,6 @@
     "tooltipD": "Iniziare con una lettera maiuscola è valido, anche se solitamente riservato a contesti diversi dalle variabili locali."
   },
   {
-    "QuestionType": 1,
-    "rightAnswer": 1,
-    "question": "Quale delle seguenti affermazioni descrive correttamente il comportamento del casting implicito tra un tipo int e un tipo float in C#?",
-    "answerA": "Il casting avviene solo se la variabile int è dichiarata come costante tramite la parola chiave const.",
-    "answerB": "Il casting avviene automaticamente perché il tipo float ha un'ampiezza maggiore del tipo int, evitando la perdita di dati.",
-    "answerC": "Il casting implicito non è permesso tra tipi numerici interi e tipi a virgola mobile.",
-    "answerD": "Il casting richiede l'operatore (float) perché il compilatore non può garantire l'integrità dei decimali.",
-    "tooltipA": "La modalità di dichiarazione della variabile (costante o meno) non influenza le regole di conversione tra tipi primitivi compatibili.",
-    "tooltipB": "Questo processo è noto come 'widening' e permette la conversione sicura da un tipo più piccolo a uno più grande senza intervento esplicito del programmatore.",
-    "tooltipC": "C# permette conversioni implicite tra diversi tipi numerici purché non vi sia il rischio di perdere l'ordine di grandezza del valore.",
-    "tooltipD": "Il casting esplicito è richiesto solo per il 'narrowing', ovvero quando si passa da un tipo più grande (come double) a uno più piccolo."
-  },
-  {
-    "QuestionType": 1,
-    "rightAnswer": 0,
-    "question": "Se dichiariamo una variabile come 'float x = 3.14;', quale sarà il risultato del compilatore?",
-    "answerA": "Un errore di compilazione, poiché il valore letterale 3.14 viene interpretato di default come double.",
-    "answerB": "La variabile verrà inizializzata correttamente perché il compilatore esegue un arrotondamento automatico.",
-    "answerC": "La variabile verrà inizializzata a 3 poiché il tipo float scarta i decimali se non è presente il suffisso.",
-    "answerD": "Il compilatore dedurrà automaticamente che si tratta di un float grazie all'inferenza di tipo.",
-    "tooltipA": "In C#, i numeri decimali scritti senza suffisso sono considerati double, che richiede un casting esplicito o il suffisso 'f' per essere assegnato a un float.",
-    "tooltipB": "Il compilatore C# non esegue mai conversioni implicite che potrebbero comportare una perdita di precisione dai tipi a virgola mobile più grandi a quelli più piccoli.",
-    "tooltipC": "Il troncamento dei decimali avviene solo durante il casting verso tipi interi (int), non tra diversi tipi a virgola mobile.",
-    "tooltipD": "L'inferenza di tipo avviene solo con la parola chiave var; se il tipo è esplicitamente float, il valore deve corrispondere esattamente o essere convertibile."
-  },
-  {
     "QuestionType": 3,
     "rightAnswer": 3,
     "question": "Qual è la differenza fondamentale tra una costante dichiarata con 'const' e una dichiarata con 'readonly' per i tipi primitivi?",
@@ -195,32 +143,6 @@
     "tooltipB": "Il casting numerico non genera eccezioni di formato, che sono tipiche delle conversioni da stringa a numero tramite Parse.",
     "tooltipC": "C# non esegue l'arrotondamento automatico durante il casting; per tale scopo servono metodi specifici della classe Math.",
     "tooltipD": "I tipi numerici sono compatibili tra loro tramite casting; l'unico rischio è la perdita di precisione o l'overflow."
-  },
-  {
-    "QuestionType": 1,
-    "rightAnswer": 2,
-    "question": "Quale tra i seguenti metodi è il più indicato per convertire una stringa inserita dall'utente in un int senza rischiare il crash del programma?",
-    "answerA": "(int)stringa",
-    "answerB": "int.Parse(string)",
-    "answerC": "int.TryParse(string, out int)",
-    "answerD": "Convert.ToInt32(null)",
-    "tooltipA": "Non è possibile eseguire un casting diretto tra il tipo string e il tipo int poiché sono tipi di dati strutturalmente diversi.",
-    "tooltipB": "Sebbene funzioni, lancia una FormatException se la stringa non è un numero valido, portando all'arresto del programma se non gestita.",
-    "tooltipC": "Questo metodo restituisce un booleano per indicare il successo dell'operazione, evitando il lancio di eccezioni in caso di input non numerici.",
-    "tooltipD": "Pur essendo un metodo di conversione valido, l'uso di Convert su una stringa non valida genererebbe comunque un errore di formato."
-  },
-  {
-    "QuestionType": 1,
-    "rightAnswer": 3,
-    "question": "Qual è il valore booleano risultante dall'espressione logica !(10 < 5 || 5 == 5)?",
-    "answerA": "Errore di sintassi dovuto all'operatore !.",
-    "answerB": "true",
-    "answerC": "null",
-    "answerD": "false",
-    "tooltipA": "L'operatore logico NOT è perfettamente valido in C# per invertire il valore di un'espressione booleana.",
-    "tooltipB": "L'operatore NOT esterno nega il risultato dell'operazione interna, che in questo caso è vera, rendendola falsa.",
-    "tooltipC": "Il tipo primitivo bool non può assumere valore nullo; può essere solo vero o falso.",
-    "tooltipD": "L'espressione tra parentesi è vera poiché una delle due condizioni (OR) è soddisfatta; l'operatore NOT (!) inverte quindi il risultato in falso."
   },
   {
     "QuestionType": 0,
@@ -312,19 +234,6 @@
     "tooltipB": "L'unità non è il valore di default standard per l'allocazione di memoria numerica.",
     "tooltipC": "Questo termine è comune in altri linguaggi come JavaScript, ma non è un valore di default per i tipi primitivi in C#.",
     "tooltipD": "In C#, i tipi numerici primitivi vengono inizializzati automaticamente a zero se non diversamente specificato."
-  },
-  {
-    "QuestionType": 1,
-    "rightAnswer": 2,
-    "question": "Quale delle seguenti affermazioni descrive correttamente l'operazione di 'Narrowing' (Casting Esplicito)?",
-    "answerA": "È una conversione automatica che avviene sempre senza perdita di dati.",
-    "answerB": "Si applica solo quando si converte una stringa in un numero intero.",
-    "answerC": "È la conversione da un tipo più grande a uno più piccolo e richiede l'indicazione del tipo tra parentesi.",
-    "answerD": "Viene utilizzata per trasformare un booleano in una stringa.",
-    "tooltipA": "Questa descrizione si riferisce al Widening (Casting Implicito), non al Narrowing.",
-    "tooltipB": "La conversione da stringa a numero richiede solitamente metodi come Parse o Convert, non un semplice cast.",
-    "tooltipC": "Poiché il narrowing può comportare una perdita di dati, il programmatore deve confermare l'azione usando la sintassi del cast esplicito.",
-    "tooltipD": "Il casting tra tipi non compatibili come bool e string non è supportato tramite narrowing."
   },
   {
     "QuestionType": 0,
@@ -429,6 +338,109 @@
       "tooltipB": "int è per numeri interi.",
       "tooltipC": "bool è solo true o false.",
       "tooltipD": "char è corretto per un singolo carattere."
-    }
+    },{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Cosa si intende per casting 'Esplicito' (Narrowing) in C#?",
+  "answerA": "Perdita",
+  "answerB": "Parsing",
+  "answerC": "Inizializzazione",
+  "answerD": "Widening",
+  "tooltipA": "Il narrowing richiede che lo sviluppatore confermi l'operazione tra parentesi poiché il valore originale potrebbe non entrare nel nuovo tipo.",
+  "tooltipB": "Il parsing è una conversione di formato basata su analisi testuale, non un semplice cast di tipo numerico.",
+  "tooltipC": "L'assegnazione di una costante non è un'operazione di casting, ma una semplice inizializzazione di memoria.",
+  "tooltipD": "Questa è una conversione implicita (widening) perché non c'è rischio di perdere la grandezza del valore."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Qual è il vincolo principale per una variabile dichiarata con la parola chiave 'const'?",
+  "answerA": "Istanza",
+  "answerB": "Stringa",
+  "answerC": "Immutabilità",
+  "answerD": "Dinamicità",
+  "tooltipA": "Le costanti sono implicitamente statiche e appartengono al tipo, non alla singola istanza dell'oggetto.",
+  "tooltipB": "Il modificatore const può essere applicato a diversi tipi primitivi (int, double, bool, etc.), non solo alle stringhe.",
+  "tooltipC": "Una volta assegnato in fase di compilazione, il valore di una costante non può più essere modificato durante l'esecuzione.",
+  "tooltipD": "Le variabili il cui valore può cambiare nel tempo sono variabili standard o marcate come readonly (se assegnate nel costruttore)."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Qual è il valore predefinito di una variabile di tipo 'bool' in C# se non viene inizializzata?",
+  "answerA": "True",
+  "answerB": "False",
+  "answerC": "Null",
+  "answerD": "Zero",
+  "tooltipA": "Il valore 'true' deve essere assegnato esplicitamente; il sistema non lo usa come default.",
+  "tooltipB": "In C#, i tipi booleani non inizializzati (ad esempio come campi di una classe) assumono sempre il valore false.",
+  "tooltipC": "Il tipo bool non è nullable di default; per ammettere il valore null occorre usare 'bool?'.",
+  "tooltipD": "Sebbene internamente possa essere rappresentato da un bit, il valore logico restituito è la costante false."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Dato 'int a = 10; double b = a;', come viene definita questa operazione?",
+  "answerA": "Narrowing",
+  "answerB": "Boxing",
+  "answerC": "Parsing",
+  "answerD": "Widening",
+  "tooltipA": "Il narrowing è il processo inverso, dove si passa da un tipo più grande a uno più piccolo.",
+  "tooltipB": "Il boxing riguarda la conversione di un tipo valore in un tipo oggetto (object).",
+  "tooltipC": "Il parsing si usa per convertire stringhe in numeri, non tra due tipi numerici.",
+  "tooltipD": "Si tratta di una conversione implicita sicura poiché un intero può sempre essere contenuto in un double senza perdita di precisione."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Quale tipo di dato è più indicato per gestire valori monetari che richiedono alta precisione decimale?",
+  "answerA": "Decimal",
+  "answerB": "Float",
+  "answerC": "Double",
+  "answerD": "Long",
+  "tooltipA": "Il tipo decimal ha un intervallo più piccolo rispetto a double ma una precisione molto più elevata, ideale per calcoli finanziari.",
+  "tooltipB": "Float è un tipo a virgola mobile a singola precisione e può presentare approssimazioni non adatte al denaro.",
+  "tooltipC": "Double è ottimizzato per calcoli scientifici e matematici, ma soffre di piccoli errori di arrotondamento nei decimali.",
+  "tooltipD": "Long è un tipo intero a 64 bit e non può memorizzare nativamente le frazioni decimali senza logiche aggiuntive."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Cosa accade se si tenta di assegnare 'null' a una variabile 'int' standard?",
+  "answerA": "Zero",
+  "answerB": "Eccezione",
+  "answerC": "Warning",
+  "answerD": "Errore",
+  "tooltipA": "Il sistema non assegna automaticamente 0; impedisce direttamente l'operazione.",
+  "tooltipB": "Le eccezioni avvengono a runtime, ma in questo caso il problema viene rilevato prima, durante la scrittura del codice.",
+  "tooltipC": "Non è un semplice avvertimento, ma una violazione delle regole del linguaggio sui tipi valore.",
+  "tooltipD": "Il compilatore genera un errore poiché 'int' è un tipo valore e non può essere nullo a meno che non sia dichiarato come 'int?'."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Qual è il risultato dell'espressione 'bool res = !(5 > 2 || 3 < 1);'?",
+  "answerA": "True",
+  "answerB": "Null",
+  "answerC": "Errore",
+  "answerD": "False",
+  "tooltipA": "L'espressione tra parentesi è vera, ma l'operatore NOT (!) esterno inverte il risultato.",
+  "tooltipB": "Un'operazione logica su booleani restituisce sempre true o false, mai null.",
+  "tooltipC": "La sintassi è corretta: confronta numeri e inverte il valore di un'espressione booleana.",
+  "tooltipD": "L'espressione interna è vera (5 > 2 è vero); l'operatore NOT (!) inverte quindi il risultato in falso."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Quale caratteristica definisce l'operazione di 'Narrowing'?",
+  "answerA": "Automaticità",
+  "answerB": "Stringhe",
+  "answerC": "Esplicito",
+  "answerD": "Booleani",
+  "tooltipA": "Questa descrizione si riferisce al Widening (Casting Implicito), non al Narrowing.",
+  "tooltipB": "La conversione da stringa a numero richiede solitamente metodi come Parse, non un semplice cast.",
+  "tooltipC": "Poiché il narrowing può comportare perdita di dati, richiede l'indicazione del tipo tra parentesi (cast esplicito).",
+  "tooltipD": "Il casting tra tipi numerici e booleani non è diretto in C# come in altri linguaggi."
+}
 ]
 }

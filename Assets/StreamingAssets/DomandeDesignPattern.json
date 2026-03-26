@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Secondo la classificazione dei 'Gang of Four' (GoF), a quale categoria appartiene un pattern che si occupa di come le classi e gli oggetti vengono composti per formare strutture più grandi?",
       "answerA": "Pattern Comportamentali",
@@ -40,7 +40,7 @@
       "tooltipD": "Al contrario, il pattern si basa pesantemente sull'uso di interfacce o classi astratte per definire il contratto del prodotto."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Quale problema tipico della programmazione procedurale viene risolto dal pattern Strategy attraverso l'incapsulamento degli algoritmi?",
       "answerA": "La mancanza di supporto per l'ereditarietà multipla.",
@@ -66,7 +66,7 @@
       "tooltipD": "Il meccanismo itera sull'intera collezione di osservatori per garantire che tutti i dipendenti siano sincronizzati."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Perché il pattern Decorator è spesso preferito all'ereditarietà classica per estendere le funzionalità di un oggetto?",
       "answerA": "Perché consente di combinare più comportamenti in modo flessibile a runtime.",
@@ -105,7 +105,7 @@
       "tooltipD": "La variabile deve essere inizialmente 'null' per consentire la 'lazy initialization' (inizializzazione ritardata)."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Quale pattern comportamentale è ideale per implementare un sistema di 'Undo/Redo' salvando le richieste come oggetti?",
       "answerA": "Pattern Decorator",
@@ -131,7 +131,7 @@
       "tooltipD": "La DI riguarda l'architettura del codice e il disaccoppiamento, non la gestione della memoria a basso livello del runtime .NET."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Nel pattern Observer, qual è lo scopo del metodo 'Detach' (o Rimuovi)?",
       "answerA": "Bloccare l'accesso al database da parte del client.",
@@ -170,7 +170,7 @@
       "tooltipD": "Il Garbage Collector non elimina oggetti ancora referenziati o in fase di utilizzo statico, quindi questa non è la ragione tecnica del pattern."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Qual è il vantaggio architetturale principale derivante dall'uso del pattern Factory Method rispetto all'istanziazione diretta tramite l'operatore new?",
       "answerA": "Semplifica la sintassi del codice eliminando la necessità di utilizzare interfacce o classi astratte.",
@@ -183,7 +183,7 @@
       "tooltipD": "Delegando la creazione alle sottoclassi di un 'Creator', il codice client interagisce solo con l'interfaccia astratta del prodotto."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nel pattern Observer, quale affermazione descrive meglio la conoscenza che il Subject ha dei suoi Observer?",
       "answerA": "Il Subject conosce l'implementazione concreta di ogni Observer per inviare dati specifici a ciascuno.",
@@ -196,7 +196,7 @@
       "tooltipD": "Il Subject deve almeno gestire una lista di riferimenti per poter invocare il metodo di aggiornamento."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "In che modo il pattern Decorator evita la 'proliferazione di sottoclassi' che si verificherebbe con l'ereditarietà classica?",
       "answerA": "Utilizzando la composizione ricorsiva per combinare i comportamenti a runtime invece di definirli a compile-time.",
@@ -222,7 +222,7 @@
       "tooltipD": "Strategy si concentra sulla separazione della logica comportamentale, non solo sulla gestione dei dati."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Perché la classe Singleton viene spesso dichiarata con la keyword `sealed` in C#?",
       "answerA": "Per obbligare il programmatore a inizializzare tutti i campi nel costruttore statico.",
@@ -235,7 +235,7 @@
       "tooltipD": "Se la classe non fosse 'sealed', una sottoclasse potrebbe potenzialmente violare il vincolo dell'unica istanza."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nel pattern Strategy, qual è il compito principale della classe Context?",
       "answerA": "Creare nuove istanze di strategie concrete in base all'input dell'utente tramite uno switch-case.",
@@ -261,7 +261,7 @@
       "tooltipD": "Il Decorator è strutturale perché definisce come gli oggetti vengono composti per formare strutture più complesse e flessibili."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nel pattern Factory Method, chi ha la responsabilità finale di decidere quale ConcreteProduct istanziare?",
       "answerA": "Il client che invoca il metodo FactoryMethod.",
@@ -274,7 +274,7 @@
       "tooltipD": "Le interfacce definiscono contratti; la logica di istanziazione risiede solitamente nelle classi che implementano i creatori."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Cosa differenzia principalmente il pattern Decorator dal pattern Strategy?",
       "answerA": "Non esiste alcuna differenza, sono due nomi diversi per lo stesso concetto di polimorfismo.",
@@ -313,7 +313,7 @@
       "tooltipD": "Strategy è comportamentale: gestisce famiglie di algoritmi intercambiabili a runtime."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Qual è il vantaggio principale del pattern Factory Method rispetto all'uso diretto dell'operatore new all'interno di un client?",
       "answerA": "Permette di aggiungere nuovi attributi privati a una classe esistente senza ricompilare il codice.",
@@ -326,7 +326,7 @@
       "tooltipD": "Questa è la responsabilità specifica del pattern Singleton, mentre la Factory può creare molteplici istanze."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Perché il pattern Decorator è considerato un'alternativa flessibile all'ereditarietà classica?",
       "answerA": "Consente a una classe di ereditare contemporaneamente da più classi base in C#.",
@@ -339,7 +339,7 @@
       "tooltipD": "La gestione della memoria è gestita dal CLR e non dipende dall'uso di pattern strutturali specifici."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Nel pattern Observer, quale principio fondamentale della programmazione ad oggetti viene promosso attraverso l'uso del metodo Notify()?",
       "answerA": "Il disaccoppiamento (decoupling), poiché il Soggetto non conosce i dettagli implementativi dei suoi Osservatori.",
@@ -378,7 +378,7 @@
       "tooltipD": "Questa è una preoccupazione tipica dei pattern comportamentali o di ottimizzazione strutturale, non del processo di creazione."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "In C#, perché è considerata una buona pratica dichiarare una classe Singleton come `sealed`?",
       "answerA": "Per forzare l'inizializzazione dell'oggetto solo quando il programma viene avviato (Eager loading).",
@@ -391,7 +391,7 @@
       "tooltipD": "L'ereditarietà potrebbe permettere la creazione di istanze di classi derivate, aggirando il controllo dell'unica istanza previsto nella classe base."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Qual è la differenza fondamentale tra i pattern Adapter e Facade, nonostante entrambi siano strutturali?",
       "answerA": "L'Adapter crea nuove funzionalità, mentre il Facade si limita a nascondere quelle esistenti.",
@@ -415,6 +415,227 @@
       "tooltipB": "Il risparmio di memoria tramite la condivisione di oggetti è lo scopo del pattern Flyweight.",
       "tooltipC": "Questa è la responsabilità del pattern Observer.",
       "tooltipD": "Questa problematica è gestita dal pattern Singleton."
-    }
+    },
+    {
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Secondo i GoF, a quale categoria appartiene un pattern che si occupa della composizione di classi e oggetti?",
+  "answerA": "Comportamentali",
+  "answerB": "Architetturali",
+  "answerC": "Creazionali",
+  "answerD": "Strutturali",
+  "tooltipA": "Il focus di questa categoria è l'assegnazione di responsabilità e la comunicazione tra oggetti[cite: 25].",
+  "tooltipB": "I pattern GoF operano a livello di oggetto, non di sistema alto come quelli architetturali[cite: 25].",
+  "tooltipC": "Questa categoria si concentra esclusivamente sulla logica di istanziazione[cite: 25].",
+  "tooltipD": "Questi pattern mirano a ottimizzare la composizione dei componenti e le relazioni tra entità[cite: 26]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Quale struttura condizionale complessa viene eliminata tipicamente dal pattern Strategy?",
+  "answerA": "Ereditarietà",
+  "answerB": "Switch",
+  "answerC": "Static",
+  "answerD": "Global",
+  "tooltipA": "C# non supporta l'ereditarietà multipla; lo Strategy usa la composizione come alternativa[cite: 27].",
+  "tooltipB": "Sostituendo i controlli condizionali (if/else o switch) con oggetti, il codice rispetta il principio Open/Closed[cite: 28].",
+  "tooltipC": "Il pattern riguarda la variazione del comportamento a runtime, non i metodi statici[cite: 28].",
+  "tooltipD": "Lo Strategy organizza la logica algoritmica, non la gestione della memoria[cite: 28]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Cosa permette il pattern Decorator rispetto all'ereditarietà per estendere un oggetto?",
+  "answerA": "Flessibilità",
+  "answerB": "Privacy",
+  "answerC": "Interfacce",
+  "answerD": "Staticità",
+  "tooltipA": "Tramite la composizione, è possibile combinare diversi comportamenti evitando un'esplosione di sottoclassi[cite: 30].",
+  "tooltipB": "I decoratori non hanno accesso ai membri privati dell'oggetto avvolto[cite: 30].",
+  "tooltipC": "Sia il componente che i decoratori devono implementare la stessa interfaccia[cite: 30].",
+  "tooltipD": "L'ereditarietà è statica; il Decorator è orientato alla dinamicità durante l'esecuzione[cite: 30]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Quale pattern è ideale per implementare un sistema di 'Undo/Redo'?",
+  "answerA": "Decorator",
+  "answerB": "Observer",
+  "answerC": "Command",
+  "answerD": "Factory",
+  "tooltipA": "Il Decorator aggiunge funzionalità, ma non tiene traccia cronologica delle operazioni[cite: 31].",
+  "tooltipB": "L'Observer notifica i cambiamenti ma non memorizza la storia delle azioni[cite: 31].",
+  "tooltipC": "Incapsulando le richieste in oggetti, è possibile memorizzarle in una pila per annullarle[cite: 31].",
+  "tooltipD": "Il Factory Method si occupa solo della creazione degli oggetti[cite: 31]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Nel pattern Observer, qual è lo scopo del metodo 'Detach'?",
+  "answerA": "Database",
+  "answerB": "Inizializzazione",
+  "answerC": "Disiscrizione",
+  "answerD": "Cancellazione",
+  "tooltipA": "L'Observer opera in memoria e non ha una relazione diretta obbligatoria con il database[cite: 33].",
+  "tooltipB": "L'inizializzazione avviene solitamente nel costruttore[cite: 33].",
+  "tooltipC": "Permette a un oggetto di smettere di ricevere notifiche dal Subject a runtime[cite: 33].",
+  "tooltipD": "Il Subject continua a esistere; Detach rimuove solo un osservatore specifico dalla lista[cite: 34]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Qual è il principale vantaggio del Factory Method per il codice client?",
+  "answerA": "Semplificazione",
+  "answerB": "Persistenza",
+  "answerC": "Memoria",
+  "answerD": "Disaccoppiamento",
+  "tooltipA": "Il pattern Factory Method si basa pesantemente su astrazioni, non semplifica la sintassi[cite: 36].",
+  "tooltipB": "Il pattern si occupa di istanziazione, non di salvataggio dati su database[cite: 36].",
+  "tooltipC": "Il controllo del numero di istanze è tipico del Singleton o Object Pool[cite: 36].",
+  "tooltipD": "Delegando la creazione, il client interagisce solo con l'interfaccia astratta del prodotto[cite: 36]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Come conosce il Subject i suoi Observer per mantenere un basso accoppiamento?",
+  "answerA": "Concretamente",
+  "answerB": "Interfaccia",
+  "answerC": "Ereditarietà",
+  "answerD": "Anonimamente",
+  "tooltipA": "Conoscere l'implementazione concreta creerebbe un accoppiamento forte[cite: 38].",
+  "tooltipB": "Interagendo tramite un'interfaccia (es. IObserver), il Subject notifica oggetti senza dipendere dalla loro classe[cite: 38].",
+  "tooltipC": "L'ereditarietà creerebbe una gerarchia rigida; l'Observer usa la composizione[cite: 38].",
+  "tooltipD": "Il Subject deve gestire una lista di riferimenti per poter invocare l'aggiornamento[cite: 38]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Quale tecnica usa il Decorator per evitare la proliferazione di sottoclassi?",
+  "answerA": "Composizione",
+  "answerB": "Static",
+  "answerC": "Marker",
+  "answerD": "Delegati",
+  "tooltipA": "Aggregando oggetti con la stessa interfaccia, si concatenano funzionalità senza creare classi per ogni combinazione[cite: 40].",
+  "tooltipB": "Le classi statiche impedirebbero l'uso di oggetti fondamentali per questo pattern[cite: 40].",
+  "tooltipC": "Il Decorator richiede metodi operativi reali per delegare il comportamento[cite: 40].",
+  "tooltipD": "Il pattern si basa sulla struttura di classi che incapsulano altre istanze dello stesso tipo[cite: 40]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Perché il Singleton in C# viene spesso dichiarato come 'sealed'?",
+  "answerA": "Inizializzazione",
+  "answerB": "Injection",
+  "answerC": "Performance",
+  "answerD": "Sicurezza",
+  "tooltipA": "L'inizializzazione non è influenzata dalla keyword sealed[cite: 42].",
+  "tooltipB": "Sealed impedisce l'estensione, l'opposto di quanto serve per una base di injection[cite: 42].",
+  "tooltipC": "Il motivo principale è legato alla struttura dell'istanza, non alla velocità del JIT[cite: 42].",
+  "tooltipD": "Impedisce che sottoclassi derivate possano creare istanze aggiuntive violando il vincolo[cite: 42]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Qual è il compito principale della classe 'Context' nel pattern Strategy?",
+  "answerA": "Istanziazione",
+  "answerB": "Delega",
+  "answerC": "Implementazione",
+  "answerD": "Notifica",
+  "tooltipA": "La creazione delle strategie è solitamente compito di una Factory o del client[cite: 44].",
+  "tooltipB": "Il Context funge da intermediario che usa la strategia corrente delegando l'algoritmo[cite: 44].",
+  "tooltipC": "Il Context non deve implementare gli algoritmi, ma usarli come classi separate[cite: 44].",
+  "tooltipD": "La notifica è una responsabilità del pattern Observer[cite: 44]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Nel Factory Method, chi decide quale 'ConcreteProduct' istanziare?",
+  "answerA": "Client",
+  "answerB": "Sottoclassi",
+  "answerC": "Creator",
+  "answerD": "Interfaccia",
+  "tooltipA": "Il client invoca il metodo, ma la logica è incapsulata nel creatore specifico[cite: 47].",
+  "tooltipB": "Ogni sottoclasse concreta (ConcreteCreator) implementa il metodo per restituire un prodotto specifico[cite: 47].",
+  "tooltipC": "La classe base fornisce solo l'astrazione, non decide l'istanza concreta[cite: 47].",
+  "tooltipD": "La logica di istanziazione risiede nelle classi che implementano i creatori[cite: 47]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Cosa cambia il Decorator rispetto allo Strategy?",
+  "answerA": "Nulla",
+  "answerB": "Staticità",
+  "answerC": "Estetica",
+  "answerD": "Concatenazione",
+  "tooltipA": "Pur usando il polimorfismo, hanno intenti e strutture differenti[cite: 49].",
+  "tooltipB": "Entrambi usano istanze e astrazioni, non classi statiche[cite: 49].",
+  "tooltipC": "Il Decorator 'infiocchetta' l'esterno dell'oggetto; lo Strategy scambia il nucleo algoritmico[cite: 49].",
+  "tooltipD": "Il Decorator è progettato per la concatenazione, lo Strategy seleziona un solo algoritmo[cite: 49]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Quale principio promuove il Factory Method delegando la scelta della classe concreta?",
+  "answerA": "Incapsulamento",
+  "answerB": "Accoppiamento",
+  "answerC": "Velocità",
+  "answerD": "Globalità",
+  "tooltipA": "Il pattern gestisce la creazione, non la modifica degli attributi privati[cite: 52].",
+  "tooltipB": "Astrarre la creazione riduce l'accoppiamento facendo dipendere il client da interfacce[cite: 52].",
+  "tooltipC": "L'allocazione avviene comunque a runtime; il pattern introduce un leggero overhead[cite: 52].",
+  "tooltipD": "La creazione di un'istanza globale è compito del Singleton[cite: 52]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "In che momento il Decorator aggiunge responsabilità agli oggetti?",
+  "answerA": "Compile-time",
+  "answerB": "Runtime",
+  "answerC": "Staticamente",
+  "answerD": "Automaticamente",
+  "tooltipA": "L'ereditarietà è statica (compile-time), il Decorator è dinamico[cite: 54].",
+  "tooltipB": "Il Decorator permette di combinare comportamenti avvolgendo l'oggetto durante l'esecuzione[cite: 54].",
+  "tooltipC": "Il pattern si basa su interfacce proprio per evitare gerarchie statiche rigide[cite: 54].",
+  "tooltipD": "La gestione della memoria è compito del CLR, non del pattern[cite: 54]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Quale concetto promuove il metodo Notify() nel pattern Observer?",
+  "answerA": "Disaccoppiamento",
+  "answerB": "Gerarchia",
+  "answerC": "Build",
+  "answerD": "Nascondimento",
+  "tooltipA": "Il Soggetto interagisce con un'interfaccia comune senza conoscere i dettagli degli osservatori[cite: 56].",
+  "tooltipB": "Soggetto e Osservatore sono collegati tramite interfacce, non ereditarietà obbligatoria[cite: 56].",
+  "tooltipC": "L'Observer sfrutta il polimorfismo di esecuzione (runtime), non di build[cite: 56].",
+  "tooltipD": "Gli osservatori devono spesso accedere allo stato del soggetto per aggiornarsi[cite: 56]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Quale vincolo protegge la keyword 'sealed' in un Singleton?",
+  "answerA": "Eager",
+  "answerB": "Stack",
+  "answerC": "Thread-safe",
+  "answerD": "Unicità",
+  "tooltipA": "Il caricamento immediato o lazy non dipende dal modificatore sealed[cite: 59].",
+  "tooltipB": "In C#, le classi sono allocate nello heap indipendentemente dal sealed[cite: 59].",
+  "tooltipC": "La thread-safety deve essere implementata esplicitamente dal programmatore[cite: 59].",
+  "tooltipD": "L'ereditarietà permetterebbe a classi derivate di creare nuove istanze violando l'unicità[cite: 59]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Cosa fornisce il pattern Facade rispetto all'Adapter?",
+  "answerA": "Creazione",
+  "answerB": "Runtime",
+  "answerC": "Semplificazione",
+  "answerD": "Astrazione",
+  "tooltipA": "L'Adapter converte dati, il Facade orchestra chiamate esistenti senza creare nuove responsabilità[cite: 61].",
+  "tooltipB": "Entrambi i pattern hanno effetti durante l'esecuzione del programma[cite: 61].",
+  "tooltipC": "L'Adapter adatta interfacce incompatibili; il Facade crea un'interfaccia semplificata per sistemi complessi[cite: 62].",
+  "tooltipD": "Entrambi possono lavorare con interfacce o classi a seconda delle necessità[cite: 62]."
+}
   ]
 }

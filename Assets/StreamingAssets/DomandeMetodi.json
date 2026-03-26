@@ -14,7 +14,7 @@
       "tooltipD": "protected permette l'accesso anche alle classi derivate, non solo alla classe originale."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Qual è la differenza fondamentale tra i parametri passati con la parola chiave `ref` e quelli passati con `out`?",
       "answerA": "Non esiste alcuna differenza funzionale; sono sinonimi utilizzati per migliorare la leggibilità.",
@@ -92,7 +92,7 @@
       "tooltipD": "C# non blocca la variabile originale; semplicemente il metodo opera su una copia distinta."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 3,
       "question": "Qual è lo scopo principale del delegato `Func<T1, T2, TResult>`?",
       "answerA": "Definire un costruttore personalizzato per una classe generica.",
@@ -105,7 +105,7 @@
       "tooltipD": "Func è il delegato standard per funzioni che producono un output basato su determinati input."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Nell'architettura .NET, quale componente è responsabile della compilazione 'Just-In-Time' (JIT) dell'Intermediate Language (IL) in codice macchina?",
       "answerA": "BCL (Base Class Library)",
@@ -144,7 +144,7 @@
       "tooltipD": "Sebbene usato in alcuni algoritmi come valore di errore, -1 non è il valore di default del linguaggio."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 2,
       "question": "Nel pattern matching degli `switch`, cosa rappresenta il carattere underscore `_`?",
       "answerA": "Un segnaposto per indicare che il valore deve essere obbligatoriamente nullo.",
@@ -157,7 +157,7 @@
       "tooltipD": "L'operatore di negazione in C# è il punto esclamativo (!)."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Perché si dovrebbe preferire l'uso di un `Dictionary<TKey, TValue>` rispetto a una `List<T>` per cercare un elemento tramite una chiave univoca?",
       "answerA": "Perché occupa meno memoria complessiva.",
@@ -248,7 +248,7 @@
       "tooltipD": "La DI tramite costruttore si applica alle istanze di classe, indipendentemente da chi le istanzia."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Qual è il limite principale della 'Setter Injection' rispetto alla 'Constructor Injection'?",
       "answerA": "Non garantisce che la dipendenza sia presente prima che l'oggetto venga utilizzato.",
@@ -261,7 +261,7 @@
       "tooltipD": "La DI, in qualsiasi sua forma, funziona al meglio proprio utilizzando interfacce per disaccoppiare i componenti."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 0,
       "question": "Quale operatore viene utilizzato per verificare a runtime se un oggetto è compatibile con un determinato tipo o interfaccia?",
       "answerA": "is",
@@ -274,7 +274,7 @@
       "tooltipD": "Il casting è l'operazione di conversione stessa, non un operatore booleano di verifica."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Qual è la funzione del metodo `Invoke()` in un delegato o in un evento?",
       "answerA": "Registra un nuovo metodo all'interno della lista di esecuzione.",
@@ -287,7 +287,7 @@
       "tooltipD": "Per liberare la memoria si attende il Garbage Collector o si imposta il delegato a null."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Perché un metodo dichiarato in una `interface` non può avere un corpo (implementazione) nelle versioni classiche di C#?",
       "answerA": "Perché le interfacce servono a definire solo lo stato (variabili) dell'oggetto.",
@@ -313,7 +313,7 @@
       "tooltipD": "Questo permette di introdurre nuovi tipi di oggetti senza dover modificare il codice client che li utilizza."
     },
     {
-      "QuestionType": 1,
+      "QuestionType": 0,
       "rightAnswer": 1,
       "question": "Cosa accade se un metodo marcato come `sealed` viene ereditato da una sottoclasse?",
       "answerA": "Il compilatore genera automaticamente una copia del metodo per la sottoclasse.",
@@ -415,6 +415,135 @@
       "tooltipB": "Il tipo int obbligherebbe il metodo a restituire un numero intero tramite l'istruzione return.",
       "tooltipC": "Il termine void indica esplicitamente che il metodo esegue delle azioni ma non invia alcun dato indietro al chiamante.",
       "tooltipD": "string è un tipo di ritorno usato quando il metodo deve restituire una sequenza di caratteri."
-    }
-  ]
+    },{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Quale condizione è obbligatoria per i parametri 'ref' rispetto a 'out' prima della chiamata?",
+  "answerA": "Null",
+  "answerB": "Oggetto",
+  "answerC": "Inizializzazione",
+  "answerD": "Dichiarazione",
+  "tooltipA": "Il compilatore applica vincoli diversi su inizializzazione e assegnazione per questi due modificatori.",
+  "tooltipB": "Entrambi i modificatori possono essere applicati a qualsiasi tipo di dato in C#.",
+  "tooltipC": "Ref lavora su un valore esistente che deve essere già inizializzato, mentre out garantisce la restituzione di un nuovo valore.",
+  "tooltipD": "È 'ref' che richiede obbligatoriamente una variabile già inizializzata prima del passaggio."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 3,
+  "question": "Cosa produce come risultato finale il delegato 'Func<T1, T2, TResult>'?",
+  "answerA": "Costruttore",
+  "answerB": "Asincronia",
+  "answerC": "Nulla",
+  "answerD": "Valore",
+  "tooltipA": "Func è un delegato per metodi o lambda, non serve a definire costruttori.",
+  "tooltipB": "Func è un delegato generico per operazioni che restituiscono un valore, indipendentemente dal contesto sincrono o asincrono.",
+  "tooltipC": "I delegati che non restituiscono nulla sono rappresentati da Action.",
+  "tooltipD": "Func rappresenta un metodo che accetta parametri e restituisce un valore di tipo TResult."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Quale componente del .NET esegue la compilazione 'Just-In-Time'?",
+  "answerA": "BCL",
+  "answerB": "CLR",
+  "answerC": "IDE",
+  "answerD": "Garbage-Collector",
+  "tooltipA": "La BCL fornisce le classi base ma non si occupa della compilazione.",
+  "tooltipB": "Il CLR è l'ambiente di esecuzione che include il compilatore JIT per ottimizzare il codice a runtime.",
+  "tooltipC": "Gli editor o IDE non partecipano all'esecuzione del codice macchina a runtime.",
+  "tooltipD": "Il Garbage Collector gestisce la memoria, non la traduzione del codice IL."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 2,
+  "question": "Nel pattern matching, l'underscore '_' agisce come caso...",
+  "answerA": "Nullo",
+  "answerB": "Temporaneo",
+  "answerC": "Default",
+  "answerD": "Negazione",
+  "tooltipA": "Per gestire il null si usa la parola chiave 'null'.",
+  "tooltipB": "L'underscore è un discard, non una variabile utilizzabile.",
+  "tooltipC": "L'underscore agisce come catch-all (default), catturando qualsiasi valore non gestito precedentemente.",
+  "tooltipD": "L'operatore di negazione in C# è il punto esclamativo (!)."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Qual è il vantaggio principale di un 'Dictionary' rispetto a una 'List' nella ricerca?",
+  "answerA": "Memoria",
+  "answerB": "Velocità",
+  "answerC": "Tipizzazione",
+  "answerD": "Ordinamento",
+  "tooltipA": "I dizionari hanno un overhead di memoria maggiore rispetto alle liste a causa della struttura hash.",
+  "tooltipB": "I dizionari offrono prestazioni di ricerca quasi istantanee (tempo costante) tramite hash code.",
+  "tooltipC": "Entrambe le collezioni generiche sono limitate al tipo dichiarato.",
+  "tooltipD": "Il Dictionary standard non garantisce l'ordine degli elementi."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Qual è il rischio principale della 'Setter Injection'?",
+  "answerA": "NullReference",
+  "answerB": "Staticità",
+  "answerC": "Visibilità",
+  "answerD": "Incompatibilità",
+  "tooltipA": "Se la proprietà non viene impostata prima dell'uso, l'oggetto può causare una NullReferenceException.",
+  "tooltipB": "Il Setter Injection permette il cambio della dipendenza in qualsiasi momento a runtime.",
+  "tooltipC": "Le proprietà per la DI non devono essere necessariamente statiche.",
+  "tooltipD": "La DI utilizza proprio le interfacce per disaccoppiare correttamente i componenti."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 0,
+  "question": "Quale operatore restituisce un booleano per verificare la compatibilità di un tipo?",
+  "answerA": "Is",
+  "answerB": "As",
+  "answerC": "Typeof",
+  "answerD": "Casting",
+  "tooltipA": "L'operatore 'is' restituisce true se l'oggetto è compatibile con il tipo specificato.",
+  "tooltipB": "L'operatore 'as' tenta la conversione e restituisce null se fallisce, senza fornire un booleano.",
+  "tooltipC": "Typeof ottiene l'oggetto Type da una classe, non controlla un'istanza.",
+  "tooltipD": "Il casting è l'operazione di conversione, non un controllo booleano."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Cosa esegue il metodo 'Invoke()' in un delegato?",
+  "answerA": "Registrazione",
+  "answerB": "Esecuzione",
+  "answerC": "Sospensione",
+  "answerD": "Rimozione",
+  "tooltipA": "La registrazione dei metodi avviene tramite l'operatore +=.",
+  "tooltipB": "Invoke attiva la catena di chiamate ai metodi associati al delegato.",
+  "tooltipC": "Invoke è un'operazione di attivazione immediata e sincrona.",
+  "tooltipD": "Per liberare memoria si imposta il delegato a null o si attende il Garbage Collector."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Cosa rappresenta un'interfaccia nel paradigma OOP?",
+  "answerA": "Stato",
+  "answerB": "Contratto",
+  "answerC": "Bytecode",
+  "answerD": "Performance",
+  "tooltipA": "Le interfacce non possono contenere campi di stato o variabili private.",
+  "tooltipB": "Definisce 'cosa' l'oggetto deve fare, lasciando alla classe concreta il 'come'.",
+  "tooltipC": "Il CLR è in grado di gestire implementazioni in tipi non istanziabili come le classi astratte[cite: 163].",
+  "tooltipD": "L'assenza di corpo nelle interfacce classiche è una scelta architetturale, non prestazionale[cite: 163]."
+},
+{
+  "QuestionType": 1,
+  "rightAnswer": 1,
+  "question": "Quale azione è vietata su un metodo marcato come 'sealed'?",
+  "answerA": "Invocazione",
+  "answerB": "Override",
+  "answerC": "Ereditarietà",
+  "answerD": "Copia",
+  "tooltipA": "Il metodo sealed rimane accessibile e può essere chiamato liberamente[cite: 166].",
+  "tooltipB": "La parola chiave sealed impedisce alle classi derivate di sovrascrivere o modificare il comportamento del metodo[cite: 165, 166].",
+  "tooltipC": "La sottoclasse eredita il metodo ma non può alterarlo[cite: 165].",
+  "tooltipD": "Non viene creata alcuna copia; viene mantenuto il riferimento alla versione originale[cite: 165]."
+}
+]
 }

@@ -53,19 +53,6 @@
          "tooltipD": "Poiché in C# una stringa è una collezione di caratteri, il foreach permette di estrarre ogni singolo char in modo sequenziale e semplificato."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 3,
-         "question": "A cosa serve l'underscore (_) in una struttura switch con pattern matching?",
-         "answerA": "Indica che il valore deve essere obbligatoriamente nullo.",
-         "answerB": "Rappresenta una variabile di tipo stringa vuota.",
-         "answerC": "Serve per separare i nomi delle variabili composte.",
-         "answerD": "Gestisce tutti i casi non previsti esplicitamente (default).",
-         "tooltipA": "Il valore nullo viene gestito esplicitamente con la parola chiave null, non con l'underscore.",
-         "tooltipB": "Sebbene sembri un carattere speciale, non è legato a un valore di stringa ma alla logica di corrispondenza dei tipi.",
-         "tooltipC": "Questa è una convenzione di nomenclatura, ma all'interno dello switch ha una funzione sintattica specifica per il flusso di controllo.",
-         "tooltipD": "Nel pattern matching, l'underscore funge da 'discard' o caso jolly, catturando qualsiasi valore che non ha trovato una corrispondenza precedente."
-      },
-      {
          "QuestionType": 0,
          "rightAnswer": 1,
          "question": "Nell'operatore logico AND (&&), quando l'intera espressione risulta vera?",
@@ -170,19 +157,6 @@
          "tooltipD": "L'espressione n%2 == 0 verifica se il resto della divisione per 2 è zero, indicando un numero pari."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 2,
-         "question": "Cosa indica l'uso del carattere underscore '_' in uno 'switch' che utilizza il pattern matching?",
-         "answerA": "Serve a definire una costante numerica all'interno dello switch.",
-         "answerB": "Indica una variabile locale che deve essere inizializzata.",
-         "answerC": "Rappresenta il pattern 'discard' che gestisce tutti i casi non specificati precedentemente.",
-         "answerD": "Viene usato per forzare l'uscita immediata dal ciclo corrente.",
-         "tooltipA": "Le costanti devono essere definite esplicitamente con nomi o valori letterali.",
-         "tooltipB": "In questo contesto, l'underscore non funge da identificatore di variabile classica.",
-         "tooltipC": "Funziona in modo simile alla clausola 'default', catturando qualsiasi valore che non ha soddisfatto i pattern precedenti.",
-         "tooltipD": "Per interrompere un ciclo o uno switch si utilizza solitamente la parola chiave 'break'."
-      },
-      {
          "QuestionType": 0,
          "rightAnswer": 1,
          "question": "Come si comporta un ciclo 'foreach' quando viene applicato a una variabile di tipo string?",
@@ -209,30 +183,17 @@
          "tooltipD": "L'indice assume i valori 0, 2, 4, 6, 8 prima che la condizione i < 10 diventi falsa."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 0,
-         "question": "Cosa succede se in uno 'switch' tradizionale (C#) si omette l'istruzione 'break' alla fine di un 'case' non vuoto?",
-         "answerA": "Il compilatore genera un errore poiché non è permesso il 'fall-through' automatico.",
-         "answerB": "Lo 'switch' viene ignorato e il programma continua normalmente.",
-         "answerC": "Viene eseguito il blocco 'default' a prescindere dal valore.",
-         "answerD": "Il programma esegue automaticamente il codice del 'case' successivo.",
-         "tooltipA": "C# richiede esplicitamente un'istruzione di interruzione (come 'break' o 'return') per evitare errori logici comuni in altri linguaggi.",
-         "tooltipB": "Il codice non compilerebbe affatto, impedendo l'esecuzione del programma.",
-         "tooltipC": "Il blocco default viene attivato solo se nessun altro case corrisponde al valore cercato.",
-         "tooltipD": "Questo comportamento è tipico di linguaggi come il C++, ma in C# è bloccato dal compilatore."
-      },
-      {
-      "QuestionType": 2,
-      "rightAnswer": 2,
-      "question": "Completa con il risultato dell'espressione:\nbool risultato = ___ ; !(5 > 3 && 2 == 2)",
-      "answerA": "error",
-      "answerB": "true",
-      "answerC": "false",
-      "answerD": "null",
-      "tooltipA": "I confronti tra costanti intere sono operazioni perfettamente valide, nessun errore viene generato.",
-      "tooltipB": "L'interno della parentesi è vero, quindi ! lo inverte a false, non a true.",
-      "tooltipC": "5 > 3 è vero e 2 == 2 è vero, quindi l'AND è vero; la negazione ! restituisce false.",
-      "tooltipD": "Il risultato di un'operazione logica è sempre bool (true o false), mai null."
+         "QuestionType": 2,
+         "rightAnswer": 2,
+         "question": "Completa con il risultato dell'espressione:\nbool risultato = ___ ; !(5 > 3 && 2 == 2)",
+         "answerA": "error",
+         "answerB": "true",
+         "answerC": "false",
+         "answerD": "null",
+         "tooltipA": "I confronti tra costanti intere sono operazioni perfettamente valide, nessun errore viene generato.",
+         "tooltipB": "L'interno della parentesi è vero, quindi ! lo inverte a false, non a true.",
+         "tooltipC": "5 > 3 è vero e 2 == 2 è vero, quindi l'AND è vero; la negazione ! restituisce false.",
+         "tooltipD": "Il risultato di un'operazione logica è sempre bool (true o false), mai null."
       },
       {
          "QuestionType": 0,
@@ -274,19 +235,6 @@
          "tooltipD": "Questa parte viene eseguita al termine di ogni ciclo per preparare l'indice all'iterazione successiva."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 0,
-         "question": "Quale istruzione può essere usata per scrivere un'operazione condizionale 'if-else' in una sola riga?",
-         "answerA": "L'operatore ternario ?:",
-         "answerB": "Il ciclo 'foreach' con filtro integrato.",
-         "answerC": "La clausola 'when' applicata a un metodo.",
-         "answerD": "L'istruzione 'switch' compatta.",
-         "tooltipA": "La sintassi 'condizione ? valoreVero : valoreFalso' permette di assegnare valori basandosi su una condizione in modo conciso.",
-         "tooltipB": "Il 'foreach' non include una sintassi nativa a riga singola per sostituire un 'if-else' generico.",
-         "tooltipC": "La clausola 'when' è utilizzata principalmente nel pattern matching o nella gestione delle eccezioni.",
-         "tooltipD": "Sebbene esistano espressioni 'switch', l'operatore specifico per 'if-else' è il ternario."
-      },
-      {
          "QuestionType": 0,
          "rightAnswer": 3,
          "question": "Qual è la differenza fondamentale tra un ciclo 'while' e un ciclo 'do-while' in C#?",
@@ -311,19 +259,6 @@
          "tooltipB": "Sebbene il pattern matching effettui un cast sicuro, lo scopo di 'when' è il filtraggio logico, non la conversione di tipo.",
          "tooltipC": "Il blocco predefinito è gestito dalla parola chiave 'default' o dal pattern '_'.",
          "tooltipD": "Il pattern matching richiede comunque che il tipo o il valore di base soddisfino il criterio del case prima di valutare 'when'."
-      },
-      {
-         "QuestionType": 1,
-         "rightAnswer": 3,
-         "question": "Data l'espressione 'bool result = (a > 10 || b < 5) && !c;', quale combinazione di valori rende 'result' uguale a 'true'?",
-         "answerA": "a = 12, b = 2, c = true",
-         "answerB": "a = 5, b = 10, c = false",
-         "answerC": "a = 8, b = 6, c = true",
-         "answerD": "a = 12, b = 10, c = false",
-         "tooltipA": "Sebbene la parentesi sia vera, l'operatore '!c' con c = true diventa false, annullando il risultato finale.",
-         "tooltipB": "Entrambe le condizioni nella parentesi sono false (5 non > 10 e 10 non < 5), rendendo l'intera espressione falsa.",
-         "tooltipC": "In questo caso sia la condizione nella parentesi (8 non > 10 e 6 non < 5) che la condizione esterna sono false.",
-         "tooltipD": "L'espressione tra parentesi è vera (12 > 10), e '!false' è vero, quindi V ∧ V = V."
       },
       {
          "QuestionType": 0,
@@ -352,56 +287,17 @@
          "tooltipD": "Per iterare sulle parole è necessario prima utilizzare il metodo 'Split()' per creare un array di stringhe."
       },
       {
-         "QuestionType": 1,
-         "rightAnswer": 0,
-         "question": "In un'espressione 'switch' moderna (C# 8.0+), cosa rappresenta il simbolo '_'?",
-         "answerA": "Rappresenta il 'discard pattern', che agisce come caso predefinito per gestire qualsiasi valore non precedentemente specificato.",
-         "answerB": "È un segnaposto per indicare che quel caso deve essere ignorato e saltato.",
-         "answerC": "Rappresenta una variabile privata locale definita all'interno dello switch.",
-         "answerD": "Indica che il valore deve essere nullo per corrispondere al caso.",
-         "tooltipA": "L'underscore è usato per catturare tutti i casi rimanenti, garantendo che l'espressione switch sia esaustiva.",
-         "tooltipB": "Se un caso viene abbinato tramite '_', il codice associato viene eseguito; non viene semplicemente ignorato.",
-         "tooltipC": "L'underscore in questo contesto non è una variabile accessibile, ma un simbolo sintattico per la corrispondenza universale.",
-         "tooltipD": "Per gestire i valori nulli si utilizza esplicitamente la parola chiave 'null'."
-      },
-      {
-      "QuestionType": 2,
-      "rightAnswer": 2,
-      "question": "Completa con il numero di iterazioni del ciclo:\nfor (int i = 1; i <= 5; i += 2) { }\n// eseguito ___ volte",
-      "answerA": "infinito",
-      "answerB": "5",
-      "answerC": "3",
-      "answerD": "2",
-      "tooltipA": "L'incremento è positivo e la condizione di uscita è ben definita, il ciclo termina.",
-      "tooltipB": "Questo accadrebbe solo se l'incremento fosse i++ invece di i += 2.",
-      "tooltipC": "Il ciclo esegue per i=1, i=3, i=5. Al passo successivo i=7 che è > 5, quindi si ferma.",
-      "tooltipD": "La condizione i <= 5 include il valore 5, quindi l'iterazione con i=5 viene eseguita."
-      },
-      {
-         "QuestionType": 1,
-         "rightAnswer": 1,
-         "question": "Perché l'utilizzo di 'int.TryParse' è spesso preferito all'interno di una condizione 'if' rispetto a 'int.Parse'?",
-         "answerA": "È l'unico metodo che supporta il casting esplicito verso tipi 'float'.",
-         "answerB": "Permette di tentare la conversione e gestire l'eventuale fallimento tramite il ramo else senza sollevare eccezioni.",
-         "answerC": "Converte automaticamente la stringa in 0 se il formato è errato.",
-         "answerD": "È più veloce nella conversione di stringhe molto lunghe.",
-         "tooltipA": "'int.TryParse' è specifico per gli interi; per i float esiste 'float.TryParse'.",
-         "tooltipB": "'TryParse' restituisce un booleano che indica il successo, evitando crash del programma in caso di input non validi.",
-         "tooltipC": "Sebbene imposti il parametro 'out' a 0, il suo scopo è permettere al programmatore di decidere come gestire l'errore tramite il valore di ritorno booleano.",
-         "tooltipD": "Il vantaggio principale non è la velocità pura, ma la robustezza e la gestione sicura degli errori."
-      },
-      {
-         "QuestionType": 1,
-         "rightAnswer": 0,
-         "question": "Qual è il rischio principale di non includere l'istruzione 'break' in un blocco 'case' di uno 'switch' in C#?",
-         "answerA": "Il compilatore genererà un errore, poiché il 'fall-through' non è permesso se il case contiene istruzioni.",
-         "answerB": "Verrà eseguito automaticamente solo il caso 'default'.",
-         "answerC": "Verranno eseguiti tutti i casi successivi fino alla fine dello switch.",
-         "answerD": "Il programma entrerà in un ciclo infinito all'interno dello switch.",
-         "tooltipA": "A differenza di altri linguaggi come il C++, C# impedisce il fall-through accidentale per evitare errori logici comuni.",
-         "tooltipB": "Il 'default' viene eseguito solo se nessuna corrispondenza è trovata, non come conseguenza di un 'break' mancante.",
-         "tooltipC": "In C# questo comportamento non è possibile per ragioni di sicurezza del codice, a meno che il case non sia vuoto.",
-         "tooltipD": "L'assenza di 'break' non crea un ciclo, ma impedisce la compilazione corretta del codice."
+         "QuestionType": 2,
+         "rightAnswer": 2,
+         "question": "Completa con il numero di iterazioni del ciclo:\nfor (int i = 1; i <= 5; i += 2) { }\n// eseguito ___ volte",
+         "answerA": "infinito",
+         "answerB": "5",
+         "answerC": "3",
+         "answerD": "2",
+         "tooltipA": "L'incremento è positivo e la condizione di uscita è ben definita, il ciclo termina.",
+         "tooltipB": "Questo accadrebbe solo se l'incremento fosse i++ invece di i += 2.",
+         "tooltipC": "Il ciclo esegue per i=1, i=3, i=5. Al passo successivo i=7 che è > 5, quindi si ferma.",
+         "tooltipD": "La condizione i <= 5 include il valore 5, quindi l'iterazione con i=5 viene eseguita."
       },
       {
          "QuestionType": 0,
@@ -415,6 +311,110 @@
          "tooltipB": "Sebbene funzionale, un 'if' semplice richiederebbe una nidificazione complessa o una lunga catena meno efficiente e leggibile dello 'switch'.",
          "tooltipC": "Il 'foreach' serve per iterare su collezioni di dati, non per gestire scelte condizionali basate su un valore.",
          "tooltipD": "Lo 'switch' è ottimizzato per confrontare una singola variabile con diversi valori costanti, migliorando la leggibilità rispetto a molti 'if-else'."
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 3,
+         "question": "Quale parola definisce la funzione dell'underscore (_) in uno switch con pattern matching?",
+         "answerA": "Null",
+         "answerB": "String",
+         "answerC": "Separator",
+         "answerD": "Discard",
+         "tooltipA": "Il valore nullo viene gestito esplicitamente con la parola chiave null, non con l'underscore. [cite: 2]",
+         "tooltipB": "Sebbene sembri un carattere speciale, non è legato a un valore di stringa ma alla logica di corrispondenza dei tipi. [cite: 2]",
+         "tooltipC": "Questa è una convenzione di nomenclatura, ma all'interno dello switch ha una funzione sintattica specifica per il flusso di controllo. [cite: 2]",
+         "tooltipD": "Nel pattern matching, l'underscore funge da 'discard' o caso jolly, catturando qualsiasi valore senza corrispondenza. [cite: 3]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 2,
+         "question": "A quale clausola standard somiglia il pattern '_' in uno switch?",
+         "answerA": "Const",
+         "answerB": "Local",
+         "answerC": "Default",
+         "answerD": "Break",
+         "tooltipA": "Le costanti devono essere definite esplicitamente con nomi o valori letterali. [cite: 5]",
+         "tooltipB": "In questo contesto, l'underscore non funge da identificatore di variabile classica. [cite: 5]",
+         "tooltipC": "Funziona in modo simile alla clausola 'default', catturando qualsiasi valore che non ha soddisfatto i pattern precedenti. [cite: 5]",
+         "tooltipD": "Per interrompere un ciclo o uno switch si utilizza solitamente la parola chiave 'break'. [cite: 6]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 0,
+         "question": "Cosa genera il compilatore C# se si omette il 'break' in un 'case' non vuoto?",
+         "answerA": "Errore",
+         "answerB": "Warning",
+         "answerC": "Default",
+         "answerD": "Fall-through",
+         "tooltipA": "C# richiede esplicitamente un'istruzione di interruzione per evitare errori logici comuni. [cite: 7]",
+         "tooltipB": "Il codice non compilerebbe affatto, impedendo l'esecuzione del programma. [cite: 7]",
+         "tooltipC": "Il blocco default viene attivato solo se nessun altro case corrisponde al valore cercato. [cite: 7]",
+         "tooltipD": "Questo comportamento è tipico di linguaggi come il C++, ma in C# è bloccato dal compilatore. [cite: 8]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 0,
+         "question": "Quale operatore permette di scrivere un 'if-else' in una sola riga?",
+         "answerA": "Ternario",
+         "answerB": "Foreach",
+         "answerC": "When",
+         "answerD": "Switch",
+         "tooltipA": "La sintassi 'condizione ? valoreVero : valoreFalso' permette di assegnare valori in modo conciso. [cite: 10]",
+         "tooltipB": "Il 'foreach' non include una sintassi nativa a riga singola per sostituire un 'if-else' generico. [cite: 10]",
+         "tooltipC": "La clausola 'when' è utilizzata principalmente nel pattern matching o nella gestione delle eccezioni. [cite: 10]",
+         "tooltipD": "Sebbene esistano espressioni 'switch', l'operatore specifico per 'if-else' è il ternario. [cite: 10]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 3,
+         "question": "Dato '(a > 10 || b < 5) && !c', quale valore di 'c' rende l'espressione 'true' se le parentesi sono vere?",
+         "answerA": "Null",
+         "answerB": "Void",
+         "answerC": "True",
+         "answerD": "False",
+         "tooltipA": "Sebbene la parentesi sia vera, l'operatore '!c' con c = true diventa false. [cite: 13]",
+         "tooltipB": "Il tipo richiesto è booleano, non void.",
+         "tooltipC": "Se c è true, !c diventa false, annullando il risultato finale. [cite: 13]",
+         "tooltipD": "L'espressione tra parentesi è vera, e '!false' è vero, quindi il risultato è vero. [cite: 13]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 0,
+         "question": "In C# 8.0+, l'underscore nelle espressioni switch garantisce che il codice sia...",
+         "answerA": "Esaustivo",
+         "answerB": "Privato",
+         "answerC": "Nullo",
+         "answerD": "Saltato",
+         "tooltipA": "L'underscore cattura i casi rimanenti, garantendo che l'espressione switch gestisca ogni possibilità. [cite: 16]",
+         "tooltipB": "L'underscore in questo contesto non è una variabile privata accessibile. [cite: 16]",
+         "tooltipC": "Per gestire i valori nulli si utilizza esplicitamente la parola chiave 'null'. [cite: 16]",
+         "tooltipD": "Se un caso viene abbinato tramite '_', il codice associato viene eseguito. [cite: 16]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 1,
+         "question": "Cosa evita 'int.TryParse' rispetto a 'int.Parse' in caso di errore?",
+         "answerA": "Casting",
+         "answerB": "Eccezioni",
+         "answerC": "Loop",
+         "answerD": "Zero",
+         "tooltipA": "'int.TryParse' è specifico per gli interi. [cite: 19]",
+         "tooltipB": "'TryParse' restituisce un booleano, evitando il crash del programma (eccezione) per input non validi. [cite: 19]",
+         "tooltipC": "Il vantaggio principale è la robustezza, non la gestione dei cicli. [cite: 20]",
+         "tooltipD": "Sebbene imposti il parametro a 0, il suo scopo è la gestione sicura dell'errore. [cite: 19]"
+      },
+      {
+         "QuestionType": 1,
+         "rightAnswer": 0,
+         "question": "Cosa impedisce il C# non permettendo l'omissione del 'break'?",
+         "answerA": "Fall-through",
+         "answerB": "Default",
+         "answerC": "Overload",
+         "answerD": "Recursion",
+         "tooltipA": "C# impedisce il fall-through accidentale (passaggio al case successivo) per sicurezza. [cite: 21, 22]",
+         "tooltipB": "Il 'default' non è influenzato dalla presenza o meno del break in altri case. [cite: 22]",
+         "tooltipC": "L'omissione del break non ha a che fare con l'overloading dei metodi.",
+         "tooltipD": "L'assenza di 'break' impedisce la compilazione, non crea ricorsione. [cite: 23]"
       }
    ]
 }
