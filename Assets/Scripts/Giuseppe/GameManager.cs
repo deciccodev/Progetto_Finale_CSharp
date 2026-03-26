@@ -305,9 +305,7 @@ public sealed class GameManager : MonoBehaviour
                     Debug.Log("Valore per il progresso non valido");
                     break;
         }*/
-
     }
-
 
     #endregion
 
